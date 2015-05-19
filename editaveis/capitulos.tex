@@ -216,30 +216,262 @@ Adicionalmente, foi descrito o framework JADE, o qual é adotado neste TCC para 
 
 \chapter[PROPOSTA]{PROPOSTA}
 \section{PROCESSO INVESTIGATIVO}
+Nesta etapa do TCC, foi elaborado um cenário para avaliar o esforço necessário do autor para implementar um Software nas linguagens Java, Mql4 e Python. Para isso, foram adotadas as seguintes etapas para realizar uma prova de conceito: (i) Elaborar cenário, onde foi eleito um padrão de formação encontrado nos gráficos de candlesticks e foi elaborada uma hipótese inicial; (ii) Selecionar  ativos, onde foram eleitas algumas ações com seus devidos valores históricos para testar os produtos de  Software; (iv) Implementar, onde os algoritmos foram implementados nas três linguagens escolhidas; (v) Analisar resultados, onde foi feita a análise manual dos resultados afim de verificar o grau de acerto. Estas etapas estão descritas nos subtópicos seguintes e ilustrado na Figura 9.
+
+\textbf{Figura 9: Processo investigativo}
+
 \subsection{Elaborar cenário}
+
+Para nortear as provas de conceitos feitas para este estudo, foi elaborado um cenário onde é requerido uma maneira automatizada de se chegar à uma solução. Este cenário é descrito a seguir.
+
+\begin{adjustwidth}{1,5cm}{0cm}
+\textit{Uma das maneiras de um investidor acompanhar as movimentações do mercado de capitais, mais especificamente uma Bolsa de Valores, é através de gráficos como: (i) o gráfico de barras ; (ii) o gráfico de linha  e (iii) o gráfico de candlestick(MATSURA, 2006, p.5-6). Considerando o último, deseja-se encontrar uma maneira automatizada bem como a formação do padrão de candlestickconhecido como Darkcloud(MATSURA, 2006, p.61). Padrão este, que poderá compor um plano estratégico de investimento.}
+
+\textit{Uma candlestick é formada por 4 valores: (i) valor de abertura; (ii) valor de máxima; (iii) valor de mínima; e (iv) valor de fechamento. Quando o valor de  fechamento é maior do que o valor de abertura tem-se uma candlestick de alta, quando ocorre o inverso tem-se uma candlestick de baixa. A Figura 10 ilustra uma candlestick de alta, que é representada com o preenchimento em branco e umacandlestick de baixa, que é representada com o preenchimento em vermelho. Cada candlestick representa uma periodicidade, a qual pode ser desde um minuto até um ano (MATSURA, 2006, p.6).}
+\end{adjustwidth}
+
+O padrão Darkcloud é formado por duas clandlesticks, sendo a primeira de alta e a segunda de baixa, onde a segunda tem a abertura maior que a máxima da primeira e fechamento maior que a abertura da primeira (MATSURA, 2006, p.61).Bigalow faz a seguinte interpretação deste padrão.
+
+\begin{citacao}
+Após uma forte tendência de alta, a atmosfera está altista. O otimismo está presente. O preço abre com gap para cima. Os vendedores aparecem e empurram os preços de volta para baixo. Finalmente, o preço fecha na ou próximo das mínimas do dia. O fechamento não confirmou a maioria dos ganhos do dia anterior. Os comprados agora estão preocupados. Obviamente observam que a tendência de alta deve se encerrada. Este sinal proporciona uma boa venda a descoberto, com um estope acima da máxima do dia da vela preta (candlestick de baixa) . 
+(BIGALOW, 2010, p.47)
+\end{citacao}
+
+\textbf{Figura 11: Padrão DarkCloud}
+
+Diante deste cenário, criou-se a seguinte hipótese para nortear a atividade: “A implementação da prova de conceito orientada a Sistemas Multiagentes não será possível ou mesmo demandará muito esforço por parte do desenvolvedor, impossibilitando o seu uso no contexto em estudo neste TCC”.Iniciaram-se, assim,as outras etapas ilustradas na Figura 9.
+
 \subsection{Selecionar ativos}
+
+Nesta etapa, foram obtidos os dados históricos dos ativos (i.e. Ações) das seguintes empresas: (i) Brookfield Incorporações,BISA3 SA; (ii) MVR Engenharia, MRVE3SA; e (iii) Rossi Residencial S.A.,RSID3SA. Para realizar a atividade com os dados disponíveis aos produtos de Software escritos na linguagem Mql4, foi feita uma coleta de dados do par de moedas Euro/Dólar americano (EUR/USD). Oscódigos Mql4, Java+JADE e Python implementados neste estudo de caso estão disponíveis nos apêndices B,C e D, respectivamente. O período adotado para coleta foi o diário entre fevereiro de 2008 e janeiro de 2014.
+
+
+
 \subsection{Implementar Algoritmo}
+
+Considere a candlestick de baixa na Figura 12 como candlestick 0, e a candlestick de alta como candlestick 1. De acordo com o cenário exposto no subtópico 4.1.2, a formação é considerada Darkcloud se:
+
+\begin{itemize}
+  \item A candlestick 1 deve ser de alta;
+  \item A candlestick 0 deve ser de baixa;
+  \item A candlestick 0 deve ter valor de abertura superior ao valor de fechamento da candlestick 1;
+  \item A candlestick 0 deve ter seu valor de fechamento entre o valor mediano do corpo da candlestick 1. Deve também ter seu valor de fechamento superior ao valor de abertura da candlestick 1;
+  \item A candlestick 0 deve ter um corpo considerável.
+\end{itemize}
+
+\textbf{Figura 12: DarkCloud}
+
+A Tabela 1 apresenta o tempo gasto para implementar cada algoritmo nas linguagens eleitas para este TCC.
+
+\textbf{Tabela 1: Tempo médio de implementação do algoritmo}
+
+O algoritmo foi implementado em Java com JADE em um único comportamento, onde o algoritmo concentrado em uma classe é chamado pelo agente. Na linguagem Mql4, o algoritmo implementado retorna uma sinalização visual no gráfico de candlestick, fornecido pela plataforma, alertando a identificação do padrão. Na linguagem Python, o algoritmo implementado retorna uma listagem, contendo informações como datas de ocorrência do padrão, no terminal da IDE utilizada para implementação. Vale ressaltar, que a implementação foi o suficiente para estimar a viabilidade em se implementar a ferramenta proposta no Paradigma de Sistemas Multiagentes.
+
+
 \subsection{Analisar resultado}
-\subsection{Elaborar cenário}
+
+Notou-se que o esforço necessário para implementar o algoritmo nas três linguagens foi aproximadamente o mesmo. Na linguagem Java+JADE e Python, por serem multiplataforma, existe a possibilidade em desenvolver a ferramenta de forma que a mesma tenha o mesmo comportamento nas plataformas mais populares existentes hoje.
+
+Na proposta aqui apresentada, um critério de qualidade que merece atenção é a extensibilidade, visando futuras manutenções evolutivas bem como possibilitando trabalhar em mais de um contexto financeiro, como por exemplo, abordar o Mercado de Ações e o Mercado de Renda Fixa simultaneamente. Nesse caso, seria possível trabalhar em um contexto de alto risco de investimento juntamente com um de baixo risco de investimento, obtendo uma melhor gestão de recursos investidos pelo usuário.
+
+Em relação a extensibilidade no contexto financeiro,o Paradigma de Sistemas Multiagentes adequa-se ao estudo,visto que já existe um suporte tecnológico apropriado, um framework que atende às necessidades deste TCC, no caso um suporte para troca de mensagens entre entidades de Software – no contexto abordado neste TCC, entre investidores – baseado em comunicação usando protocolos, padrões bem estabelecidos na comunidade de Software e possiblidades de extensibilidade orientadas, por exemplo, a ontologias específicas.
+
+Um outro ponto considerado foi dado que o esforço em se implementar a prova de conceito utilizando a combinação tecnológica linguagem Java e plataforma JADE foi aproximadamente o mesmo em relação às implementações em Python ou Mql4. Portanto, pode-se concluir que a hipótese inicial não se verificou. Assim, a aplicação do Paradigma de Sistemas Multiagentes no contexto financeiro abordado é possível, compreendendo um esforço por parte do desenvolvedor muito próximo dos exigidos nas demais linguagens analisadas.
+
+Finalmente, diante das propriedades do Paradigma de Sistemas Multiagentes, expostas no capítulo 2, nos tópicos 2.2.1, 2.2.1.2 e 2.2.1.3 e a descrição do contexto financeiro exposta no mesmo capítulo, tópico 2.1.2, nota-se que existem características comuns entre eles. Nesse cenário, merecem menção as seguintes características:
+
+\begin{enumerate}
+\item Autonomia - não há intervenções no processo de decisão de um agente, ele toma decisões sem intervenção de outros agentes ou humanos. Da mesma maneira, um investidor humano também possui autonomia para decidir quando realizar investimentos;
+\item Sociabilidade - um agente interage com outros agentes, Software ou humano, através de  algum tipo de linguagem de comunicação. Da mesma maneira, um investidor humano interage com outros atores presentes em uma bolsa de valores, seja para montar grupos, e de maneira conjunta resolver problemas que estão além das suas habilidades individuais, ou apenas para usar serviços disponibilizados por outros atores;
+\item Reatividade - um agente fica situado em um ambiente e é capaz de perceber esse ambiente através de seus sensores, é capaz de responder em tempo hábil às mudanças que ocorrem nele. Da mesma maneira, um investidor percebe o ambiente de bolsa de valores no qual está inserido, através de acompanhamentos frequentes de informações que alimentam suas estratégias, e responde às mudanças ocorridas na bolsa de valores de acordo com as informações de saída de suas estratégias;
+\item Assincronismo -  um agente, ao receber uma requisição, tem o poder de decidir se irá ou não atender à mesma. Adicionalmente, este agente este pode enviar uma requisição a outro agente e continuar suas atividades. Caso não seja atendido, ele tem o poder de enviar a mesma requisição a outros agentes, por exemplo, contornando o problema. Da mesma maneira, um investidor humano pode procurar um ou vários atores presentes na bolsa e escolher aquele que melhor o atende.
+
+\end{enumerate}
+
+Tal fato motiva a exploração do paradigma orientado a agentes no contexto financeiro abordado, tendo como objetivo contribuir com o contexto financeiro através da construção de uma ferramenta de estratégia financeira apoiada por Sistemas Multiagentes Comportamentais, onde não será exigido do usuário conhecimentos relacionados ao Mercado Financeiro. Assim, a ferramenta abstrairá a complexidade de cálculos financeiros comumente utilizados na análise técnica e delegará ao usuário somente a decisão em comprar ou vender.
+
 \section{FERRAMENTA PROPOSTA}
+
+A ferramenta será um Software de apoio à gestão de uma carteira de investimento, que inicialmente será composta por ações de empresas com presença na Bolsa de Valores Brasileira. Em evoluções futuras, a carteira de investimentos poderá ser composta também por: (i) Opções das mesmas empresas; (ii) Ativos na Bolsa de Mercadorias e Futuros Brasileiros; (iii) Letras de Dívida Pública e demais títulos de renda fixa. 
+
+ A ferramenta proposta atuará considerando três tipos de perfis de investidor, de forma a contribuir na realização do maior lucro possível dentro do perfil do usuário, ou seja, sob a perspectiva de investimento cabível para esse usuário. Informações sobre os perfis são simplificadamente providas na Tabela 2.
+
+ \textbf{Tabela 2: Perfis de investidores}
+Para cada perfil de investidor serão utilizados agentes com estratégias que mais se adequam ao perfil. Para o perfil Conservador serão priorizadas empresas que oferecem dividendos e aquelas que oferecem menores volatilidades bem como boa liquidez de seus papéis. Para o perfil Moderado serão priorizadas estratégias de compra e venda de papéis em uma periodicidade maior do que a semanal. E para o perfil Corajoso, serão utilizadas estratégias de curto prazo, ou seja, entre um dia e quatro semanas. O tópico a seguir expõe algumas estratégias utilizadas por investidores e algumas que podem ser adotadas por este estudo.
+
 \subsection{Principais Agentes}
-\subsection{Gestão de Carteira dos Agentes Gestores}
-\subsubsection{Montagem da carteira de ações}
-\subsubsection{Monitoramento da carteira de Ações}
-\subsubsection{Montagem da carteira de ações}
-\subsection{Estratégias de busca de ações dos Agentes Caçadores}
-\subsection{Estratégia dos Agentes Especialistas}
-\subsubsection{Estratégia por perfil}
+
+Como proposta inicial deste TCC, serão implementados três grupos de agentes. Um grupo de gestores, um grupo de especialistas de operação e um grupo de caçadores de papéis (i.e. ações de empresas). Um agente do grupo de gestores é responsável por controlar investimentos para que eles estejam em um grau de risco aceitável ao usuário investidor, seja ele Corajoso, Moderado ou Conservador. Esse agente terá uma equipe formada por agentes dos grupos de especialistas operação e de caçadores de papéis.
+
+Os Agentes Caçadores de papéis ficarão responsáveis por procurar no Mercado Financeiro Brasileiro papéis que sejam interessantes para o perfil do usuário investidor, fazendo uma seleção de papéis e passando essas informações para o agente gestor de um grupo de especialistas. Esses últimos farão uso das estratégias financeiras expostas no tópico 4.2.5.1. Os agentes serão construídos de forma que seja possível continuar o estudo futuramente, mantendo ativo o critério de qualidade: manutenibilidade evolutiva do Software desenvolvido.
+
+Os Agentes Especialistas ficarão responsáveis por monitorar um grupo de ações passados pelo seu gestor, eles monitorarão a variação de preços das ações sob sua custódia.
+
+\textbf{Figura 13: Estrutura de agentes planejado}
+
+\subsubsection{Agente Gestor}
+O Agente Gestor irá administrar uma equipe composta por um ou mais especialistas. Ele autorizará uma compra ou venda de ações analisadas pelos especialistas. Ele fará controle constante do risco envolvido na carteira de ações administrada. O Agente Gestor de riscos tem as principais responsabilidades:
+\begin{enumerate}
+\item Criar e excluir um ou mais Agentes Especialistas;
+\item Autorizar compras ou vendas de ações;
+\item Monitorar os riscos envolvidos na carteira de ações, bem como alinhar estes ao perfil do usuário investidor;
+\item ntervir, se necessário, em uma operação que represente altos riscos.
+\end{enumerate}
+
+As responsabilidades dos Agentes gestores relacionadas à gestão da carteira de investimento estão descritas no tópico 4.2.3.
+
+\subsubsection{Agente Especialista}
+
+O Agente Especialista é o agente que fará constantemente leituras dos valores das ações que estão sob sua responsabilidade. Ele receberá uma lista de ações do Agente Gestor e aplicará a melhor estratégia possível para cada ação. Ele fará o cálculo do risco envolvido em suas estratégias, orientados por em uma base histórica de operações e/ou simulações feitas em valores históricos desta ação. O Agente Especialista tem as seguintes responsabilidades:
+
+\begin{enumerate}
+\item Aplicar estratégias que ofereçam o maior lucro possível para cada tipo de usuário investidor;
+\item Mensurar o risco envolvido em cada estratégia e reportar ao Agente Gestor;
+\item Fazer simulações e persistir informações de operações;
+\end{enumerate}
+
+\subsubsection{Agente Caçador}
+
+O Agente Caçador de papéis fará buscas constantes no portfólio de ações da bolsa  de valores, afim de selecionar as que mais oferecem retornos positivos. Após encontrar estes papéis, ele informará aos Agentes Gestores. O Agente Caçador de papéis tem as seguintes responsabilidades: 
+\begin{enumerate}
+\item Buscar e selecionar as melhores ações a se investir;
+\item Criar uma listagem destas ações e reportar aos Agentes Gestores que solicitarem.
+\end{enumerate}
+
+\subsubsection{Gestão de Carteira dos Agentes Gestores}
+
+De acordo com o perfil do usuário, os Agentes Gestores farão a gestão da carteira de investimento usando duas estratégias, gestão passiva e ativa. Para o investidor Conservador, ele fará uma gestão mais passiva, onde não há intenção de sobrepor o mercado. A carteira será mais diversificada e as ações permanecerão compradas por um tempo maior, consequentemente o risco envolvido será menor, em relação aos outros perfis.
+
+Para o investidor Moderado, ele fará uma gestão um pouco mais ativa, onde há uso de estratégias financeiras para tentar se antecipar ao mercado, no entanto com um controle de risco mais rigoroso do que perfil Corajoso. Para o perfil Corajoso, os Agentes Gestores adotarão uma gestão mais ativa. A carteira de ações de um usuário corajoso possui uma diversificação menor e o controle de risco é menos rigoroso em relação aos outros perfis.
+
+Para gerir uma carteira, o Agente Gestor calculará constantemente o desvio padrão e a variância da carteira, bem como das Ações individualmente. Ao montar uma carteira de ações, os Agentes Gestores usarão como parâmetro a correlação entre as ações da carteira, além do perfil do usuário. Os subtópicos seguintes expõem o procedimento de montagem e monitoração de uma carteira de ações gerida por um Agente Gestor.
+
+\subsubsubsection{Montagem da carteira de ações}
+
+Após instanciado os agentes para o usuário, o Agente Gestor verifica qual foi o perfil escolhido pelo usuário em seu cadastro e inicia o processo de montagem de carteira de ações. Ele contata um Agente Caçador e solicita um número determinado de ações, de acordo com o perfil do usuário. Segundo Pinheiro (2007, p.93),uma carteira com ações de 30 empresas diferentes pode ser considerada como uma carteira conservadora. Com base neste número, foi derivada a quantidade de ações por carteira de cada tipo de perfil. Assim, para um usuário Conservador sua carteira terá ações de 30empresas. Para um Moderado 13empresas. E para um usuário Corajoso 8 empresas. Vale ressaltar que esses números são iniciais foram baseados na recomendação do autor Pinheiro (2007, p.93) combinados com os números da sequência de Fibonacci, sequência bastante aceita no meio financeiro, e serão ajustados empiricamente durante TCC2.
+
+\textbf{Figura 14: Processo de montagem de uma carteira}
+
+Ao receber o grupo de ações solicitadas ao Agente Caçador, o Agente Gestor calcula a correlação dos retornos (i.e. percentual de diferença entre o período atual com seu anterior) e as aprova de acordo com o perfil do usuário. Os critérios de aceite de uma ação é mostrado na Tabela 3.
+
+\textbf{Tabela 3: Critério de aceite de ações}
+
+Após feito cálculo da correlação, o Agente Gestor calcula o desvio padrão e a variância dos retornos da ação e distribui entre os Agentes Especialistas que compõem sua equipe.
+
+\subsubsubsection{Monitoramento da carteira de Ações}
+
+Ao montar a carteira de ações e dividir as ações entre os Agentes Especialistas, os Agentes Gestores iniciarão o processo de monitoramento desta carteira. Eles solicitarão o percentual de retorno aos Agentes Especialistas, de acordo com a periodicidade trabalhada. Ao obter os valores, os Agentes Gestores realizarão o cálculo da correlação e desvio padrão para encontrar ações que representem risco em desacordo com o perfil do usuário. Se a ação representar um risco elevado, esta será removida da carteira e possivelmente substituída.
+
+\textbf{Figura 15: Processo de monitoramento da carteira}
+
+\subsubsection{Estratégias de busca de ações dos Agentes Caçadores}
+
+Os Agentes Caçadores farão buscas de ações constantemente na bolsa de valores. Eles farão leituras dos dados históricos de cada ação e persistirão uma base de dados com informações como o Retorno diário,o Desvio padrão, e a Variância. Todos na periodicidade diária, semanal e mensal. Adicionalmente, será persistido  o link para acesso à cotação pelos Agentes Especialistas.
+
+\subsubsection{Estratégia dos Agentes Especialistas}
+
+Com intuito de se obter um Software que ofereça uma melhor manutenção, serão adotados padrões de projeto. Visando exemplificar o uso de padrões de projeto no cenário acordado, será adotado, por exemplo, o padrão de projeto comportamental Strategy. Esse padrão permite a variação de algoritmos, independentemente do agente, facilitando ainda ser sensível ao contexto. O padrão Strategy é composto por três participantes: (i) Context, é quem chama uma estratégia através uma classe interface. Neste estudo,Context será representado pelos agentes, os quais avaliarão, em tempo de execução, o cenário financeiro vivenciado pelo investidor; (ii) Strategy, é a interface comum a todos os algoritmos relacionados à ela; e (iii) ConcreteStrategy, é a classe concreta que implementa os diferentes algoritmos. Neste estudo, serão as estratégias financeiras com as quais os agentes financeiros atuarão no ambiente. A Figura 16 mostra como esse padrão é aplicado/instanciado considerando a ferramenta proposta.
+
+\textbf{Figura 16: Padrão Strategy aplicado}
+
+Por fim, os Agentes Especialistas farão uso de estratégias financeiras. Estratégias estas compostas por indicadores financeiros. Assim, será necessário neste estudo implementar estratégias financeiras em linguagem Java para que as mesmas possam ser utilizadas por estes Agentes.  Serão implementados, inicialmente, os seguinte indicadores: (i) Média Móvel Simples, MMS; (ii) Média Móvel Exponencial, MME; (iii) Darkcloud; (iv) Bullishengulfing  e (v) BearishEngulfing. Estes, descritos a partir do tópico 4.2.4.1. Serão implementadas ainda, classes que representam estratégias financeiras que farão uso de combinações destes indicadores, como apresentado na Tabela 4.
+
+\textbf{Tabela 4: Estratégias por perfil}
+
 \subsubsubsection{Estratégias Financeiras}
+
+Existem duas formas de se fazer investimentos no Mercado Financeiro. A primeira é investir sem nenhum critério, de forma Ad Hoc, e a outra é investir orientando-se por planos de estratégias. Um plano de estratégia deve ser montado de acordo com o nível de risco assumido pelo investidor. Um plano pode ser orientado por outros tipos de indicadores, além dos adotados nesse estudo.
+
+Neste estudo, serão usadas estratégias financeiras baseadas em médias móveis exponenciais e simples, inicialmente. Serão duas médias de duas periodicidades, onde o cruzamento indica reversão no sentido do mercado (MATSURA, 2006, p. 72). No cruzamento da média de menor periodicidade com a maior, de baixo para cima, serão feitas ordens de compra de ações. Já no cruzamento inverso, serão feitas vendas.
+
 \subsubsubsection{Estratégias Baseadas em Médias Móveis}
+
+São utilizadas, como ilustrado na Figura 17, duas médias móveis exponenciais, uma de 21 períodos na cor azul e uma de 13 períodos na cor vermelha, a titulo de exemplo. Na estratégia de cruzamento de médias móveis, o cruzamento da vermelha com a azul, de cima para baixo, como mostrado nos círculos pretos, indica oportunidade de venda de ações. No cruzamento da vermelha com a azul, de baixo para cima, indica oportunidade de compra de ações. No tópico 4.2.5, estão expostos os tipos de médias móveis e suas utilizações.
+
+\textbf{Figura 17: Ações Gol Linhas Aérias.}
+
 \subsubsubsection{Estratégias Baseadas em padrões de candlestick}
+
+Esta estratégia foi elaborada com base no uso do gráfico de candlesticks (veja a definição de candlestick no item 4.1.1) e consiste na utilização de três padrões de formação de candlesticks. Nessa última, quando identificada a formação no gráfico da ação, é feita uma operação de compra ou de venda. A Figura a seguir apresenta estes três padrões, que serão adotados neste estudo.
+
+\textbf{Figura  18: Padrões de formação de candlestick}
+
+O padrão de formação Darkcloud é composto por duas candlesticks, a primeira de alta, em branco, e a segunda de baixa, em vermelho. Elas são precedidas de uma tendência de alta confirmada da ação. A segunda candlestick tem valor de abertura superior ao valor de fechamento da primeira, e tem valor de fechamento superior ao valor de abertura da primeira candlestick. Este padrão de formação indica reversão da tendência de alta para baixa (MATSURA, 2006, p.61). Tal fato será utilizado para sinalizar oportunidades de venda de ações.
+
+O padrão de formação BearishEngulfing, assim como o Darkcloud, sinaliza a reversão de um tendência de alta de uma ação. No entanto, este padrão difere-se por sua segunda candlestick ter valor de fechamento inferior ao valor de abertura da primeira (BIGALOW, 2010, p.38).
+
+O padrão de formação BullishEngulfing é um padrão de reversão de tendência similar ao BearishEngulfing. Este padrão é precedido de uma tendência de baixa, e sinaliza oportunidade de compra de ações. É composto por duas candlesticks, a primeira de baixa fecha de acordo com a tendência (i.e. uma candlestick de baixa). A segunda tem seu valor de abertura inferior ao valor de fechamento da primeira, e seu valor de fechamento maior do que o valor de abertura da primeira (BIGALOW,2010, p.36). As Figuras 19 a 21apresentam os padrões identificados em um gráfico de candlesticks.
+
+\textbf{Figura 19: Padrão DarkCloud}
+\textbf{Figura 20: Padrão Bullish Engulfing}
+\textbf{Figura 21: Padrão Bearish Engulfing}
+
 \subsubsubsection{Médias Móveis}
 
-\subsubsubsection{Arquitetura MVC Aplicada à ferramenta}
+Médias móveis são médias de preços que se deslocam no tempo, ou seja, para um novo valor de entrada, há a saída de um valor antigo do cálculo. Com as médias móveis é possível suavizar a movimentação do mercado e, dessa forma, identificar tendências (MATSURA, 2006, p.68). Ao se calcular uma média móvel, é escolhido primeiro qual a quantidade de valores que será utilizado no cálculo. Se utilizamos 5 valores, tem-se, então, uma média de 5 períodos, e assim por diante. Depois, define-se o tipo da média móvel. No caso desse estudo, serão as médias móveis simples e exponenciais.
+
+A média móvel simples é uma média com tempo de reação mais lento dentre as médias. Ela é bastante utilizada para identificar tendências de alta ou de baixa no Mercado Financeiro. Quanto maior a sua periodicidade, mais lenta ela será. Médias de alta periodicidade, normalmente, são utilizadas em estratégias de longo prazo (MATSURA, 2006, p. 69).
+
+\textbf{Figura 22: Média Móvel Simples}
+
+A Média Móvel Exponencial é mais ágil em relação à média simples. Ela confere peso maior aos valores mais recentes, e com isso se torna uma média mais sensível às oscilações do Mercado Financeiro.
+
+\textbf{Figura 23: Média Móvel Exponencial}
+
+Onde F é o valor de fechamento de uma ação, N é o número de períodos da média, e K é a constante calculada.
+
+\subsection{Arquitetura MVC Aplicada à ferramenta}
+
+Existem duas características que norteiam o desenvolvimento de um Software na atualidade, manutenabilidade e reusabilidade. Para viabilizar que a ferramenta proposta por este estudo atenda essa visão de desenvolvimento de Software, manutenível bem como reutilizável, aliado ao fato da ferramenta ser Web, o modelo arquitetural escolhido foi o MVC (KRASNER;POPE,1988). Dessa forma, pretende-se que os códigos implementados no Paradigma de Sistemas Multiagentes possuam um alto grau de modularização, baixo acoplamento e alta coesão. Será almejado ainda possibilitar a realização de futuras manutenções de maneira mais eficiente, dado que o contexto financeiro compreende regras de negócio de alta mutabilidade. 
+
+Em View ou Visão (Figura 24), concentrarão todos os códigos relacionados à interface com o usuário, seja com interfaces Web, desktop ou mobile. Esta ferramenta será construída de maneira que possa ser continuada e melhorada futuramente pelo desenvolvedor/criador ou posteriores voluntários. Em Controllerou Controle (Figura 25), concentrarão os códigos responsáveis por conectar o usuário com os agentes implementados, representando a máquina de raciocínio dos agentes - o core central do Sistema Multiagentes. Em Modelou Modelo (Figura 25),concentrarão as entidades do modelo de domínio, representando os agentes de Software, outros modelos conceituais pertinentes (ex. protocolos de comunicação utilizados, regras de negócio do contexto financeiro e outros) e modelo de entidades da camada de persistência.
+
+\textbf{Figura 24: Camada View}
+\textbf{Figura 25: Controller-Model}
+
 
 \section{RESUMO DO CAPÍTULO}
 
+Este capítulo elucidou, dentre outros detalhes, uma descrição dos agentes planejados para este estudo, que serão classificados em: (i) Agente Gestor, responsável por montar equipes e gerir o risco envolvido na carteira de ações, de modo que fique alinhado com o perfil do usuário investidor; (ii) Agente Especialista, responsável por monitorar a variação dos preços das ações abordadas por ele; e (iii) o Agente Caçador, responsável por procurar ações atrativas na bolsa de valores e reportá-las aos Agentes Especialistas.
 
+Foram apresentadas também duas estratégias financeiras, que serão implementadas neste estudo. A primeira estratégia é baseada em médias móveis. A segunda é baseada em formação de padrões em gráficos de candlesticks. Foram detalhados quatro indicadores financeiros, os quais compõem as estratégias: (i) Médias Móveis Simples e Exponencial; (ii) DarkCloud; (iii) BearishEngulfing e (iii) Bullish Engulfing.
+
+\chapter[METODOLOGIA DE DESENVOLVIMENTO DA FERRAMENTA]{METODOLOGIA DE DESENVOLVIMENTO DA FERRAMENTA}
+\section{DESENVOLVIMENTO DA FERRAMENTA}
+
+O TCC1 foi desenvolvido considerando as seguintes atividades:
+\begin{itemize}
+\item Levantar Referencial Teórico:\\ Nesta atividade, foram feitos levantamentos de artigos científicos, artigos jornalísticos, publicações de empresas públicas/privadas, possíveis tecnologias que mais se alinhem à proposta, possibilitando maior conhecimento dos domínios Financeiros e de Engenharia de Software.
+
+\item Definir escopo:  
+Nesta atividade, o escopo do TCC foi definido como: Construir uma Ferramenta de estratégia financeira.
+\item Levantar Suporte Tecnológico: 
+ Nesta atividade, foram levantadas tecnologias que mais se adequam ao proposto pelo TCC.
+\item Desenvolver provas de conceito:\\ 
+Nesta atividade, foram implementadas provas de conceito, utilizando uma adaptação da metodologia Scrum, em diferentes suportes tecnológicos, visando à definição de uma boa estratégia em atendimento à proposta.
+\item Refinar proposta: \\
+Nesta atividade, foi feita uma revisão da proposta e assim o seu refino para atividade de escrita do TCC1.
+\item Escrever TCC1:\\ 
+Nesta etapa foi feita a documentação dos resultados obtidos nas etapas anteriores, possibilitando a obtenção da escrita final do TCC01.
+\end{itemize}
+
+\section{ESTADO ATUAL}
+\subsection{Contexto Financeiro}
+\subsection{Desenvolvimento da Ferramenta}
+\section{RESUMO DO CAPÍTULO}
+
+\chapter{RESULTADOS}
+\section{AGENTES IMPLEMENTADOS}
+\subsection{Agente Gestor}
+\subsection{Agente Especialista}
+\subsection{Agente Caçador}
+\subsection{Agente Criador}
+\section{MÉTRICAS}
+\section{COLETA DE IMPRESSÕES}
+\subsubsection{Pesquisa - Ação}
+\subsubsection{Coleta de impressões com usuários}
+\subsubsection{Coleta de impressões através de simulações de estratégias}
+\section{RESUMO DO CAPÍTULO}
 
 
 
