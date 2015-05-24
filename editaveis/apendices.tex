@@ -116,6 +116,7 @@ Foram identificadas nesta coleta de impressões, demandas por melhorias onde par
 \section{INTRODUÇÃO}
 
 Esta coleta de impressões com potenciais usuários teve como principal objetivo verificar  o objetivo especifico proposto: “Abstrair a complexidade de cálculos financeiros comumente utilizados na Análise Técnica. Assim, essa complexidade não é sentida pelo usuário, deixando a mesma a cargo da ferramenta”. Vale ressaltar que essa avaliação teve como foco as estratégias adotadas na ferramenta.
+
 As estratégias foram simuladas no período no período de 1 de janeiro de 2012 a 1 de março de 2015, a versão do JADE utilizado é a 4.3.3 de 10 de dezembro de 2014, a versão do Grais era a 2.4.3 e a versão do java era a 1.7.0\_79. A ferramenta foi simulada ainda em um notebook da marca Apple modelo MacBook Pro (Retina, 13-inch, Late 2013) com processador 2.6 GHz Intel Core i5, com 8 GB 1600 MHz DDR3 de Memória RAM e com o Sistema operacional OS X Yosemite versão 10.10.3.
 
 \section{IMPRESSÕES COLETADAS}
@@ -123,6 +124,1267 @@ As estratégias foram simuladas no período no período de 1 de janeiro de 2012 
 Todas estratégias de todos perfis foram simuladas de maneira conjunta de acordo com o perfil relacionado, as tabelas apresentadas abaixo contém os dados detalhados das simulações.
 
 \textbf{Colocar Tabelas aqui }
+
+\section{TABELAS}
+\subsection{Dados Simulação Perfil Conservador}
+
+\begin{center}
+\begin{longtable}{| p{2cm} | p{10cm} |p{2cm} |}
+\caption*{Estratégias Perfil Conservador e Resultados} \\
+\hline
+\textbf{Agente} & \textbf{stratégia} & \textbf{Percentual de Ganho} \\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{Agente} & \textbf{stratégia} & \textbf{Percentual de Ganho} \\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	A1 & Média Móvel Simples 13/21 & -29,06\% \\ \hline
+	A2 & Media Móvel Simples 21/34 & -31,74\% \\ \hline
+	A3 & Media Móvel Exponencial 21/34 & 34,96\% \\ \hline
+	A4 & Media Móvel Simples  13/21 & 4,93\% \\ \hline
+	A5 & Media Móvel Simples 21/34. & -60,41\% \\ \hline
+	A6 & Media Móvel Exponencial 21/34. & 8,26\% \\ \hline
+	A7 & Media Móvel Simples  13/21. & 59,91\% \\ \hline
+	{} & \textbf{TOTAL GERAL} & \textbf{7,8\%} 
+	
+\label{t09}
+\end{longtable}
+\end{center} 
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A1: Ação GEPA3.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+	1/5/2013	&Buy	&64.02	&{}\\ \hline
+	3/0/2014	&Buy	&62.04	&{}\\ \hline
+	1/2/2014	&Sell	&47.51	&-26.00\%\\ \hline
+	1/4/2014	&Buy	&48		&{}\\ \hline
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-26,00\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A1: Ação SHOW3.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+	
+	5/1/2012	&Buy	&13.2	&{}\\ \hline
+	4/4/2012	&Sell	&15.5	&17.42\%\\ \hline
+	5/6/2012	&Buy	&17.37	&{}\\ \hline
+	2/7/2012	&Sell	&17.3	&-0.40\%\\ \hline
+	5/7/2012	&Buy	&17.39	&{}\\ \hline
+	3/8/2012	&Sell	&14.1	&-18.92\%\\ \hline
+	1/0/2013	&Buy	&7.62	&{}\\ \hline
+	5/1/2013	&Sell	&7.68	&0.79\%\\ \hline
+	3/2/2013	&Buy	&7.9	&{}\\ \hline
+	4/4/2013	&Sell	&8.44	&6.84\%\\ \hline
+	2/4/2013	&Buy	&9.19	&{}\\ \hline
+	4/5/2013	&Sell	&6.86	&-25.35\%\\ \hline
+	2/7/2013	&Buy	&8.59	&{}\\ \hline
+	3/8/2013	&Sell	&7.7	&-10.36\%\\ \hline
+	4/11/2013	&Buy	&5.35	&{}\\ \hline
+	4/1/2014	&Sell	&4.8	&-10.28\%\\ \hline
+	4/3/2014	&Buy	&4.93	&{}\\ \hline
+	2/4/2014	&Sell	&5		&1.42\%\\ \hline
+	4/4/2014	&Buy	&4.88	& \\ \hline
+	2/5/2014	&Sell	&5.2	&6.56\%\\ \hline
+	2/6/2014	&Buy	&5.33	&{}\\ \hline
+	4/7/2014	&Sell	&5.1	&-4.32\%\\ \hline
+	4/11/2014	&Buy	&2.88	&{}\\ \hline
+	5/0/2015	&Sell	&2.98	&3.47\%\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-26,00\%}
+
+\label{t3}
+\end{longtable}
+\end{center}
+
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A1: Ação TELB4.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+	
+		5/1/2012	&Buy		&14.79	&\\\hline
+		4/3/2012	&Sell	&13.69	&-7.44\%\\\hline
+		1/9/2012	&Buy		&7.37	& \\\hline
+		3/11/2012	&Sell	&6.61	&-10.31\% \\\hline
+		4/11/2012	&Buy		&8.04	& \\\hline
+		1/0/2013	&Sell	&7.09	&-11.82\%\\\hline
+		5/9/2013	&Buy		&2.87 &	\\\hline
+		4/9/2013	&Sell	&2.7		&-5.92\%\\\hline
+		5/10/2013	&Buy		&2.82	&\\\hline
+		4/10/2013	&Sell	&2.84	&0.71\%\\\hline
+		5/3/2014	&Buy		&2.52	&\\\hline
+		5/4/2014	&Sell	&2.37	&-5.95\%\\\hline
+		5/5/2014	&Buy		&2.49	&\\\hline
+		4/6/2014	&Sell	&2.33	&-6.43\%\\\hline
+		2/8/2014	&Buy		&2.26	&\\\hline
+		4/9/2014	&Sell	&1.87	&-17.26\%\\\hline
+		5/2/2015	&Buy		&1.13	&\\\hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{27,3\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A2: Ação TERI3.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+	
+		3/4/2012	&Sell	&0.22	&\\ \hline
+		3/8/2012	&Buy	&0.16	&\\ \hline
+		3/10/2012	&Sell	&0.13	&-18.75\%\\ \hline
+		3/6/2013	&Buy	&0.12	&\\ \hline
+		4/10/2013	&Sell	&0.12	&0.00\%\\ \hline
+		3/1/2014	&Buy	&0.11   &	\\ \hline
+		5/1/2014	&Sell	&0.11	&0.00\%\\ \hline
+		3/5/2014	&Buy	&0.1	&\\ \hline
+		2/6/2014	&Sell	&0.09	&-10.00\%\\ \hline
+		4/6/2014	&Buy	&0.1	&\\ \hline
+		4/6/2014	&Sell	&0.1	&0.00\%\\ \hline
+		3/8/2014	&Buy	&0.09	&\\ \hline
+		5/8/2014	&Sell	&0.09	&0.00\%\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-28,75\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A2: Ação RPMG3.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	1/4/2012	&Buy	&0.11	&\\ \hline
+	2/4/2012	&Sell	&0.1	&-9.09\%\\ \hline
+	4/3/2013	&Buy	&0.03	&\\ \hline
+	2/4/2013	&Sell	&0.03	&0.00\%\\ \hline
+	2/5/2013	&Buy	&0.03	&\\ \hline
+	2/10/2013	&Sell	&0.03	&0.00\%\\ \hline
+	3/11/2014	&Buy	&0.33	&\\ \hline
+	2/2/2015	&Sell	&0.25	&-24.24\%\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-33,33\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A2: Ação SCLO4.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	5/1/2012	&Sell	&3.79	&\\ \hline
+	1/1/2012	&Buy	&3.89	&\\ \hline
+	3/1/2012	&Sell	&3.7	&-4.88\%\\ \hline
+	4/3/2012	&Buy	&3.85	&\\ \hline
+	2/3/2012	&Sell	&3.85	&0.00\%\\ \hline
+	2/4/2012	&Buy	&3.85	&\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-4,88\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A2: Ação TXRX4.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	
+	4/2/2012	&Buy	&0.44	&\\ \hline
+	1/9/2012	&Sell	&0.27	&-38.64\%\\ \hline
+	5/6/2014	&Buy	&0.28	&\\ \hline
+	4/0/2015	&Sell	&0.22	&-21.43\%\\ \hline
+	4/2/2015	&Buy	&0.28	&\\ \hline
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-60,07\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A3: Ação MGEL4.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	2/8/2013	&Sell	&0.22	&\\ \hline
+	4/9/2013	&Buy	&0.17	&\\ \hline
+	5/2/2014	&Sell	&0.12	&-29.41\%\\ \hline
+	2/2/2014	&Buy	&0.11	&\\ \hline
+	1/2/2014	&Sell	&0.12	&9.09\%\\ \hline
+	4/3/2014	&Buy	&0.11	&\\ \hline
+	5/5/2014	&Sell	&0.2	&81.82\%\\ \hline
+	5/9/2014	&Buy	&0.15	&\\ \hline
+	3/1/2015	&Sell	&0.14	&-6.67\%\\ \hline
+		
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{54,83\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A3: Ação SPRI3.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	3/10/2012	&Sell	&0.44	&\\ \hline
+	3/2/2013	&Buy	&0.49	&\\ \hline
+	1/8/2013	&Sell	&0.42	&-14.29\%\\ \hline
+	2/9/2013	&Buy	&0.36	&\\ \hline
+	1/0/2014	&Sell	&0.39	&8.33\%\\ \hline
+	3/2/2014	&Buy	&0.37	&\\ \hline
+		
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-5,96\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A3: Ação TCNO3.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	1/6/2013	&Sell	&0.16	&\\ \hline
+	5/10/2013	&Buy	&0.08	&\\ \hline
+	2/0/2014	&Sell	&0.09	&12.50\%\\ \hline
+	4/2/2014	&Buy	&0.08	&	\\ \hline
+	4/3/2014	&Sell	&0.13	&62.50\%\\ \hline
+	4/5/2014	&Buy	&0.1	&\\ \hline
+	1/5/2014	&Sell	&0.11	&10.00\%\\ \hline
+	4/9/2014	&Buy	&0.22	&\\ \hline
+	2/2/2015	&Sell	&0.14	&-36.36\%\\ \hline		
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{48,64\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A4: Ação BPHA3.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	2/4/2012	&Sell	&9.32	&\\ \hline
+	3/6/2012	&Buy	&10.93	&\\ \hline
+	2/9/2012	&Sell	&12.35	&12.99\%\\ \hline
+	1/10/2012	&Buy	&12.69	&\\ \hline
+	1/2/2013	&Sell	&13.9	&9.54\%\\ \hline
+	2/9/2013	&Buy	&8.55	&\\ \hline
+	1/10/2013	&Sell	&7.45	&-12.87\%\\ \hline
+	1/5/2014	&Buy	&3.73	&\\ \hline
+	1/6/2014	&Sell	&3.3	&-11.53\%\\ \hline
+	2/7/2014	&Buy	&3.89	&\\ \hline
+	1/9/2014	&Sell	&3.77	&-3.08\%\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{4,95\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A4: Ação CBEE3.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	2/1/2012	&Buy	&1.8	&\\ \hline
+	4/3/2012	&Sell	&1.31	&-27.22\%\\ \hline
+	1/4/2012	&Buy	&1.7	&\\ \hline
+	1/5/2012	&Sell	&1.58	&-7.06\%\\ \hline
+	1/7/2012	&Buy	&1.46	&\\ \hline
+	3/9/2012	&Sell	&1.3	&-10.96\%\\ \hline
+	5/4/2013	&Buy	&1.75	&\\ \hline
+	4/6/2013	&Sell	&1.16	&-33.71\%\\ \hline
+	4/7/2013	&Buy	&1.33	&\\ \hline
+	3/9/2013	&Sell	&1.29	&-3.01\%\\ \hline
+	2/11/2013	&Buy	&1.29	&\\ \hline
+	3/0/2014	&Sell	&1.2	&-6.98\%\\ \hline
+	4/3/2014	&Buy	&1.14	&\\ \hline
+	2/4/2014	&Sell	&1.2	&5.26\%\\ \hline
+	4/4/2014	&Buy	&1.24	&\\ \hline
+	5/6/2014	&Sell	&1.25	&0.81\%\\ \hline
+	5/7/2014	&Buy	&1.23	&\\ \hline
+	1/7/2014	&Sell	&1.2	&-2.44\%\\ \hline
+	3/8/2014	&Buy	&1.16	&\\ \hline
+	4/8/2014	&Sell	&1.15	&-0.86\%\\ \hline
+	1/11/2014	&Buy	&1.05	&\\ \hline
+	1/0/2015	&Sell	&1.09	&3.81\%\\ \hline
+	3/0/2015	&Buy	&1		&\\ \hline
+	1/1/2015	&Sell	&1.09	&9.00\%\\ \hline
+	5/1/2015	&Buy	&0.95	&\\ \hline
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-73,36\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A4: Ação HETA4.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	5/2/2012	&Sell	&0.37	&\\ \hline
+	1/7/2012	&Buy	&0.25	&\\ \hline
+	4/8/2012	&Sell	&0.23	&-8.00\%\\ \hline
+	2/0/2013	&Buy	&0.16	&\\ \hline
+	4/0/2013	&Sell	&0.17	&6.25\%\\ \hline
+	3/4/2013	&Buy	&0.14	&\\ \hline
+	1/6/2013	&Sell	&0.28	&100.00\%\\ \hline
+	4/8/2013	&Buy	&0.32	&\\ \hline
+	1/9/2013	&Sell	&0.27	&-15.63\%\\ \hline
+	4/11/2013	&Buy	&0.31	&\\ \hline
+	3/1/2014	&Sell	&0.31	&0.00\%\\ \hline
+	1/6/2014	&Buy	&0.33	&\\ \hline
+	2/9/2014	&Sell	&0.4	&21.21\%\\ \hline
+	3/2/2015	&Buy	&0.34	&\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{103,83\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A4: Ação MLFT4.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	
+	3/5/2012	&Sell	&1.7	&\\ \hline
+	1/7/2012	&Buy	&1.57	&\\ \hline
+	1/8/2012	&Sell	&1.55	&-1.27\%\\ \hline
+	2/9/2012	&Buy	&1.69	&\\ \hline
+	4/11/2012	&Sell	&1.57	&-7.10\%\\ \hline
+	1/0/2013	&Buy	&1.7	&\\ \hline
+	1/3/2013	&Sell	&1.72	&1.18\%\\ \hline
+	5/9/2013	&Buy	&1.58	&\\ \hline
+	2/10/2013	&Sell	&1.5	&-5.06\%\\ \hline
+	2/11/2013	&Buy	&1.6	&\\ \hline
+	4/1/2014	&Sell	&1.6	&0.00\%\\ \hline
+	3/7/2014	&Buy	&1.4	&\\ \hline
+	3/7/2014	&Sell	&1.34	&-4.29\%\\ \hline
+	3/9/2014	&Buy	&1.36	&\\ \hline
+	2/10/2014	&Sell	&1.22	&-10.29\%\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-28,83\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A4: Ação VVAR3.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	2/3/2012	&Sell	&20	 &\\ \hline
+	4/7/2012	&Buy	&19	 &\\ \hline
+	1/8/2012	&Sell	&18	 &-5.26\%\\ \hline
+	1/11/2012	&Buy	&18	 &\\ \hline
+	1/0/2013	&Sell	&18	 &0.00\%\\ \hline
+	2/1/2013	&Buy	&18.02	&\\ \hline
+	2/6/2013	&Sell	&23		&27.64\%\\ \hline
+	2/7/2013	&Buy	&24	   &\\ \hline
+	5/10/2013	&Sell	&8.97	&-62.63\%\\ \hline
+	5/3/2014	&Buy	&7.1	&\\ \hline
+	1/6/2014	&Sell	&7.55	&6.34\%\\ \hline
+	4/8/2014	&Buy	&8.09	&\\ \hline
+	5/9/2014	&Sell	&7	    &-13.47\%\\ \hline
+	4/10/2014	&Buy	&7.5	&\\ \hline
+	4/11/2014	&Sell	&5.13	&-31.60\%\\ \hline
+	5/0/2015	&Buy	&7.38	&\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-78,98\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A5: Ação JHSF3.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	3/4/2012	&Sell	&5.96	&\\ \hline
+	2/7/2012	&Buy	&6.75	&\\ \hline
+	1/2/2013	&Sell	&8		&18.52\%\\ \hline
+	4/8/2013	&Buy	&6.72	&\\ \hline
+	4/9/2013	&Sell	&5.58	&-16.96\%\\ \hline
+	4/1/2014	&Buy	&4.1	&\\ \hline
+	1/2/2014	&Sell	&4		&-2.44\%\\ \hline
+	5/6/2014	&Buy	&4		&\\ \hline
+	5/8/2014	&Sell	&3.84	&-4.00\%\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-4,88\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A5: Ação MMXM3.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	5/4/2012	&Sell	&8.18	&\\ \hline
+	3/0/2013	&Buy	&3.95	&\\ \hline
+	5/1/2013	&Sell	&3.3	&-16.46\%\\ \hline
+	3/7/2013	&Buy	&1.99	&\\ \hline
+	4/9/2013	&Sell	&1.07	&-46.23\%\\ \hline
+	5/0/2014	&Buy	&3.7	&\\ \hline
+	2/3/2014	&Sell	&2.54	&-31.35\%\\ \hline
+	2/11/2014	&Buy	&0.59	&\\ \hline
+	5/2/2015	&Sell	&0.66	&11.86\%\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-82,18\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A5: Ação OGXP3.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	4/4/2012	&Sell	&13.75	&\\ \hline
+	1/8/2012	&Buy	&6.63	&\\ \hline
+	3/9/2012	&Sell	&4.63	&-30.17\%\\ \hline
+	2/0/2014	&Buy	&0.31	&\\ \hline
+	5/2/2014	&Sell	&0.25	&-19.35\%\\ \hline
+	2/6/2014	&Buy	&0.19	&\\ \hline
+	4/7/2014	&Sell	&0.18	&-5.26\%\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-54,78\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A5: Ação VIVR3.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	5/1/2012	&Buy	&2.14	&\\ \hline
+	3/4/2012	&Sell	&1.93	&-9.81\%\\ \hline
+	4/1/2013	&Buy	&1.04	&\\ \hline
+	5/3/2013	&Sell	&0.63	&-39.42\%\\ \hline
+	5/9/2013	&Buy	&0.32	&\\ \hline
+	4/0/2014	&Sell	&0.25	&-21.88\%\\ \hline
+	1/7/2014	&Buy	&0.21	&\\ \hline
+	3/9/2014	&Sell	&0.12	&-42.86\%\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-113,97\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A6: Ação CRIV4.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	5/2/2012	&Sell	&4.32	&\\ \hline
+	3/5/2012	&Buy	&3.99	&\\ \hline
+	5/7/2012	&Sell	&4.05	&1.50\%\\ \hline
+	2/5/2013	&Buy	&5.19	&\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{1,5\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A6: Ação MWET4.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	
+	4/8/2012	&Sell	&1.18	&\\ \hline
+	4/10/2012	&Buy	&1.12	&\\ \hline
+	2/3/2013	&Sell	&0.94	&-16.07\%\\ \hline
+	4/3/2013	&Buy	&0.78	&\\ \hline
+	1/3/2013	&Sell	&1.1	&41.03\%\\ \hline
+	2/6/2013	&Buy	&0.91	&\\ \hline
+	5/7/2013	&Sell	&1.09	&19.78\%\\ \hline
+	3/8/2013	&Buy	&0.91	&\\ \hline
+	2/8/2013	&Sell	&0.97	&6.59\%\\ \hline
+	4/1/2014	&Buy	&1.35	&\\ \hline
+	2/1/2014	&Sell	&1.6	&18.52\%\\ \hline
+	1/1/2014	&Buy	&1.46	&\\ \hline
+	5/1/2014	&Sell	&1.56	&6.85\%\\ \hline
+	2/2/2014	&Buy	&1.38	&\\ \hline
+	5/2/2014	&Sell	&1.63	&18.12\%\\ \hline
+	5/3/2014	&Buy	&1.47	&\\ \hline
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{94,82\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A6: Ação RJCP3.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	3/9/2013	&Sell	&0.02	&\\ \hline
+	1/11/2013	&Buy	&0.01	&\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{0,0\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A6: Ação SNSY5.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	1/1/2012	&Sell	&4.06	&\\ \hline
+	2/4/2012	&Buy	&3.66	&\\ \hline
+	5/7/2012	&Sell	&3.26	&-10.93\%\\ \hline
+	4/9/2012	&Buy	&2.81	&\\ \hline
+	2/9/2013	&Sell	&1.26	&-55.16\%\\ \hline
+	4/10/2013	&Buy	&0.95	&\\ \hline
+	4/3/2014	&Sell	&0.87	&-8.42\%\\ \hline
+	3/4/2014	&Buy	&0.8	&\\ \hline
+	5/7/2014	&Sell	&0.89	&11.25\%\\ \hline
+	2/7/2014	&Buy	&0.81	&\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-63,26\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A7: Ação CBMA4.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	
+	5/2/2012	&Sell	&0.08	&\\ \hline
+	2/7/2012	&Buy	&0.07	&\\ \hline
+	5/8/2012	&Sell	&0.05	&-28.57\%\\ \hline
+	1/9/2012	&Buy	&0.07	&\\ \hline
+	5/11/2012	&Sell	&0.07	&0.00\%\\ \hline
+	3/1/2013	&Buy	&0.06	&\\ \hline
+	5/2/2013	&Sell	&0.05	&-16.67\%\\ \hline
+	1/4/2013	&Buy	&0.05	&\\ \hline
+	3/5/2013	&Sell	&0.05	&0.00\%\\ \hline
+	3/6/2013	&Buy	&0.05	&\\ \hline
+	1/8/2013	&Sell	&0.04	&-20.00\%\\ \hline
+	3/10/2013	&Buy	&0.04	&\\ \hline
+	4/0/2014	&Sell	&0.05	&25.00\%\\ \hline
+	1/1/2014	&Buy	&0.04	&\\ \hline
+	2/2/2014	&Sell	&0.04	&0.00\%\\ \hline
+	5/6/2014	&Buy	&0.05	&\\ \hline
+	4/9/2014	&Sell	&0.05	&0.00\%\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-40,24\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A7: Ação DTCY3.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	5/2/2012	&Sell	&0.91	&\\ \hline
+	4/4/2012	&Buy	&0.9	&\\ \hline
+	3/4/2012	&Sell	&0.8	&-11.11\%\\ \hline
+	1/8/2012	&Buy	&0.66	&\\ \hline
+	2/9/2012	&Sell	&0.57	&-13.64\%\\ \hline
+	2/1/2013	&Buy	&0.66	&\\ \hline
+	2/3/2013	&Sell	&0.59	&-10.61\%\\ \hline
+	4/3/2013	&Buy	&0.59	&\\ \hline
+	3/4/2013	&Sell	&0.51	&-13.56\%\\ \hline
+	1/7/2013	&Buy	&0.43	&\\ \hline
+	1/8/2013	&Sell	&0.4	&-6.98\%\\ \hline
+	2/0/2014	&Buy	&0.4	&\\ \hline
+	3/2/2014	&Sell	&0.31	&-22.50\%\\ \hline
+	3/4/2014	&Buy	&0.4	&\\ \hline
+	4/7/2014	&Sell	&0.45	&12.50\%\\ \hline
+	4/8/2014	&Buy	&0.55	&\\ \hline
+	3/8/2014	&Sell	&0.51	&-7.27\%\\ \hline
+	2/11/2014	&Buy	&0.39	&\\ \hline
+	1/11/2014	&Sell	&0.38	&-2.56\%\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-75,73\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A7: Ação GPCP3.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	
+	1/2/2012	&Sell	&0.43	&\\ \hline
+	3/6/2012	&Buy	&0.37	&\\ \hline
+	3/7/2012	&Sell	&0.34	&-8.11\%\\ \hline
+	5/0/2013	&Buy	&0.16	&\\ \hline
+	4/1/2013	&Sell	&0.16	&0.00\%\\ \hline
+	2/1/2013	&Buy	&0.15	&\\ \hline
+	1/1/2013	&Sell	&0.15	&0.00\%\\ \hline
+	3/1/2013	&Buy	&0.15	&\\ \hline
+	5/2/2013	&Sell	&0.15	&0.00\%\\ \hline
+	4/5/2013	&Buy	&0.09	&\\ \hline
+	3/10/2013	&Sell	&0.41	&355.56\%\\ \hline
+	1/11/2013	&Buy	&0.45	&\\ \hline
+	2/0/2014	&Sell	&0.5	&11.11\%\\ \hline
+	5/1/2014	&Buy	&0.49	&\\ \hline
+	4/2/2014	&Sell	&0.47	&-4.08\%\\ \hline
+	4/2/2014	&Buy	&0.54	&\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{354,48\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A7: Ação PRML3.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	
+	1/3/2012	&Sell	&3.39	&\\ \hline
+	3/6/2012	&Buy	&2.41	&\\ \hline
+	5/8/2012	&Sell	&2.88	&19.50\%\\ \hline
+	1/11/2012	&Buy	&2.4	&\\ \hline
+	1/1/2013	&Sell	&2.02	&-15.83\%\\ \hline
+	1/2/2013	&Buy	&2.02	&\\ \hline
+	4/3/2013	&Sell	&1.87	&-7.43\%\\ \hline
+	5/7/2013	&Buy	&1.6	&\\ \hline
+	1/9/2013	&Sell	&1.25	&-21.88\%\\ \hline
+	2/0/2014	&Buy	&1.09	&\\ \hline
+	3/0/2014	&Sell	&0.96	&-11.93\%\\ \hline
+	1/3/2014	&Buy	&1.22	&\\ \hline
+	3/5/2014	&Sell	&1.1	&-9.84\%\\ \hline
+	2/7/2014	&Buy	&1.1	&\\ \hline
+	2/8/2014	&Sell	&1.02	&-7.27\%\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-54,68\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A7: Ação RCSL4.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	
+	5/2/2012	&Sell	&0.23	&\\ \hline
+	2/8/2012	&Buy	&0.1	&\\ \hline
+	4/8/2012	&Sell	&0.08	&-20.00\%\\ \hline
+	4/7/2013	&Buy	&0.05	&\\ \hline
+	4/8/2013	&Sell	&0.04	&-20.00\%\\ \hline
+	1/8/2013	&Buy	&0.05	&\\ \hline
+	5/11/2013	&Sell	&0.08	&60.00\%\\ \hline
+	5/1/2014	&Buy	&0.08	&\\ \hline
+	4/2/2014	&Sell	&0.06	&-25.00\%\\ \hline
+	3/4/2014	&Buy	&0.07	&\\ \hline
+	3/5/2014	&Sell	&0.06	&-14.29\%\\ \hline
+	2/7/2014	&Buy	&0.05	&\\ \hline
+	5/8/2014	&Sell	&0.05	&0.00\%\\ \hline
+	4/11/2014	&Buy	&0.04	&\\ \hline
+	1/11/2014	&Sell	&0.03	&-25.00\%\\ \hline
+	4/2/2015	&Buy	&0.04	&\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-44,29\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+\subsection{Dados Simulação Perfil Corajoso}
+
+
+\begin{center}
+\begin{longtable}{| p{2cm} | p{10cm} |p{2cm} |}
+\caption*{Estratégias Perfil Corajoso e Resultados} \\
+\hline
+\textbf{Agente} & \textbf{stratégia} & \textbf{Percentual de Ganho} \\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{Agente} & \textbf{stratégia} & \textbf{Percentual de Ganho} \\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	A1 & Bearish - Bullish & -34,71\% \\ \hline
+	A2 & Dark Cloud - Bullish Engulf & -6,45\% \\ \hline
+	{} & \textbf{TOTAL GERAL} & -\textbf{18,08\%} 
+	
+\label{t10}
+\end{longtable}
+\end{center} 
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A1: Ação BMKS3.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	
+	05/02/12	&Sell	&329.9	&\\ \hline
+	06/19/12	&Buy	&305.95	&\\ \hline
+	06/24/12	&Sell	&295	&-3.58\%\\ \hline
+	08/14/12	&Buy	&305	&\\ \hline
+	08/28/12	&Sell	&298	&-2.30\%\\ \hline
+	09/05/12	&Sell	&290	&\\ \hline
+	03/19/13	&Sell	&362	&\\ \hline
+	04/01/13	&Buy	&375	&\\ \hline
+	05/02/13	&Sell	&351	&-6.40\%\\ \hline
+	09/02/13	&Buy	&330	&\\ \hline
+	09/03/13	&Sell	&320.06	&-3.012\%\\ \hline
+	09/23/13	&Buy	&340	&\\ \hline
+	11/20/13	&Sell	&331	&-2.647\%\\ \hline
+	01/14/14	&Buy	&340	&\\ \hline
+	03/07/14	&Sell	&320.5	&-5.735\%\\ \hline
+	03/14/14	&Buy	&350	&\\ \hline
+	03/25/14	&Sell	&337	&-3.714\%\\ \hline
+	03/26/14	&Buy	&350	&\\ \hline
+	03/27/14	&Sell	&330	&-5.714\%\\ \hline
+	04/04/14	&Buy	&350	&\\ \hline
+	04/18/14	&Sell	&344	&\\ \hline
+	04/24/14	&Buy	&349	&\\ \hline
+	04/28/14	&Sell	&330	&-5.444\%\\ \hline
+	07/24/14	&Buy	&310	&\\ \hline
+	08/04/14	&Sell	&299	&-3.548\%\ \\ \hline
+	08/13/14	&Buy	&305	&\\ \hline
+	09/10/14	&Sell	&300	&-1.639\%\\ \hline
+	09/23/14	&Buy	&320	&\\ \hline
+	10/02/14	&Sell	&285	&-10.938\%\\ \hline
+	11/28/14	&Buy	&298	&\\ \hline
+	12/10/14	&Sell	&270	&-9.396\%\\ \hline
+	01/16/14	&Buy	&288.98	&\\ \hline
+	01/29/14	&Sell	&260.25	&-9.942\%\\ \hline
+	02/19/15	&Buy	&275	&\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-54,68\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A1: Ação DAGB11.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	
+	02/02/12	&Sell	&204	&\\ \hline
+	03/22/12	&Buy	&232	&\\ \hline
+	04/19/12	&Buy	&240	&\\ \hline
+	05/24/12	&Sell	&237	&-1.25\%\\ \hline
+	06/15/12	&Buy	&242	&\\ \hline
+	08/09/12	&Sell	&243	&0.413\%\\ \hline
+	08/14/12	&Buy	&251	&\\ \hline
+	09/28/12	&Sell	&242.5	&-3.386\%\\ \hline
+	12/14/12	&Sell	&267	&\\ \hline
+	12/17/12	&Buy	&274	&\\ \hline
+	01/01/12	&Sell	&272	&-0.730\%\\ \hline
+	01/03/12	&Sell	&268	&\\ \hline
+	02/12/13	&Sell	&281.78	&\\ \hline
+	04/23/13	&Buy	&269.5	&\\ \hline
+	06/11/13	&Buy	&288	&\\ \hline
+	10/10/13	&Sell	&322	&11.806\%\\ \hline
+	01/20/14	&Sell	&400.5	&\\ \hline
+	02/20/14	&Buy	&395.99	&\\ \hline
+	02/24/14	&Sell	&387	&-2.270\%\\ \hline
+	03/03/14	&Buy	&396	&\\ \hline
+	06/02/14	&Buy	&375	&	\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{4,58\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A2: Ação KLBN4.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	
+	03/13/12	&Buy	&9.63	&\\ \hline
+	09/21/12	&Sell	&10.07	&4.569\%\\ \hline
+	09/25/12	&Sell	&10.01	&\\ \hline
+	09/27/12	&Sell	&10.3	&\\ \hline
+	11/16/12	&Buy	&11.85	&\\ \hline
+	11/21/12	&Buy	&12.14	&\\ \hline
+	11/23/12	&Buy	&12	&\\ \hline
+	11/26/12	&Buy	&11.8   &	\\ \hline
+	11/27/12	&Buy	&11.7	&\\ \hline
+	11/28/12	&Buy	&12		&\\ \hline
+	11/29/12	&Buy	&12		&\\ \hline
+	11/30/12	&Buy	&12.04	&\\ \hline
+	04/05/13	&Buy	&14.29	&\\ \hline
+	04/08/13	&Buy	&14.42	&\\ \hline
+	04/09/13	&Buy	&14.41	&\\ \hline
+	04/10/13	&Buy	&14.53	&\\ \hline
+	04/12/13	&Buy	&13.76	&\\ \hline
+	04/15/13	&Buy	&13.53	&\\ \hline
+	04/16/13	&Buy	&13.76	&\\ \hline
+	04/17/13	&Buy	&13.34	&\\ \hline
+	04/18/13	&Buy	&13.43	&\\ \hline
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{4,00\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm} |p{2cm} |}
+\caption*{Agente A2: Ação USIM3.SA} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{DATA} & \textbf{Ordem} & \textbf{R\$} & \textbf{Ganho (\%)}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	09/19/12	&Buy	&13.49	&\\ \hline
+	09/20/12	&Buy	&13.29	&\\ \hline
+	09/24/12	&Buy	&13.2	&\\ \hline
+	09/25/12	&Buy	&11.7	&\\ \hline
+	09/26/12	&Buy	&12.22	&\\ \hline
+	09/28/12	&Buy	&11.62	&\\ \hline
+	10/01/12	&Buy	&11.74	&\\ \hline
+	11/28/12	&Buy	&12.66	&\\ \hline
+	11/29/12	&Buy	&13.6	&\\ \hline
+	11/30/12	&Buy	&13.65	&\\ \hline
+	11/03/12	&Buy	&14.06	&\\ \hline
+	12/04/12	&Buy	&13.85	&\\ \hline
+	11/05/12	&Buy	&13.16	&\\ \hline
+	12/06/12	&Buy	&12.92	&\\ \hline
+	12/07/12	&Buy	&13.6	&\\ \hline
+	12/10/12	&Buy	&13.67	&\\ \hline
+	12/11/12	&Buy	&13.52	&\\ \hline
+	02/06/12	&Sell	&11.2	-16.976\%\\ \hline
+	02/08/13	&Sell	&11.33	&\\ \hline
+	02/11/13	&Sell	&11.33	&\\ \hline
+	07/31/13	&Sell	&8.77	&\\ \hline
+	08/01/13	&Sell	&8.76	&\\ \hline
+	08/02/13	&Sell	&8.6	&\\ \hline
+	08/05/13	&Sell	&8.77	&\\ \hline
+	08/06/13	&Sell	&8.5	&\\ \hline
+	08/07/13	&Sell	&8.67	&\\ \hline
+	08/08/13	&Sell	&9.09	&\\ \hline
+	08/09/13	&Sell	&9.58	&\\ \hline
+	08/12/13	&Sell	&9.58	&\\ \hline
+	01/03/14	&Buy	&12.35	&\\ \hline
+	01/06/14	&Buy	&12.49	&\\ \hline
+	01/07/14	&Buy	&12.54	&\\ \hline
+	01/08/14	&Buy	&12.39	&\\ \hline
+	01/09/14	&Buy	&12.21	&\\ \hline
+		
+
+	{} 		&{}		&\textbf{\% Acumulado} 	&\textbf{-16,9\%}
+
+\label{t1}
+\end{longtable}
+\end{center}
 
 
 \section{AÇÕES TOMADAS} 
