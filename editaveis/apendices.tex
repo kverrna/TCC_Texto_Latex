@@ -1391,5 +1391,231 @@ Todas estratégias de todos perfis foram simuladas de maneira conjunta de acordo
 
 \section{CONCLUSÃO} 
 
+\chapter{ARQUITETURA}
+\section{INTRODUÇÃO}
+
+Neste documento é detalhado as principais partes da arquitetura implementada para a Ferramenta de Software desenvolvida.  A arquitetura é composta por padrões de projetos orientados a objetos e por agentes comportamentais de Software. O Padrão Arquitetural adotado é o Model-View-Controller adaptado ao uso do paradigma Orientado a Agentes Comportamentais. Este documento contém ainda, uma proposta de refatoração arquitetural no tocante aos Agentes implementados, tais sugestões foram obtidas através da experiência do desenvolvedor com o paradigma e como ele é interpretado pela plataforma JADE.
+
+\section{OBJETIVOS}
+
+Este Documento de Arquitetura da Ferramenta de Software provê uma visão geral da arquitetura, usando um conjunto de visões para tratar aspectos específicos do paradigma abordado. 
+
+Este documento serve como um subsidio para posteriores manutenções evolutivas ou corretivas da Ferramenta de Software.
+
+%\section{ORGANIZAÇÃO DO DOCUMENTO}
+
+%Este documento esta organizando em: (i) \textbf{Arquitetura}, contém a visão geral da arquitetura bem como visões específicas da partes mais importantes da arquitetura. ()
+
+\section{ARQUITETURA}
+\subsection{Visão Geral}
+
+Esta Ferramenta de Software foi desenvolvida com o propósito de auxiliar um cidadão brasileiro a comprar boas ações e vender-las de maneira que obtenha o maior lucro possível, dentro do perfil de usuário escolhido. A Ferramenta proposta está contextualizada na Bolsa de Valores de São Paulo e esta faz uso de estratégias financeiras baseadas em análise técnica de Ações da Bolsa. Ao identificar alguma Ação para compra, ela sugere ao usuário sua compra e posteriormente sua venda. 
+
+O Objetivo Geral da Arquitetura é \textit{“Prover uma Ferramenta de Estratégia Financeira apoiada por Sistemas Multiagentes Comportamentais”}. E os objetivos Específicos atendidos pela Arquitetura da Ferramenta são : (i) Abstrair a complexidade de Cálculos financeiros comumente utilizados na Análise Técnica; e (ii) Explorar o Paradigma de Sistemas Multiagentes Comportamentais baseados em tempo, no contexto financeiro. Para tal, foram criadas as seguintes Estórias de Usuário, estas nortearam o desenvolvimento:
+
+\begin{enumerate}
+
+	\item Como engenheiro, quero um agente capaz de montar e gerir uma carteira de ações de acordo com o perfil de investidos escolhido pelo usuário e valor investido. 
+	\item Como engenheiro, quero um agente capaz de tomar estratégias financeiras de acordo com o perfil de investidor escolhido pelo usuário e valor investido.
+\end{enumerate}
+
+Para atender estas estórias de usuário, assim como as demais estórias do Backlog da Ferramenta de Software desenvolvida, foram criadas Camadas de Software. A primeira camada, camada de Visão, abriga os código relacionados a tecnologia Web, Grails. Esta responsável por ser a principal interface com o usuário final. As segunda  e terceira camadas, Canada de Controle e Modelo, abrigam os código relacionados ao servidor, escrito em Linguagem JAVA+JADE. 
+
+\begin{figure}[h]
+\centering
+\label{f1}
+\includegraphics[width=0.6\textwidth]{figuras/arquiteturaVisaoGeral}
+\newline{Figura 01:Arquitetura visão Geral}
+\end{figure}
+
+A Camada de Controle contém o pacote core. No pacote core estão concentrados os códigos que implementam os agentes comportamentais propostos e suas classes de suporte, concentra-se neste pacote de maneira adicional, uma estrutura proposta para futura refatoração arquitetural da ferramenta, no tocante aos comportamentos dos agente. O tópicos seguintes apresentam mais detalhes dos agentes implementados contidos neste pacote.
+
+A Camada de Modelo contém o pacote suport, este dividido em três subpacotes - financial, util  e statistical. De maneira sucinta,  as classes  contidas no subpacote financial são responsáveis por prover o mecanismo de estratégias financeiras a serem utilizadas pelos agentes comportamentais da Ferramenta de Software. As classes contidas no subpacote statistical são responsáveis por prover mecanismos de calculos estatisticos utilizados por agentes do tipo Caçador (Hunter) para selecionar Ações  compatíveis com os perfis abordados pela Ferramenta, elas são utilizadas ainda pelos agentes do  tipo Gestor (Manager) para realizar o controle de risco envolvido em uma carteira de Ações. As classes contidas no pacote util, são responsáveis por prover o mecanismo de persistência de dados no MongoDB. Vale ressaltar que a comunicação entre as camadas de Visão e Controle é feita via banco de dados, como ilustrado na figura 2.
+
+
+\begin{figure}[h]
+\centering
+\label{f2}
+\includegraphics[width=0.9\textwidth]{figuras/comunicacao}
+\newline{Figura 02: Comunicação entre camadas}
+\end{figure}
+
+\subsection{Pacote Core}
+
+O pacote core contém as classes que implementam os Agentes comportamentais utilizados na Ferramenta de Software desenvolvida. Ele contém o subpacote agent e este por sua vez contém  os subpacotes behaviours,  util e suport.   O subpacote util contém classes responsáveis por realizar testes funcionais de comportamentos de agentes, como apresentado no figura 3.   As Classes AgentA e AgentB tem o propósito de realizar  testes de comunicação e comportamentos , esta estratégia foi necessária uma vez que a plataforma JADE até a data de publicação deste documento carecia uma estrutura adequada para testes de comportamentos. As Classes StockAgent, SimulationBehaviour, StocksInMemory e Simulation Setup compõe uma estrutura pensada pelo desenvolvedor para simular a Ferramenta quando não houver conexão com a internet.
+
+O pacote behaviours contém comportamentos isolados a serem agregados a agentes que necessitarem deles. Durante o desenvolvimento da Ferramenta proposta e após seguir as práticas adotadas pelas literaturas relacionadas à implementação de agentes com o JADE, o desenvolvedor elaborou uma arquitetura baseada em interfaces de maneira a reduzir o acoplamento de classes que implementam agentes comportamentais, bem como facilitar futuras manutenções evolutivas e corretivas. Esta arquitetura contém uma interface denominada ProcedureBehaviour e uma classe concreta denominada CommunicationBehaviour, e é uma sugestão de manutenção evolutiva para a Ferramenta de Software, figura 4.
+
+\begin{figure}[h]
+\centering
+\label{f3}
+\includegraphics[width=0.9\textwidth]{figuras/pacoteAgents_Util}
+\newline{Figura 03: Classes de Apoio}
+\end{figure}
+
+A Classe CommunicationBehaviour implementa o comportamento em comum entre os agentes comportamentais que é receber mensagens de outros agentes e responder estas mensagens através da execução de um comportamento. Esta classe dispõe de um mecanismo de adição de comportamentos, na qual para que essa adição seja feita é necessário informar a classe, os atributos ConversationID e uma classe concreta ProcedureBehaviour. Um classe agente comportamental pode utilizar uma classe ProcedureBehaviour sem a necessidade de utilizar a classe CommunicationBehaviour. Esta classe agente pode utilizar da agregação para aplicar o seu conjunto de comportamentos, assim reduzindo o acoplamento da classe e aumentando sua coesão.
+
+\begin{figure}[h]
+\centering
+\label{f4}
+\includegraphics[width=0.9\textwidth]{figuras/pacoteBehaviours}
+\newline{Figura 04: Arquitetura sugerida para refatoração arquitetural}
+\end{figure}
+
+\subsubsection{Agentes implementados}
+
+Conforme proposto no capítulo 4, Foram implementados os 3 tipos de agentes de Software planejados: (i) Agente Gestor; (ii) Agente Especialista; (iii) Agente Caçador. No entanto, verificou-se a necessidade em criar um quarto tipo de Agente de Software, o Agente Criador. Este responsável por auxiliar na comunicação entre usuários web com seus respectivos Agentes de Software. 
+
+\subsubsubsection{Agente Gestor (Manager)}
+
+O Agente do tipo Gestor é o responsável por administrar a carteira de ações dos usuários, ações que por sua vez são acompanhadas por Agentes Especialistas. Ele autoriza uma compra ou venda de ações analisadas pelos Agentes Especialistas, vale ressaltar que essa autorização passa pelo usuário vinculado ao grupo de Agentes. O Agente Gestor, de maneira autônoma, faz o monitoramento de risco envolvido na carteira de ações administrada. Bem como, executa o processo de montagem de carteira de maneira alinhada com o perfil escolhido pelo usuário. De acordo com as responsabilidades descritas no capitulo 4, foram implementadas as seguintes responsabilidades: 
+
+\begin{itemize}
+
+	\item \textbf{Criar e excluir um ou mais Agentes Especialistas}\newline\newline
+	Todo Agente Gestor é criado pelo Agente Criador presente no servidor. A figura 5 ilustra o processo de criação dos Agentes especialistas de acordo com o perfil escolhido pelo usuário. Após criados os Especialistas, é iniciado o processo de montagem de carteira de ações. Apresentado no tópico seguinte.
+\begin{figure}[h]
+\centering
+\label{f5}
+\includegraphics[width=0.9\textwidth]{figuras/f29}
+\newline{Figura 5: Processo de criação dos Agentes do tipo Gestor}
+
+\end{figure}
+
+	\item \textbf{Montar carteiras de ações}\newline\newline
+	A figura 6 ilustra o processo de montagem de uma carteira de ações, bem como o processo de rateio de ações entre os Agentes Especialistas vinculados ao grupo de Agentes. Vale ressaltar que de acordo com o processo previsto no capítulo 4, as ações escolhidas são alinhadas com o perfil escolhido pelo próprio usuário.  \newline
+	
+	O processo de montagem de carteira de ações inicia-se no momento em que o um Agente Gestor é instanciado no servidor. Após ser instanciado, o Agente Gestor recebe do Agente criador uma mensagem contendo informações do usuário tais como: (i) Nome; (ii) Valor investido; e (iii) Perfil escolhido. O Agente Gestor envia uma mensagem ao Agente Caçador de Ações solicitando um grupo de ações compatíveis ao perfil escolhido pelo usuário, figura 7. Após escolher as ações, o Agente Gestor faz o rateio entre os Agentes Especialistas. Por fim, ao concluir os processos de montagem de carteira de ação e rateio, o Agente Gestor inicia o processo contínuo de monitoramento do risco na carteira, figura 8.
+
+
+
+\begin{figure}[h]
+\centering
+\label{f6}
+\includegraphics[width=0.7\textwidth]{figuras/f31}
+\newline{Figura 6: Processo de montagem de uma Carteira de Ações}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\label{f7}
+\includegraphics[width=0.9\textwidth]{figuras/f34}
+\newline{Figura 7: Processo Troca de Mensagens Agente Gestor e Agente Criador}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+\label{f8}
+\includegraphics[width=0.9\textwidth]{figuras/f37}
+\newline{Figura 8: Monitoramento de risco da carteira de ações}
+\end{figure}
+\item \textbf{Gerir careiras de ações}\newline\newline
+Foi implementado no Agente Gestor um comportamento cíclico responsável por monitorar os riscos envolvidos na carteira de ações, que por sua vez acompanhadas por Agentes Especialistas. O Agente Gestor é capaz de cancelar uma operação de compra, caso esta represente um grau de risco incompatível com o perfil escolhido pelo usuário, figura 9.
+
+\begin{figure}[h]
+\centering
+\label{f9}
+\includegraphics[width=0.9\textwidth]{figuras/f38}
+\newline{Figura 9: Acompanhamento de risco em operações}
+\end{figure}
+\end{itemize}
+
+\subsubsubsection{Agente Especialista (Expert)}
+
+Conforme descrito no capítulo 4, o Agente Especialista é o Agente responsável por realizar leituras constantes do mercado de valores em busca de novas cotações das ações sob sua responsabilidade. Ele é criado pelo seu Agente Gestor e executa estratégias compatíveis com o perfil escolhido pelo usuário, recebe ainda um grupo de ações na qual será responsável. Durante o Desenvolvimento, verificou-se necessário transferir a responsabilidade de mensurar risco de estratégias para o seu Agente Gestor, e após implementação verificou-se empiricamente que executar uma rotina de simulação poderia onerar o servidor devido ao consumo de memória ao manipular objetos Candlesticks em grande quantidade. Com isso, foram implementadas as seguintes responsabilidades: (i) Aplicar estratégias que ofereçam o maior lucro possível compatível com o perfil escolhido pelo usuário; e (ii) Solicitar autorização para realizar compra ou venda de ações, figura 11.
+
+
+\begin{figure}[h]
+\centering
+\label{f10}
+\includegraphics[width=0.9\textwidth]{figuras/f40}
+\newline{Figura 10: Acompanhamento de risco em operações}
+\end{figure}
+
+\subsubsubsection{Agente Caçador (Hunter)}
+Conforme descrito no capitulo 4, o Agente Caçador é responsável por fazer buscas constantes de cotações de ações presentes na bolsa de valores e trabalhadas pela ferramenta e realizará uma categorização destas ações através de valores estatísticos, tais como: (i) retorno médio diário; (ii) retorno médio 15 e 30 dias; (iii) variância média diária; e (iv) variância média 15 e 30 dias. Através destes valores, o Agente Caçador seleciona grupos de ações compatíveis com os perfis informados por Agentes Gestores no procedimento de montagem de carteira. De acordo com as responsabilidades descritas no capitulo 4, foram implementadas as seguintes responsabilidades: (i) Busca e Seleção das melhores ações a se investir, estas ações variam de acordo com o perfil de usuário tratado pelos Agentes Gestores. O processo é ilustrado na figuras 11; e (ii) categorização de ações através de valores estatísticos, o Agente caçador faz cálculos estatísticos frequentes dada ação abordada na ferramenta e os utiliza como parâmetro de escolha para selecionar ações para atender as solicitações dos Agentes Gestores, como ilustrado na figuras 12.
+
+\begin{figure}[h]
+\centering
+\label{f11}
+\includegraphics[width=0.9\textwidth]{figuras/f42}
+\newline{Figura 11: Processo de escolha de ações}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\label{f12}
+\includegraphics[width=0.9\textwidth]{figuras/f44}
+\newline{Figura 12: Persistência de valores estatísticos por ação}
+\end{figure}
+
+\subsubsubsection{Agente Criador (Criator)}
+
+Este agente não foi previsto no capitulo 4, porém durante a implementação verificou-se a necessário criar um tipo de Agente para auxiliar na comunicação entre os usuários e seus respectivos grupos de Agentes. Assim como o Agente Caçador, existe apenas um agente Criador para cada servidor. Suas responsabilidades são: (i) Monitorar a criação de novas contas. O usuário quando cria uma conta o Agente Criador captura as informações repassadas pelo usuário, cria um Agente Gestor para este usuário e o informa através de uma mensagem com informações do usuário tais como nome, valor investido e perfil escolhido; (ii) Monitorar \textit{Log In} de usuários.  Quando um usuário autentica-se na ferramenta, o Agente Criador informa ao seu Agente Gestor para que o mesmo comunique-se com seu usuário, a comunicação entre o Agente Gestor e seu respectivo usuário é demonstrado na figura 15, bem como todas funcionalidades apresentadas neste documento.
+
+\subsection{Pacote Suport}
+
+Este pacote comporta as classes de suporte ao funcionamento da Ferramenta de Software desenvolvida, nele estão classes relacionadas a persistência de dados e a estratégias financeiras utilizadas pelos agentes comportamentais desenvolvidos. A figura 13 ilustra de maneira geral a composição do pacote suport. 
+
+\begin{figure}[h]
+\centering
+\label{f13}
+\includegraphics[width=0.9\textwidth]{figuras/pacoteSuport}
+\newline{Figura 13: Pacote Suport}
+\end{figure}
+
+O pacote suport é divido em três importantes subpacotes, financial, util e statistical. No pacote financial estão concentradas as classes responsáveis por prover as estratégias financeiras utilizadas pelos agentes Especialistas. O subpacote statistical contém classes que dispõe de cálculos estatísticos utilizados pelo agente Caçador para encontrar Ações compatíveis com os três perfis de usuários abordados pela ferramenta. O subpacote util contém as classes responsáveis pela persistência de dados bem como requisições http de novas cotações.
+
+O pacote suport é essencial para futuras manutenções evolutivas da ferramenta, pois para adicionar novas estratégias basta criar novas classes com estas estratégias e implementar a interface Strategy. A figura 14 apresenta o diagrama das duas principais estratégias abordadas na Ferramenta de Software. Caso a manutenção evolutiva tenha como objetivo abordar outras Bolsa de Valores ou mesmo consumir dados diretamente da BM\&FBovespa, o pacote candidato a manutenção será o requests. Pois este, contém as classes que implementam a obtenção de dados e a lógica de armazenamento destes dados.
+
+\begin{figure}[h]
+\centering
+\label{f14}
+\includegraphics[width=0.9\textwidth]{figuras/estrategiasClasses}
+\newline{Figura 14: Estratégias Financeiras}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\label{f15}
+\includegraphics[width=0.9\textwidth]{figuras/f46}
+\newline{Figura 15: Visão geral da Ferramenta}
+\end{figure}
+
+\section{Ferramentas}
+
+
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} |p{4cm}|}
+\caption*{Ferramentas adotadas} \\
+\hline
+\textbf{Nome} & \textbf{Versão} & \textbf{Responsabilidade} \\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{Nome} & \textbf{Versão} & \textbf{Responsabilidade}\\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	JADE	&14.3.2	&Prover Agentes Comportamentais\\ \hline
+	Grails	&2.4.3	&Prover Interface com usuários\\ \hline
+	MongoDB	&3.0.2	&Banco de Dados Não Relacional\\ \hline
+	Maven	&3.3.3	&Gerencia de dependências\\ \hline
+	Java JDK	&1.7.0\_79	&Copilador\\ \hline
+	Eclipse Luna	&4.4.0	&IDE
+
+	
+
+\label{t1}
+\end{longtable}
+\end{center}
+
+
 
 \end{apendicesenv}
