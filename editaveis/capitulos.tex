@@ -1,7 +1,11 @@
 
 \newpage
-
 \chapter[REFERENCIAL TEÓRICO]{Referencial Teórico}
+
+
+Este capítulo apresenta o suporte teórico utilizado para o desenvolvimento da ferramenta. O capítulo está organizado em seções. Na primeira seção, é apresentado o Contexto Financeiro abordado, bem como a abordagem de análise financeira adotada neste Trabalho de Conclusão de Curso. Na segunda seção, é apresentada uma descrição do Paradigma de Sistemas Multiagentes explorado. Adicionalmente, é feita ainda neste capítulo uma explanação acerca das três arquiteturas comumente encontradas em Sistemas Multagentes.
+
+
 \section{Contexto Financeiro}
 \subsection{Mercado Financeiro}
 
@@ -140,6 +144,10 @@ Esse capítulo elucidou o Contexto Financeiro, apresentando como o Mercado Finan
 \newpage
 \FloatBarrier
 \chapter[SUPORTE TECNOLÓGICO]{Suporte Tecnoógico}
+
+Este capítulo apresenta o suporte tecnológico utilizado para o desenvolvimento da ferramenta. O capítulo está organizado em seções. Na primeira seção, são apresentadas ferramentas comumente utilizadas em análises técnicas da Bolsa de Valores. Na segunda seção, são apresentados os padrões de projetos adotados no desenvolvimento da ferramenta, bem como o padrão arquitetural adotado com propósito de contribuir com a manutenabilidade e extensibilidade da ferramenta. Adicionalmente, ainda nessa seção, é apresentada uma descrição mais detalhada do framework JADE. Por fim, é apresentada a metodologia Ágil que foi adaptada para conduzir o desenvolvimento da ferramenta acordada por este Trabalho de Conclusão de Curso.
+
+
 \section{Contexto Financeiro}
 
 Novos recursos tecnológicos são criados periodicamente, sejam linguagens de programação, novas formas de se solucionar um problema, novos produtos derivados da eletrônica, entre outros. No contexto financeiro não é diferente, ferramentas voltadas ao mercado de capitais, com intuito de automatizar as operações de um investidor neste mercado, encontram-se à disposição.
@@ -332,7 +340,7 @@ Essas atividades compreenderam desde "Levantar Referencial Teórico" a "Escrever
 \includegraphics[width=0.9\textwidth]{figuras/f27}
 \caption{Desenvolvimento TCC}
 \end{figure}
-Visando elucidar o que foi realizado em cada atividade, seguem breves descrições sobre sobre essas atividades:
+Visando elucidar o que foi realizado em cada atividade, seguem breves descrições sobre essas atividades:
 
 \begin{description}
 \item [Levantar Referencial Teórico:] Nesta atividade, foram feitos levantamentos de artigos científicos, artigos jornalísticos, publicações de empresas públicas/privadas, possíveis tecnologias que mais se adequassem ao tema tratado no trabalho, possibilitando maior conhecimento dos domínios Financeiro e de Engenharia de Software.
@@ -341,7 +349,7 @@ Visando elucidar o que foi realizado em cada atividade, seguem breves descriçõ
 Nesta atividade, o escopo do TCC foi definido como sendo "Construir uma Ferramenta de estratégia financeira apoiada por Sistemas Multiagentes Comportamentais".
 
 \item [Levantar Suporte Tecnológico:] 
- Nesta atividade, foram levantadas as tecnologias que mais se adequavam, em um primeiro momento, ao coberto no TCC.
+ Nesta atividade, foram levantadas as tecnologias que mais se adequavam, em um primeiro momento, ao tema coberto no TCC.
 
 \item [Desenvolver Provas de Conceito:]
 Nesta atividade, foram implementadas provas de conceito, utilizando uma adaptação da metodologia Scrum, em diferentes suportes tecnológicos, visando à definição de uma boa estratégia em atendimento à ferramenta.
@@ -386,8 +394,8 @@ Nesta etapa do TCC, foi elaborado um cenário para avaliar o esforço necessári
 \end{figure}
 
 \begin{description}
-\item [Elaborar cenário para prova de conceito:]
-Para nortear as provas de conceitos feitas para este estudo, foi elaborado um cenário onde é requerida uma maneira automatizada de se chegar à uma solução. Este cenário é descrito a seguir.
+\item [Elaborar Cenário para Prova de Conceito:]
+Para nortear as provas de conceito feitas para este estudo, foi elaborado um cenário onde é requerida uma maneira automatizada de se chegar à uma solução. Este cenário é descrito a seguir.
 
 \begin{adjustwidth}{1,5cm}{0cm}
 \textit{Uma das maneiras de um investidor acompanhar as movimentações do mercado de capitais, mais especificamente uma Bolsa de Valores, é através de gráficos como: (i) o gráfico de barras ; (ii) o gráfico de linha  e (iii) o gráfico de candlestick\cite[p. 5-6]{matsura2006}. Considerando o último, deseja-se encontrar uma maneira automatizada bem como a formação do padrão de candlestick conhecido como Dark cloud \cite[p.61]{matsura2006}. Padrão este, que poderá compor um plano estratégico de investimento.}
@@ -460,14 +468,14 @@ A Tabela 1  apresenta o tempo gasto para implementar cada algoritmo nas linguage
 
 O algoritmo foi implementado em Java combinado com JADE em um único comportamento, onde o algoritmo concentrado em uma classe é chamado pelo agente. Na linguagem Mql4, o algoritmo implementado retorna uma sinalização visual no gráfico de candlestick, fornecido pela plataforma, alertando a identificação do padrão. Na linguagem Python, o algoritmo implementado retorna uma listagem, contendo informações como datas de ocorrência do padrão, no terminal da IDE utilizada para implementação. Vale ressaltar, que a implementação foi o suficiente para estimar a viabilidade em se implementar a ferramenta proposta no Paradigma de Sistemas Multiagentes.
 
-\item [Analisar resultado:]
+\item [Analisar Resultado:]
 Notou-se que o esforço necessário para implementar o algoritmo nas três linguagens foi aproximadamente o mesmo. Na linguagem Java+JADE e Python, por serem multiplataformas, permitiria desenvolver a ferramenta de forma que a mesma tenha o mesmo comportamento nas plataformas mais populares existentes hoje.
 
 Na ferramenta desenvolvida, um critério de qualidade que merece atenção é a extensibilidade, visando futuras manutenções evolutivas bem como possibilitando trabalhar em mais de um contexto financeiro, como por exemplo, abordar o Mercado de Ações e o Mercado de Renda Fixa simultaneamente. Nesse caso, seria possível trabalhar em um contexto de alto risco de investimento juntamente com um de baixo risco de investimento, obtendo uma melhor gestão de recursos investidos pelo usuário.
 
-Em relação à extensibilidade no contexto financeiro, o Paradigma de Sistemas Multiagentes adequa-se ao estudo, visto que já existe um suporte tecnológico apropriado, um \textit{framework} que atende às necessidades deste TCC, no caso um suporte para troca de mensagens entre entidades de Software – no contexto abordado neste TCC. Esse framework oferece um suporte para troca de mensagens entre entidades inteligentes, no contexto abordado neste TCC, entre investidores. Tal suporte baseia-se na comunicação usando protocolos, padrões bem estabelecidos na comunidade de Software para Sistemas Multiagentes e possibilidades de extensibilidade orientadas, por exemplo, a ontologias específicas.
+Em relação à extensibilidade no contexto financeiro, o Paradigma de Sistemas Multiagentes adequa-se ao estudo, visto que já existe um suporte tecnológico apropriado, um \textit{framework} que atende às necessidades deste TCC. Esse framework oferece um suporte para troca de mensagens entre entidades inteligentes, no contexto abordado neste TCC, entre investidores. Tal suporte baseia-se na comunicação usando protocolos, padrões bem estabelecidos na comunidade de Software para Sistemas Multiagentes e possibilidades de extensibilidade orientadas, por exemplo, a ontologias específicas.
 
-Um outro ponto considerado foi dado que o esforço em se implementar a prova de conceito utilizando a combinação tecnológica linguagem Java e plataforma JADE foi aproximadamente o mesmo em relação às implementações em Python ou Mql4. Portanto, pode-se concluir que a hipótese inicial não se verificou. Assim, a aplicação do Paradigma de Sistemas Multiagentes no contexto financeiro abordado é possível, compreendendo um esforço por parte do desenvolvedor muito próximo dos exigidos nas demais linguagens analisadas.
+Outro ponto considerado foi que o esforço em se implementar a prova de conceito utilizando a combinação tecnológica linguagem Java e plataforma JADE foi aproximadamente o mesmo em relação às implementações em Python ou Mql4. Portanto, pode-se concluir que a hipótese inicial não se verificou. Assim, a aplicação do Paradigma de Sistemas Multiagentes no contexto financeiro abordado é possível, compreendendo um esforço por parte do desenvolvedor muito próximo aos exigidos nas demais linguagens analisadas.
 
 Finalmente, diante das propriedades do Paradigma de Sistemas Multiagentes, expostas no \textbf{capítulo 2} e a descrição do contexto financeiro exposta no mesmo capítulo, nota-se que existem características comuns entre eles. Nesse cenário, merecem menção as seguintes características:
 
@@ -514,7 +522,7 @@ A ferramenta resultante deste TCC teve seu desenvolvimento orientando-se de acor
 
 	01 & Como engenheiro, quero um agente capaz de montar e gerir uma carteira de ações de acordo com o perfil de investidor escolhido pelo usuário. & Produto\\ \hline
 	02 & Como engenheiro, quero um agente capaz de tomar estratégias financeiras de acordo com o perfil de investidor escolhido pelo usuário e valor investido. & Produto\\ \hline
-	03 & Como engenheiro, quero um agente capaz de realizar simulações de suas estratégias financeiras no período em que a bolsa de valores de São Paulo está fechada. & Produto\\ \hline
+	03 & Como engenheiro, quero um agente capaz de realizar simulações de suas estratégias financeiras no período em que a Bolsa de Valores de São Paulo está fechada. & Produto\\ \hline
 	04 & Como engenheiro, quero um agente capaz de realizar buscas contínuas de ações de empresas com presença na Bolsa de Valores de São Paulo e as categorize de acordo com seu setor e retorno diário. & Produto\\ \hline
 	05 & Como engenheiro, quero um mecanismo no qual o usuário possa se cadastrar e se vincular a um grupo de agentes. & Produto\\ \hline
 	06 & Como engenheiro, quero um código em Python capaz de reconhecer o padrão de \textit{candlestick DarkCloud}, independentemente do ativo analisado para construir estratégias de investimentos mais eficientes. & Pesquisa\\ \hline
@@ -570,7 +578,7 @@ Nas estórias do tipo Produto, foram criadas tarefas que nortearam a implementa�
 
 Como previsto na metodologia Ágil Scrum, durante o desenvolvimento da ferramenta foi necessário modificar o Backlog inical. Dentre estas modificações temos : (i) a divisão da estória 01 em duas; (ii) a remoção da estória 03; e (iii) a criação de uma estória relacionada à comunicação dos usuários com seus respectivos agentes.
 
-Quanto à estória 01 - "Eu como engenheiro, quero um agente capaz de montar e gerir uma carteira de ações de acordo com o perfil de investidor escolhido pelo usuário e valor investido.". Esta foi dividida nas seguintes estória com suas respectivas tarefas:
+Quanto à estória 01 - "Eu como engenheiro, quero um agente capaz de montar e gerir uma carteira de ações de acordo com o perfil de investidor escolhido pelo usuário e valor investido.". Esta foi dividida nas seguintes estórias com suas respectivas tarefas:
 
 \begin{description}
 \item[Estória 01:]
@@ -584,13 +592,13 @@ Eu como engenheiro, quero um agente capaz de montar uma carteira de ações de a
 
 \end{itemize}
 
-\item[Estoória 10:]
+\item[Estória 10:]
 Eu como engenheiro, quero um agente capaz de gerir uma carteira de ações de acordo com o perfil escolhido pelo usuário.
 \begin{itemize}
 
 	\item Implementar rotina de cálculo de riscos de carteiras para agentes gestores;
 	\item Implementar critério de intervenção em operações que representem risco em desacordo com o perfil escolhido pelo usuário;
-	\item Implementar rotina de criação e destruição de Agentes Especialistas;
+	\item Implementar rotina de criação e destruição de agentes especialistas;
 	\item Implementar rotina de autorização de operações.
 
 \end{itemize}
@@ -615,7 +623,7 @@ Como engenheiro, quero um agente capaz de prover a comunicação entre os usuár
 
 \end{description}
 
-A tabela 3 apresenta o cronograma seguido no desenvolvimento das estórias de usuário, vale ressaltar que as atividades executadas nos meses de abril e maio de 2015 são relacionadas à atividade "Coletar impressões da ferramenta", descrita brevemente na subsessão 4.3. As tabelas 4, 5 e 6 apresentam  o Backlog final da ferramenta, bem como os percentuais de conclusão das tarefas por estórias e da ferramenta de maneira geral.
+A tabela 3 apresenta o cronograma seguido no desenvolvimento das estórias de usuário, vale ressaltar que as atividades executadas nos meses de abril e maio de 2015 são relacionadas à atividade "Coletar Impressões da ferramenta", descrita brevemente na subsessão 4.3. As tabelas 4, 5 e 6 apresentam  o Backlog final da ferramenta, bem como os percentuais de conclusão das tarefas por estórias e da ferramenta de maneira geral.
 
 \begin{center}
 \begin{longtable}{| p{2cm} | p{5cm} |p{3cm} |p{2cm} |}
@@ -718,7 +726,7 @@ A tabela 3 apresenta o cronograma seguido no desenvolvimento das estórias de us
 	06 & Eu, como pesquisador, quero um código em Python capaz de reconhecer o Padrão de Candlestick DarkCloud, independentemente do ativo analisado para construir estratégias de investimentos mais eficientes & 100\% \\ \hline
 	07 & Eu, como pesquisador, desejo definir estratégias de investimentos de curto prazo em um agente visando testar sua capacidade em atuar no mercado; & 100\%\\ \hline
 	08 & Eu, como pesquisador, quero um código em MQL4 capaz de reconhecer o Padrão de Candlestick DarkCloud, independentemente do ativo analisado para construir estratégias de investimentos mais eficientes; & 100\%\\ \hline
-	09 & Eu, como pesquisador, quero um código em Java+ JADE capaz de reconhecer o Padrão de candlestick DarkCloud, independentemente do ativo analisado para construir estratégias de investimentos mais eficientes. & 100\%\\ \hline
+	09 & Eu, como pesquisador, quero um código em Java+ JADE capaz de reconhecer o Padrão de Candlestick DarkCloud, independentemente do ativo analisado para construir estratégias de investimentos mais eficientes. & 100\%\\ \hline
 	{} & Total Concluído. & 100\%
 \label{t05}
 \end{longtable}
@@ -754,20 +762,20 @@ A tabela 3 apresenta o cronograma seguido no desenvolvimento das estórias de us
 
 O resultado obtido neste TCC foi avaliado de maneira quantitativa e qualitativa. 
 
-Quantitativa através da cobertura de código e métricas de qualidade de código, tais como : (i) Complexidade Ciclomática - CC, adotado para auxiliar no controle dos possíveis caminhos dos algoritmos; (ii)  Acoplamento entre Classes e Objetos - CBO, adotado para mensurar o grau de reusabilidade dos pacotes projetados; e (iii) Falta de Coesão em Métodos - LCOM, adotado para mensurar o grau de reusabilidade das classes. Qualitativa através de questionários aplicados em potenciais usuários da ferramenta com intuito de mensurar o grau de aceitação do usuário, bem como verificar os objetivos adotados neste TCC. Outros dados quanto aos resultados obtidos são apresentados detalhadamente no capitulo 6.
+Quantitativa através da cobertura de código e métricas de qualidade de código, tais como : (i) Complexidade Ciclomática - CC, adotado para auxiliar no controle dos possíveis caminhos dos algoritmos; (ii)  Coesão e Acoplamento  - SC, adotado para mensurar o grau de reusabilidade dos pacotes projetados; e (iii) Herança - DIT, adotado para mensurar o grau de encapsulamento. Qualitativa através de questionários aplicados em potenciais usuários da ferramenta com intuito de mensurar o grau de aceitação do usuário, bem como verificar os objetivos adotados neste TCC. Outros dados quanto aos resultados obtidos são apresentados detalhadamente no capitulo 6.
 
 
 \section{Resumo do Capítulo}
 
 Elucidou-se neste capítulo, um breve levantamento acerca das principais metodologias de pesquisa científica encontradas na literatura, tais como: (i) pesquisa descritiva; (ii) pesquisa explicativa; e (iii) pesquisa exploratória. Esta última sendo a que mais se adequou ao tema coberto neste Trabalho de Conclusão de Curso. 
 
-Foi descrita ainda, a metodologia utilizada para condução do Trabalho de Conclusão de Curso como um todo. Foram descritas, ainda, as metodologias que conduziram o desenvolvimento da ferramenta em si e sua análise dos resultados obtidos.
+Foi descrita ainda, a metodologia utilizada para condução do Trabalho de Conclusão de Curso como um todo. Adicionalmente, foram descritas as metodologias que conduziram o desenvolvimento da ferramenta em si e a análise dos resultados obtidos.
 
 Na subseção 4.3, foram descritas as atividades que compõem a metodologia utilizada para condução do Trabalho de Conclusão de Curso como um todo. Dentre as atividades descritas, destacou-se a atividade de desenvolvimento de provas de conceito, a qual foi de suma importância para definir o suporte tecnológico adequado ao desenvolvimento da ferramenta.   
 
-Na subseção 4.4, foi apresentada a metodologia que conduziu o desenvolvimento da ferramenta em si. Onde foi feita a adaptação da metodologia ágil Scrum. Foi apresentado ainda nesta subseção, o Product Backlog inicial da ferramenta bem como suas modificações sua distribuição no cronograma.
+Na subseção 4.4, foi apresentada a metodologia que conduziu o desenvolvimento da ferramenta em si. No caso, optou-se por uma adaptação da metodologia ágil Scrum. Foi apresentado ainda nesta subseção, o Product Backlog inicial da ferramenta bem como suas modificações e distribuição no cronograma.
 
-Por fim, na subseção 4.5 foi apresentada a metodologia que orientou a análise dos resultados obtidos. Onde os resultados obtidos foram avaliados de maneira quantitativa através da cobertura de código e métricas de qualidade de código. E de maneira qualitativa através de questionários.
+Por fim, na subseção 4.5, foi apresentada a metodologia que orientou a análise dos resultados obtidos. No caso, optou-se por avaliálos de forma quantitativa, através da cobertura de código e de métricas de qualidade de código. Adicionalmente, optou-se por avaliá-los de forma qualitativa, através de questionários aplicados junto aos pontenciais usuários da ferramenta.
 
 
 \newpage
@@ -783,7 +791,7 @@ A ferramenta compreende três níveis arquiteturais, sendo cada um deles breveme
 esse primeiro nível arquitetural corresponde à arquitetura base. Nesse escopo, a ferramenta está orientada pela arquitetura da própria plataforma JADE. Essa arquitetura provê recursos, padronizados pela Foundation for Intelligent Physical Agents (FIPA) \cite{telecon2014}, visando facilitar, dentre outras ações da programação multiagentes: (i) ciclo de vida dos agentes, orientado de acordo com uma máquina de estados desenhada especificamente para sistemas multiagentes comportamentais; (ii) comunicação entre os agentes, garantindo que a interação entre os agentes seja realizada via protocolos e ontologias pré-estabelecidos; (iii) registro dos serviços prestados pelos agentes, facilitando a busca por serviços bem como a localização de um agente em específico; (iv) criação dos agentes, (v) transporte de mensagens, com acompanhamento de troca de mensagens em tempo real, via ferramentas gráficas, e (vi) especificação dos comportamentos, orientando-se pelos tipos de comportamentos estabelecidos na plataforma, sejam eles simples ou compostos.
 
 \item[Segundo Nível Arquitetural:]
-esse segundo nível arquitetural corresponde à arquitetura da ferramenta em si, a qual se orienta pelo padrão arquitetural MVC. Esse padrão foi utilizado, pois a ferramenta é dispobilizada via Web. Dessa forma, a estrutura de pacotes da ferramenta está organizada em três camadas: modelo, visão e controle. Detalhes desse nível arquitetural são acordados nesse capítulo, mais especificamente na próxima seção.
+esse segundo nível arquitetural corresponde à arquitetura da ferramenta em si, a qual se orienta pelo padrão arquitetural MVC. Esse padrão foi utilizado, pois a ferramenta é disponibilizada via Web. Dessa forma, a estrutura de pacotes da ferramenta está organizada em três camadas: modelo, visão e controle. Detalhes desse nível arquitetural são acordados nesse capítulo, mais especificamente na próxima seção.
 
 \item[Terceiro Nível Arquitetural:]
 esse nível arquitetural corresponde à arquitetura da máquina de raciocínio dos agentes. Essa pode ser vista como o core da ferramenta, pois seu escopo corresponde à lógica dos agentes. Essa lógica implementa o \textit{rationale} dos agentes, ou seja, como eles raciocinam e quais ações desempenham. Esse nível arquitetural foi o que demandou maior dedicação ao longo do trabalho aqui apresentado. Visando facilitar o entendimento, a máquina de raciocínio dos agentes pode ser entendida como fazendo parte da camada de controle, quando associada ao modelo MVC. Esse nível arquitetural também é detalhado nesse capítulo, na seção 5.3.
@@ -792,19 +800,18 @@ esse nível arquitetural corresponde à arquitetura da máquina de raciocínio d
 
 \section{Arquitetura da Ferramenta}
 
-Existem duas características que norteiam o desenvolvimento de um Software na atualidade, manutenabilidade e reusabilidade. Para viabilizar que a ferramenta desenvolvida neste TCC atenda essa visão de desenvolvimento de Software, manutenível bem como reutilizável, aliado ao fato da ferramenta ser Web. O modelo arquitetural escolhido foi o MVC \cite{krasner1988}. Dessa forma, os códigos implementados no Paradigma de Sistemas Multiagentes possuem um alto grau de modularização, baixo acoplamento e alta coesão. Assim, a ferramenta desenvolvida possibilita a realização de  manutenções de maneira mais eficiente, dado que o contexto financeiro compreende regras de negócio de alta mutabilidade. 
+Existem duas características que norteiam o desenvolvimento de um Software na atualidade, manutenabilidade e reusabilidade. Para viabilizar que a ferramenta desenvolvida neste TCC atenda essa visão de desenvolvimento de Software, manutenível bem como reutilizável, aliado ao fato da ferramenta ser Web, o modelo arquitetural escolhido foi o MVC \cite{krasner1988}. Dessa forma, os códigos implementados no Paradigma de Sistemas Multiagentes possuem um alto grau de modularização, baixo acoplamento e alta coesão. Assim, a ferramenta desenvolvida possibilita a realização de  manutenções de maneira mais eficiente, dado que o contexto financeiro compreende regras de negócio de alta mutabilidade. 
 
-Em View ou Visão , figura 17 , concentram-se todos os códigos relacionados à interface com o usuário, esta contruida através do Grails versão 2.4.3. Em Controller ou Controle, figura 18, concentraram-se os códigos responsáveis por conectar o usuário com os agentes implementados, representando a máquina de raciocínio dos agentes - o \textit{core} central do Sistema Multiagentes. Em Model ou Modelo, figura 18, concentram-se as entidades do modelo de domínio, representando os agentes de Software, outros modelos conceituais pertinentes (ex. protocolos de comunicação utilizados, regras de negócio do contexto financeiro e outros) e modelo de entidades da camada de persistência.
+Em View ou Visão , figura 17 , concentram-se todos os códigos relacionados à interface com o usuário, esta construída através do Grails versão 2.4.3. Em Controller ou Controle, figura 18, concentraram-se os códigos responsáveis por conectar o usuário com os agentes implementados, representando a máquina de raciocínio dos agentes - o \textit{core} central do Sistema Multiagentes. Em Model ou Modelo, figura 18, concentram-se as entidades do modelo de domínio, representando os agentes de Software, outros modelos conceituais pertinentes (ex. protocolos de comunicação utilizados, regras de negócio do contexto financeiro e outros) e modelo de entidades da camada de persistência.
 
-\begin{figure}[H]
+\begin{figure}[h]
 \centering
 \label{f17}
 \includegraphics[width=0.9\textwidth]{figuras/f24}
 \caption{Camada View}
 \end{figure}
-\FloatBarrier
 
-\begin{figure}[H]
+\begin{figure}[h]
 \centering
 \label{f18}
 \includegraphics[width=0.9\textwidth]{figuras/f25}
@@ -812,38 +819,31 @@ Em View ou Visão , figura 17 , concentram-se todos os códigos relacionados à 
 \end{figure}
 \FloatBarrier
 
+Vale ressaltar que a Camada de Controle contém o pacote core (figura 19), nele estão concentrados os códigos que implementam os agentes comportamentais e suas classes de suporte. Apresenta-se neste pacote de maneira adicional, uma estrutura proposta para futura refatoração arquitetural da ferramenta (figura 20), no tocante aos comportamentos dos agente.
+
 \begin{figure}[h]
 \centering
 \label{f19}
-\includegraphics[width=0.5\textwidth]{figuras/arquiteturaVisaoGeral}
-\caption{Arquitetura Visão Geral}
-\end{figure}
-
-Vale ressaltar, que a Camada de Controle contém o pacote core, nele estão concentrados os códigos que implementam os agentes comportamentais e suas classes de suporte. Concentra-se neste pacote de maneira adicional, uma estrutura proposta para futura refatoração arquitetural da ferramenta, no tocante aos comportamentos dos agente.
-
-\begin{figure}[h]
-\centering
-\label{f21}
 \includegraphics[width=0.6\textwidth]{figuras/pacoteAgents}
 \caption{Pacote core}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-\label{f22}
+\label{f20}
 \includegraphics[width=0.8\textwidth]{figuras/classesUtil}
 \caption{Estrutura elaborada para execução da Ferramenta em modo offline}
 \end{figure}
 
-O Subpacote agent contém os subpacotes: (i) behaviours, comporta classes que implementam comportamentos e estrutura de construção de comportamento proposto pelo autor como refatoração futura; (ii) suport, comporta classes que auxiliam os agentes comportamentais implementados; e (iii) util, comporta classes que compõe a estrutura desenvolvida pelo autor para contornar o problema de ausência de conexão com internet. 
+O Subpacote agent contém os subpacotes: (i) behaviours, comporta classes que implementam comportamentos e estrutura de construção de comportamento proposto pelo autor como refatoração futura; (ii) suport, comporta classes que auxiliam os agentes comportamentais implementados; e (iii) util, comporta classes que compõem a estrutura desenvolvida pelo autor para contornar o problema de ausência de conexão com internet. 
 
-A estrutura desenvolvida para contornar uma possível falha de ausência de conexão com internet, é composta por quatro classes (figura 21): (i) StockAgent, classe que implementa um agente responsável por simular as ações do servidor de cotações; (ii) SimulationBehaviour, classe que implementa o comportamento de resposta à uma requisição de cotação; (iii) StocksInMemory, classe utilizada para carregar uma seleção de dados na memória do computador, dados estes que serão enviados aos agentes que solicitarem cotações; e (iv) SimulationSetup, classe que contém dados essenciais para o funcionamento da ferramenta em modo \textit{offline}.
+A estrutura desenvolvida para contornar uma possível falha de ausência de conexão com internet é composta por quatro classes (figura 20): (i) StockAgent, classe que implementa um agente responsável por simular as ações do servidor de cotações; (ii) SimulationBehaviour, classe que implementa o comportamento de resposta à uma requisição de cotação; (iii) StocksInMemory, classe utilizada para carregar uma seleção de dados na memória do computador, dados estes que serão enviados aos agentes que solicitarem cotações; e (iv) SimulationSetup, classe que contém dados essenciais para o funcionamento da ferramenta em modo \textit{offline}.
 
-A camada de Modelo, comportam classes  essenciais para o funcionamento da ferramenta e dos agentes em si, estas classes estão organizadas no pacote suport. O pacote suport contém três subpacotes: (i) financial, contém as classes responsáveis por prover estratégias financeiras a serem utilizadas por agentes especialistas; (ii) util, contém classes responsáveis por prover o mecanismo de persistência em banco de dados e responsáveis pela lógica de requisição de dados de cotação de ações; e o subpacote (iii) statistical, contém as classes responsáveis por prover mecanismos de cálculos estatísticos utilizados pelos agentes caçadores, no processo de triagem e ações, e pelos agentes gestores, no processo de controle de risco.   
+A camada de Modelo comporta classes  essenciais para o funcionamento da ferramenta e dos agentes em si. Estas classes está organizadas no pacote suport (figura 21). O pacote suport contém três subpacotes: (i) financial, contém as classes responsáveis por prover estratégias financeiras a serem utilizadas por agentes especialistas (figura 22); (ii) util, contém classes responsáveis por prover o mecanismo de persistência em banco de dados e responsáveis pela lógica de requisição de dados de cotação de ações; e o subpacote (iii) statistical, contém as classes responsáveis por prover mecanismos de cálculos estatísticos utilizados pelos agentes caçadores, no processo de triagem e ações, e pelos agentes gestores, no processo de controle de risco.   
 
 \begin{figure}[h]
 \centering
-\label{f23}
+\label{f21}
 \includegraphics[width=0.5\textwidth]{figuras/pacoteSuport}
 \caption{Pacote suport}
 \end{figure}
@@ -851,8 +851,8 @@ A camada de Modelo, comportam classes  essenciais para o funcionamento da ferram
 
 \begin{figure}[h]
 \centering
-\label{f24}
-\includegraphics[width=0.8\textwidth]{figuras/estrategias}
+\label{f22}
+\includegraphics[width=1\textwidth]{figuras/estrategias}
 \caption{Estrutura desenvolvida para o uso de estratégias financeiras}
 \end{figure}
 \FloatBarrier
@@ -878,26 +878,26 @@ A ferramenta desenvolvida atua considerando três tipos de perfis de investidor,
 \endlastfoot
 	Corajoso & São pessoas que, dentre os três perfis, assumem o maior risco e estão dispostas a acompanhar com maior frequência a movimentação do Mercado Financeiro.\\ \hline
 	Moderado & São pessoas que estão entre os perfis Corajoso e Conservador. Esse perfil adequa-se às pessoas que desejam operar esporadicamente no Mercado Financeiro, mas com um certo nível de risco.\\\hline
-	Conservador & São pessoas que desejam gerir seu próprio plano de aposentadoria complementar, utilizando o Mercado Financeiro Brasileiro. Pessoas com este perfil desejam apenas arrecadar um capital suficiente para garantir seu padrão de vida, ou seja é uma pessoa que deseja um lucro razoável com um grau de risco menor do que os outros perfis.
+	Conservador & São pessoas que desejam gerir seu próprio plano de aposentadoria complementar, utilizando o Mercado Financeiro Brasileiro. Pessoas com este perfil desejam apenas arrecadar um capital suficiente para garantir seu padrão de vida, ou seja, são pessoas que desejam lucros razoáveis com um grau de risco menor do que os demais perfis.
 \label{t07}
 \end{longtable}
 \end{center}
 \subsection{Principais agentes}
 
-Foram projetados inicialmente três tipos de agentes comportamentais de Software: (i) agente gestor; (ii) agente especialista; (iii) agente caçador. No entanto, durante o desenvolvimento da ferramenta verificou-se a necessidade em criar um quarto tipo de agente de Software, o tipo agente criador. Este responsável por auxiliar na comunicação entre usuários web com seus respectivos agentes de Software. 
+Foram projetados inicialmente três tipos de agentes comportamentais: (i) agente gestor; (ii) agente especialista, e (iii) agente caçador. No entanto, durante o desenvolvimento da ferramenta verificou-se a necessidade em criar um quarto tipo de agente de Software, o agente criador. Este é responsável por auxiliar na comunicação entre usuários web com seus respectivos agentes de Software, mais internos à lógica da ferramenta. 
 
 \begin{description}
 \item[Agente gestor (manager):]
-O agente do tipo gestor é o responsável por administrar a carteira de ações dos usuários, ações que por sua vez são acompanhadas por agentes especialistas. Ele autoriza uma compra ou venda de ações analisadas pelos agentes especialistas, vale ressaltar que essa autorização passa pelo usuário vinculado ao grupo de agentes. O agente gestor, de maneira autônoma, faz o monitoramento de risco envolvido na carteira de ações administrada. Bem como, executa o processo de montagem de carteira de maneira alinhada com o perfil escolhido pelo usuário. Suas responsabilidades são:
+O agente do tipo gestor é o responsável por administrar a carteira de ações dos usuários, ações que por sua vez são acompanhadas por agentes especialistas. Ele autoriza uma compra ou venda de ações analisadas pelos agentes especialistas. Vale ressaltar que essa autorização passa pelo usuário vinculado ao grupo de agentes. O agente gestor, de maneira autônoma, faz o monitoramento de risco envolvido na carteira de ações administrada. Adicionalmente, executa o processo de montagem de carteira de maneira alinhada com o perfil escolhido pelo usuário. Suas responsabilidades são:
 
 \begin{itemize}
 \item Criar e excluir um ou mais agentes especialistas:\newline
 
-A quantidade de agentes especialistas criadas pelo agente gestor varia  de acordo com o perfil de usuário. Podendo ser: (i) dois agentes especialistas para o perfil Corajoso; (ii) quatro agentes especialistas para o perfil Moderado; e (iii) sete agentes especialistas para o perfil Conservador.
+A quantidade de agentes especialistas criadas pelo agente gestor varia  de acordo com o perfil de usuário. Portanto, podem ser criados: (i) dois agentes especialistas para o perfil Corajoso; (ii) quatro agentes especialistas para o perfil Moderado; e (iii) sete agentes especialistas para o perfil Conservador.
 
 \item Montar carteira de ações:\newline
 
-Após instanciado os agentes para o usuário, o agente gestor verifica qual foi o perfil escolhido pelo usuário em seu cadastro e inicia o processo de montagem de carteira de ações. Ele interage com um agente caçador e solicita um número determinado de ações, de acordo com o perfil do usuário. Segundo Pinheiro (\citeyear{pinheiro2008}, p.93), uma carteira com ações de 30 empresas diferentes pode ser considerada como uma carteira conservadora. Com base neste número, foi derivada a quantidade de ações por carteira de cada tipo de perfil. Assim, para o perfil Conservador a carteira é formada por ações de 30 empresas. Para o perfil Moderado, 13 empresas. Já o perfil Corajoso 8 empresas. Vale ressaltar que esses números são iniciais foram baseados na recomendação do autor Pinheiro (\citeyear{pinheiro2008}, p.93), combinados com os números da sequência de Fibonacci. Essa sequência é bastante aceita no meio financeiro. Adicionalmente, esses poderão ser melhorados em manutenções futuras.
+Após instanciados os agentes para o usuário, o agente gestor verifica qual foi o perfil escolhido pelo usuário em seu cadastro e inicia o processo de montagem de carteira de ações (figura 23). Ele interage com um agente caçador e solicita um número determinado de ações, de acordo com o perfil do usuário. Segundo Pinheiro (\citeyear{pinheiro2008}, p.93), uma carteira com ações de 30 empresas diferentes pode ser considerada como uma carteira conservadora. Com base neste número, foi derivada a quantidade de ações por carteira de cada tipo de perfil. Assim, para o perfil Conservador, a carteira é formada por ações de 30 empresas. Para o perfil Moderado, 13 empresas. Já o perfil Corajoso, 8 empresas. Vale ressaltar que esses números iniciais foram baseados na recomendação do autor Pinheiro (\citeyear{pinheiro2008}, p.93), combinados com os números da sequência de Fibonacci. Essa sequência é bastante aceita no meio financeiro. Adicionalmente, esses valores iniciais poderão ser melhorados em futuras versões da ferramenta, caso seja necessário.
 
 \begin{figure}[H]
 \centering
@@ -908,12 +908,11 @@ Após instanciado os agentes para o usuário, o agente gestor verifica qual foi 
 \end{figure}
 \FloatBarrier
 
-Ao receber o grupo de ações solicitadas ao agente caçador, o agente gestor calcula a correlação dos retornos (i.e. percentual de diferença entre o período atual com seu anterior) e as aprova de acordo com o perfil do usuário. Os critérios de aceite de uma ação é mostrado na Tabela 8.
-
+Ao receber o grupo de ações solicitadas ao agente caçador, o agente gestor calcula a correlação dos retornos (i.e. percentual de diferença entre o período atual com seu anterior) e as aprova de acordo com o perfil do usuário. Os critérios de aceite de uma ação são mostrados na Tabela 8.
 
 \begin{center}
 \begin{longtable}{| p{2cm} | p{3cm} |p{2cm} |p{3cm} |}
-\caption{Critério de aceite de ações} \\
+\caption{Critérios de aceite de ações} \\
 \hline
 \textbf{Perfil} & \textbf{Quantidade de empresas} & \textbf{Critério de aceite} & \textbf{Tolerância} \\ \hline
 \endfirsthead
@@ -939,12 +938,12 @@ Após feito cálculo da correlação, o agente gestor calcula o desvio padrão e
 Consiste em captar as sugestões de compra ou venda dos agentes especialistas e repassar ao usuário vinculado. Posteriormente, repassar aos agentes especialistas a autorização da compra ou venda de uma ação.
 
 \item Monitorar risco:\newline
-O Monitoramento consiste no cálculo constante o desvio padrão e a variância da carteira, bem como das ações individualmente. Vale ressaltar, que o risco é tratado nesta ferramenta de três maneiras combinadas. A primeira, consiste no processo de montagem da carteira, onde são escolhidas ações de acordo com o perfil de usuário escolhido. A segunda, consiste no \textit{Stop Loss} presente nas estratégias utilizadas pelos agentes especialistas. E a terceira, consiste no cálculo do desvio padrão e da variância realizado pelo agente gestor, como apresentado na figura 22.
+O Monitoramento consiste no cálculo constante do desvio padrão e a variância da carteira, bem como das ações individualmente. Vale ressaltar, que o risco é tratado nesta ferramenta de três maneiras combinadas. A primeira consiste no processo de montagem da carteira, onde são escolhidas ações de acordo com o perfil de usuário escolhido. A segunda consiste no \textit{Stop Loss} presente nas estratégias utilizadas pelos agentes especialistas. E a terceira consiste no cálculo do desvio padrão e da variância realizado pelo agente gestor, como apresentado na figura 24.
 
 \begin{figure}[H]
 \centering
 \label{f24}
-\includegraphics[width=0.9\textwidth]{figuras/f15}
+\includegraphics[width=0.7\textwidth]{figuras/f15}
 \caption{Processo de monitoramento de risco}
 \end{figure}
 \FloatBarrier
@@ -952,41 +951,39 @@ O Monitoramento consiste no cálculo constante o desvio padrão e a variância d
 \end{itemize}
 
 \item[Agente especialista (expert):]
-O agente especialista é o agente responsável por realizar leituras constantes do mercado de valores em busca de novas cotações das ações sob sua responsabilidade. Ele é criado pelo seu agente gestor e executa estratégias compatíveis com o perfil escolhido pelo usuário, recebe ainda um grupo de ações na qual será responsável. Durante o desenvolvimento, verificou-se necessário transferir a responsabilidade de mensurar riscos para o seu agente gestor. Suas responsabilidades são:
+O agente especialista é o agente responsável por realizar leituras constantes do mercado de valores em busca de novas cotações das ações sob sua responsabilidade. Ele é criado pelo seu agente gestor e executa estratégias compatíveis com o perfil escolhido pelo usuário. Recebe ainda um grupo de ações, ficando responsável pelas cotações das mesmas. Durante o desenvolvimento, verificou-se a necessidade de transferir a responsabilidade de mensurar riscos para o seu agente gestor. Suas responsabilidades são:
 
 \begin{itemize}
 \item Executar estratégias financeiras:\newline
 
-Consiste no uso das estratégias financeiras implementadas para esta ferramenta. É através de uma estratégia financeira que um agente especialista age na Bolsa de Valores de São Paulo, ela é seu mecanismo de raciocínio. As estratégias financeiras adotadas para a ferramenta desenvolvida é composta pelos seguintes indicadores financeiros: 
+Consiste no uso das estratégias financeiras implementadas para esta ferramenta. É através de uma estratégia financeira que um agente especialista age na Bolsa de Valores de São Paulo, ela é seu mecanismo de raciocínio. As estratégias financeiras adotadas para a ferramenta desenvolvida são compostas pelos seguintes indicadores financeiros: 
 
 \begin{enumerate}
-\item Média Móvel Simples (MMS) e Médias Móveis Exponeciais(MME):\newline
+\item Média Móvel Simples (MMS) e Médias Móveis Exponeciais (MME):\newline
 
-Médias móveis são médias de preços que se deslocam no tempo, ou seja, para um novo valor de entrada, há a saída de um valor antigo do cálculo. Com as médias móveis é possível suavizar a movimentação do mercado e, dessa forma, identificar tendências \cite[p.68]{matsura2006}. Ao se calcular uma média móvel, é escolhido primeiramente qual a quantidade de valores que será utilizada no cálculo. Se utilizamos 5 valores, tem-se, então, uma média de 5 períodos, e assim por diante. Depois, define-se o tipo da média móvel. Para esta ferramenta, são as médias móveis simples e exponenciais.
+Médias móveis são médias de preços que se deslocam no tempo, ou seja, para um novo valor de entrada, há a saída de um valor antigo do cálculo. Com as médias móveis é possível suavizar a movimentação do mercado e, dessa forma, identificar tendências \cite[p.68]{matsura2006}. Ao se calcular uma média móvel, é escolhida, primeiramente, qual a quantidade de valores que será utilizada no cálculo. Se utilizamos 5 valores, tem-se, então, uma média de 5 períodos, e assim por diante. Depois, define-se o tipo da média móvel. Para esta ferramenta, são as médias móveis simples e exponenciais.
 
 A Média Móvel Simples (figura 25) é uma média com tempo de reação mais lento dentre as médias. Ela é bastante utilizada para identificar tendências de alta ou de baixa no Mercado Financeiro. Quanto maior a sua periodicidade, mais lenta ela será. Médias de alta periodicidade, normalmente, são utilizadas em estratégias de longo prazo \cite[p. 69]{matsura2006}.
 
-\begin{figure}[H]
+\begin{figure}[h]
 \centering
 \label{f25}
-\includegraphics[width=0.7\textwidth]{figuras/f22}
+\includegraphics[width=0.5\textwidth]{figuras/f22}
 \caption{Média Móvel Simples}
 \end{figure}
-\FloatBarrier
 
+A Média Móvel Exponencial (figura 26) é mais ágil em relação à média simples. Ela confere peso maior aos valores mais recentes, e com isso se torna uma média mais sensível às oscilações do Mercado Financeiro. Na figura 27, a variável \textbf{F} representa o valor de fechamento de uma ação, \textbf{N} representa o número de períodos da média, e \textbf{K} representa a constante calculada.
 
-A Média Móvel Exponencial (figura 27) é mais ágil em relação à média simples. Ela confere peso maior aos valores mais recentes, e com isso se torna uma média mais sensível às oscilações do Mercado Financeiro. Na figura 27, a variável \textbf{F} representa o valor de fechamento de uma ação, \textbf{N} representa o número de períodos da média, e \textbf{K} representa a constante calculada.
-
-\begin{figure}[H]
+\begin{figure}[h]
 \centering
 \label{f26}
-\includegraphics[width=0.7\textwidth]{figuras/f23}
+\includegraphics[width=0.5\textwidth]{figuras/f23}
 \caption{Média Móvel Exponencial}
 \end{figure}
 \FloatBarrier
 
 \item Darkcloud:\newline
-O padrão de formação Dark cloud (figura 28) é composto por duas candlesticks, a primeira de alta, em branco, e a segunda de baixa, em vermelho. Elas são precedidas de uma tendência de alta confirmada da ação. A segunda candlestick tem valor de abertura superior ao valor de fechamento da primeira, e tem valor de fechamento superior ao valor de abertura da primeira candlestick. Este padrão de formação indica reversão da tendência de alta para baixa \cite[p.61]{matsura2006}. Tal fato será utilizado para sinalizar oportunidades de venda de ações.
+O padrão de formação Dark cloud (figura 27) é composto por duas candlesticks, a primeira de alta, em branco, e a segunda de baixa, em vermelho. Elas são precedidas de uma tendência de alta confirmada da ação. A segunda candlestick tem valor de abertura superior ao valor de fechamento da primeira, e tem valor de fechamento superior ao valor de abertura da primeira candlestick. Este padrão de formação indica reversão da tendência de alta para baixa \cite[p.61]{matsura2006}. Tal fato será utilizado para sinalizar oportunidades de venda de ações.
 
 \begin{figure}[H]
 \centering
@@ -996,7 +993,7 @@ O padrão de formação Dark cloud (figura 28) é composto por duas candlesticks
 \end{figure}
 \FloatBarrier
 \item Bearish Engulfing:\newline
-O padrão de formação Bearish Engulfing (figura 29), assim como o Darkcloud, sinaliza a reversão de um tendência de alta de uma ação. No entanto, este padrão difere-se por sua segunda candlestick ter valor de fechamento inferior ao valor de abertura da primeira \cite[p. 38]{bigalow2010}.
+O padrão de formação Bearish Engulfing (figura 28), assim como o Darkcloud, sinaliza a reversão de um tendência de alta de uma ação. No entanto, este padrão difere-se por sua segunda candlestick ter valor de fechamento inferior ao valor de abertura da primeira \cite[p. 38]{bigalow2010}.
 
 \begin{figure}[H]
 \centering
@@ -1004,11 +1001,10 @@ O padrão de formação Bearish Engulfing (figura 29), assim como o Darkcloud, s
 \includegraphics[width=0.9\textwidth]{figuras/f21}
 \caption{Padrão Bearish Engulfing}
 \end{figure}
-\FloatBarrier
 
 \item Bullish Engulfing:\newline
 
-O padrão de formação Bullish Engulfing (figura 30) é um padrão de reversão de tendência similar ao Bearish Engulfing. Este padrão é precedido de uma tendência de baixa, e sinaliza oportunidade de compra de ações. É composto por duas candlesticks, a primeira de baixa fecha de acordo com a tendência (i.e. uma candlestick de baixa). A segunda tem seu valor de abertura inferior ao valor de fechamento da primeira, e seu valor de fechamento maior do que o valor de abertura da primeira \cite[p. 36]{bigalow2010}.
+O padrão de formação Bullish Engulfing (figura 29) é um padrão de reversão de tendência similar ao Bearish Engulfing. Este padrão é precedido de uma tendência de baixa, e sinaliza oportunidade de compra de ações. É composto por duas candlesticks, a primeira de baixa fecha de acordo com a tendência (i.e. uma candlestick de baixa). A segunda tem seu valor de abertura inferior ao valor de fechamento da primeira, e seu valor de fechamento maior do que o valor de abertura da primeira \cite[p. 36]{bigalow2010}.
 
 \begin{figure}[H]
 \centering
@@ -1052,13 +1048,13 @@ Consiste na interação com o agente gestor quando há algum sinal de compra ou 
  
 
 \item[Agente caçador (hunter):]
-O agente caçador é responsável por fazer buscas constantes de cotações de ações presentes na bolsa de valores e trabalhadas pela ferramenta. Suas responsabilidades são: 
+O agente caçador é responsável por fazer buscas constantes de cotações de ações presentes na Bolsa de Valores e trabalhadas pela ferramenta. Suas responsabilidades são: 
 
 \begin{itemize}
 \item Baixar e atualizar o banco de dados:\newline
 Consiste em realizar \textit{downloads} de cotações de ações continuamente e atualizar os dados estatísticos no banco da dados. 
 \item Categorizar ações utlizando critérios estatísticos:\newline
-Consiste em realizar uma categorização de ações através de valores estatísticos, tais como: (i) retorno médio diário; (ii) retorno médio 15 e 30 dias; (iii) variância média diária; e (iv) variância média 15 e 30 dias. Através destes valores, o agente caçador seleciona grupos de ações compatíveis com os perfis informados por agentes gestores no procedimento de montagem de carteira
+Consiste em realizar uma categorização de ações através de valores estatísticos, tais como: (i) retorno médio diário; (ii) retorno médio 15 e 30 dias; (iii) variância média diária; e (iv) variância média 15 e 30 dias. Através destes valores, o agente caçador seleciona grupos de ações compatíveis com os perfis informados por agentes gestores no procedimento de montagem de carteira.
 \item Selecionar grupo de ações de acordo com o perfil de usuário:\newline
 Consiste em selecionar um grupo de ações usando como critério de seleção a variância combinada ao perfil de usuário.
 \end{itemize}
@@ -1067,34 +1063,342 @@ Consiste em selecionar um grupo de ações usando como critério de seleção a 
  O agente criador é responsável por auxiliar a comunicação entre os usuários e seus respectivos grupos de agentes. Suas responsabilidades são: 
 
 \item Monitorar a criação de novas contas:\newline
-Consiste em monitorar o casdastro de usuários. Quando uma conta é criada, o agente criador captura as informações repassadas pelo usuário e instancia um agente gestor para este usuário. Em sequência, informa a esse agente gestor, através de uma mensagem com informações do usuário tais como nome, o valor investido e perfil escolhido.
+
+Consiste em monitorar o casdastro de usuários. Quando uma conta é criada, o agente criador captura as informações repassadas pelo usuário e instancia um agente gestor para este usuário. Em sequência, informa a esse agente gestor, através de uma mensagem com informações do usuário, tais como: nome, o valor investido e perfil escolhido.
+
 \item Monitorar \textit{Log In} de usuários:\newline
-Consiste em monitorar a autenticação de usuários na interface web. Quando um usuário autentica-se na ferramenta, o agente criador informa ao seu agente gestor para que o mesmo comunique-se com seu usuário, a comunicação entre o agente gestor e seu respectivo usuário é demonstrado na figura 32.
+Consiste em monitorar a autenticação de usuários na interface web. Quando um usuário autentica-se na ferramenta, o agente criador informa ao seu agente gestor para que o mesmo se comunique com seu usuário. A comunicação entre o agente gestor e seu respectivo usuário é demonstrado na figura 30, bem como o funcionamento geral da ferramenta.
 
 \end{description}
 
+\begin{figure}[h]
+\centering
+\label{f30}
+\includegraphics[width=1\textwidth]{figuras/visaoGeralFerramenta}
+\caption{Visão geral da ferramenta}
+\end{figure}
+\FloatBarrier
 
 
 \section{Abordagem para Manutenção Evolutiva da Ferramenta}
 
-A Ferramenta de Software desenvolvida foi desenhada de maneira a facilitar sua evolução, a figura 23 apresenta de maneira sucinta o uso de programação baseadas em interfaces. O uso de interfaces, como orientado pelo padrão de projetos Strategy, permite a criação de novas estratégias financeiras, sejam estratégias baseadas em análise técnica ou análise fundamentalista. Este é um ponto importante para manutenções evolutivas no tocante ao contexto financeiro.
+A Ferramenta de Software desenvolvida foi desenhada de maneira a facilitar sua evolução. A figura 23 apresenta de maneira sucinta o uso de programação baseada em interfaces. O uso de interfaces, como orientado pelo padrão de projeto Strategy, permite a criação de novas estratégias financeiras, sejam estratégias baseadas em análise técnica ou análise fundamentalista. Este é um ponto importante para manutenções evolutivas no tocante ao contexto financeiro.
 
-No tocante à Sistemas Multiagentes, durante o desenvolvimento da Ferramenta proposta e após seguir as práticas adotadas pelas literaturas relacionadas à implementação de agentes com o JADE, o desenvolvedor elaborou uma estrutura baseada em interfaces de maneira a reduzir o acoplamento de classes que implementam agentes comportamentais, bem como facilitar futuras manutenções. Esta estrutura contém uma interface denominada ProcedureBehaviour e uma classe concreta denominada CommunicationBehaviour, e é uma sugestão de refatoração para a Ferramenta de Software, figura 31.
+No tocante a Sistemas Multiagentes, durante o desenvolvimento da Ferramenta proposta e após seguir as práticas adotadas pelas literaturas relacionadas à implementação de agentes com o JADE, o desenvolvedor elaborou uma estrutura baseada em interfaces de maneira a reduzir o acoplamento de classes que implementam agentes comportamentais, bem como facilitar futuras manutenções. Esta estrutura contém uma interface denominada ProcedureBehaviour e uma classe concreta denominada CommunicationBehaviour, e é uma sugestão de refatoração para a Ferramenta de Software, figura 31.
 
 \begin{figure}[h]
 \centering
-\label{f25}
-\includegraphics[width=0.9\textwidth]{figuras/pacoteBehaviours}
+\label{f31}
+\includegraphics[width=1\textwidth]{figuras/pacoteBehaviours}
 \caption{Estrutura sugerida para refatoração}
 \end{figure}
 \FloatBarrier
 
-A Classe CommunicationBehaviour implementa o comportamento em comum entre os agentes comportamentais que é receber mensagens de outros agentes e responder estas mensagens através da execução de um comportamento. Esta classe dispõe de um mecanismo de adição de comportamentos, na qual para que essa adição seja feita é necessário informar a classe, os atributos ConversationID e uma classe concreta ProcedureBehaviour. Um classe agente comportamental pode utilizar uma classe ProcedureBehaviour sem a necessidade de utilizar a classe CommunicationBehaviour. Esta classe agente pode utilizar da agregação para aplicar o seu conjunto de comportamentos, assim reduzindo o acoplamento da classe e aumentando sua coesão.
+A Classe CommunicationBehaviour implementa o comportamento em comum entre os agentes comportamentais, o qual consiste em receber mensagens de outros agentes e responder estas mensagens através da execução de um comportamento. Esta classe dispõe de um mecanismo de adição de comportamentos, no qual, para que essa adição seja feita, é necessário informar a classe, os atributos ConversationID e uma classe concreta ProcedureBehaviour. Esta classe agente pode utilizar a agregação para aplicar o seu conjunto de comportamentos, assim reduzindo o acoplamento da classe e aumentando sua coesão.
+
 \section{Resumo do Capítulo}
+
+Elucidou-se neste capítulo o detalhamento da arquitetura desenhada para a ferramenta. A qual foi organizada de acordo com o padrão arquitetural Model-View-Controller (MVC). Adicionalmente, foi apresentada a arquitetura da máquina de raciocínio dos agentes implementados, esta composta por quatro tipos de agentes: (i) agente gestor, responsável por administrar uma carteira de ações; (ii) agente especialista, responsável identificar sinais de compra em venda de ações através de estratégia financeira; (iii) agente caçador,  responsável por baixar cotações e persistir dados estatísticos de ações; e (iv) agente criador, responsável por auxiliar a comunicação entre os usuários e seus respectivos agentes gestores.
+Adicionalmente, foi apresentada uma estrutura baseada em interfaces sugerida para facilitar a manutenção bem como a refatoração da ferramenta.  
+
+
 \newpage
 \chapter[RESULTADOS]{Resultados}
+
+Nesse capítulo, serão apresentados os principais resultados obtidos usando uma abordagem híbrida quantitativa e qualitativa, conduzida com pesquisa-ação combinada a cenários de uso. A parte quantitativa está apoiada em simulações realizadas na ferramenta. Já a parte qualitativa está apoiada em feedbacks dos usuários que participaram dos testes realizados na ferrramenta. A cada iteração da pesquisa-ação, foram coletadas as respectivas impressões quanto aos testes realizados.
+
+\section{Análise Quantitativa}
+\subsection{Teste unitários e coberturas de código}
+
+Foram adotadas as ferramentas JUnit e Eclemma para a realização dos testes nos códigos referentes ao suporte, tais como: (i) os códigos que implementam a camada de persisitência da ferramenta; (ii) os códigos que implementam algoritmos estatísticos utilizados pelos agentes caçadores e gestores; (iii) os códigos que implementam as estratégias financeiras utilizadas pelos agentes especialistas; e (iv) os códigos que implementam as classes de suporte a comportamentos utilizadas pelos agentes gestores e especialista. O propósito do uso dos teste unitários foi validar os algoritmos de suporte, este essenciais para o funcionamento da ferramenta. Assim, foi estabelecida a meta de 90\% de cobertura de testes.
+
+Quanto aos códigos que implementam os agentes comportamentais, estes não possuem, até o presente momento, uma ferramenta de validação comportamental adequada. Diante disto, foram migrados todas as rotinas utilizadas por comportamentos dos agentes, para classes que podem ser testadas através da ferramenta JUnit. A figura 32 apresenta a cobertura obtida da ferramenta em si. Vale ressaltar, que o JUnit não é a ferramenta mais adequada para o teste de classes que possuem comportamentos utilizados por agentes. Assim, a meta de cobertura de testes unitários estabelecida para este Trabalho de Conclusão de Curso se aplica somente para as classes contidas no pacote rcs.suport.
+
+\begin{figure}[h]
+\centering
+\label{f22}
+\includegraphics[width=0.8\textwidth]{figuras/junit2}
+\caption{Cobertura de testes unitários}
+
+\end{figure}
+\FloatBarrier
+
+
+\subsection{Métricas de Qualidade de código}
+
+Segundo Filho (\citeyear{filho2013}, p.1), medir e monitorar a qualidade do software é fundamental, independentemente da metodologia de desenvolmento adotada. Ele afirma ainda, que muitos fatores que compõem um bom software podem ser percebidos no código fonte. E mesmo que se possua uma ótima bateria de testes, esta não é capaz de produzir informações acerca de itens de qualidade, tais como : (i) manutenabilidde; (ii) modularidade; (iii) flexibilidade e (iv) simplicidade. Assim, não é recomendado negligenciar as métricas de código em relação a outras abordagens de monitoramento da qualidade. Diante disso, as duas características fundamentais que nortearam o desenvolvimento da ferramenta resultado deste Trabalho de Conclusão de Curso foram, a manutenabilidade e a reusabilidade. Estas consideradas importantes pelo autor por contruibuir na facilidade de evolução da ferramenta. 
+
+Assim, para verificar o grau de qualidade da ferramenta, no ponto de vista da qualidade de código, foram adotadas as seguintes métricas: (i) Complexidade Ciclomática - CC; (ii)  Coesão e Acoplamento  - SC; e (iii) Herança - DIT. Onde os valores de cada métrica foi obtido com o auxílio da ferramenta Analizo, esses valores são apresentados na tabela 10 e são classificados de acordo os intervalos apresentados na figura 32.
+
+\begin{figure}[h]
+\centering
+\label{f25}
+\includegraphics[width=0.9\textwidth]{figuras/metricas}
+\caption{Intervalo para interpretação das métricas.\newline Fonte:\cite{filho2013}}
+\end{figure}
+
+\begin{center}
+\begin{longtable}{| p{2cm} | p{2cm} |p{4cm} |}
+\caption{Métricas de código fonte} \\
+\hline
+\textbf{Nome} & \textbf{Valor} & \textbf{Classificação} \\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{Nome} & \textbf{Valor} & \textbf{Classificação} \\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	CC/ACCM & 3.97 & Bom \\ \hline
+	SC & 12.07 & Bom \\ \hline
+	DIT & 0.36 & Excelente
+	
+\label{t10}
+\end{longtable}
+\end{center} 
+
+Por fim, diante dos dados apresentados na tabela 10. Pode-se concluir que a ferramenta desenvolvida neste Trabalho de Conclusão de Curso possui uma arquitetura que contruibui com a manutenabilidade e a reusabilidade. 
+
+\section{Análise Qualitativa}
+
+\subsection{Pesquisa - Ação}
+Segundo Rocha, pesquisa-ação pode ser considerada "independente" e "objetiva". E de acordo com Thiollent \apud{thiollent1986} {rocha2012}, caracteriza-se pesquisa-ação como:
+\begin{citacao}
+Um tipo de pesquisa social com base empírica, concebida e realizada em estreita associação com uma ação ou com a resolução de um problema coletivo no qual os pesquisadores e os participantes, representativos da situação e/ou do problema, estão envolvidos de forma cooperativa e participativa \apud[p. 3]{thiollent1986} {rocha2012}.
+\end{citacao}
+
+A pesquisa-ação é um processo cíclico e contínuo onde planeja-se, implementa-se, descreve-se e avalia-se uma mudança para a melhoria de sua prática. Desta forma, há um aprendizado maior por parte do pesquisador durante o processo. Neste trabalho, o processo de pesquisa-ação foi utilizado para verificar o objetivo específico, sob o ponto de vista da interface com usuário, no caso: "Abstrair a complexidade de cálculos financeiros comumente utilizados na Análise Técnica. Assim, essa complexidade não é sentida pelo usuário, deixando a mesma a cargo da ferramenta.". O cenário de uso e resultados obtidos são apresentados nos tópicos seguintes.
+
+\subsection{Coleta de Impressões: Usuários}
+
+\begin{description}
+\item[Coleta de impressões com usuários]
+Esta coleta de dados foi organizada de acordo com as seguintes etapas: (i) Planejamento, nesta etapa foram levantadas questões a serem respondidas pelos potenciais usuários de maneira a avaliar a interface gráfica da ferramenta; (ii) Implementação, nesta etapa foi elaborado um questionário a ser respondido pelos usuários, e foi disponibilizado ainda um cenário tecnológico onde a ferramenta apresentou dados em um período histórico de cotações da BM\&FBovespa ; (iii) Descrição, nesta etapa concentra-se a seguinte descrição do cenário de uso da ferramenta. A Ferramenta foi apresentada aos potenciais usuários em modo de simulação no período de 1 de março de 2013 a 1 de março de 2014, a versão do JADE utilizado é a 4.3.3 de 10 de dezembro de 2014, a versão do Grails foi a 2.4.3 e a versão do java foi a 1.7.0\_79. A ferramenta foi simulada ainda em um notebook da marca Apple modelo MacBook Pro (Retina, 13-inch, Late 2013) com processador 2.6 GHz Intel Core i5, com 8 GB 1600 MHz DDR3 de Memória RAM e com o Sistema operacional OS X Yosemite versão 10.10.3; (iv) Avaliação e Ação, nesta etapa foram colhidos os \textit{feedbacks} dos potenciais usuários da ferramentas em primeiro momento; no segundo momento foram tomadas ações de ajuste da interface da ferramenta,sendo apresentado novamente aos usuários. Dentre os \textit{feedbacks} recebidos, destacou-se a sugestão de um usuário que se identificou com o perfil Corajoso, onde ele sugeriu usar outro indicador no lugar do indicador Média Móvel. As informações coletadas são expostas de maneira sucinta neste tópico e na integra no Apêndice E.
+
+\item[Objetivos]
+Esta coleta de dados com potenciais usuários teve como principal propósito verificar o objetivo especifico: “Abstrair a complexidade de cálculos financeiros comumente utilizados na Análise Técnica. Assim, essa complexidade não é sentida pelo usuário, deixando a mesma a cargo da ferramenta”. Vale ressaltar que essa avaliação teve como foco a interface gráfica da ferramenta com os usuários, onde cada usuário recebeu um formulário com questões objetivas e um campo livre para sugestões. O comportamento dos agentes bem como os resultados das estratégias abordadas foram avaliados através de simulações.
+
+\item[Público alvo avaliado]
+
+A avaliação ocorreu em maio de 2014 e participaram da avaliação seis pessoas, onde: 1 se classifica no perfil Corajoso; 1 se classifica no perfil Moderado e 4 se classificam no perfil Conservador. O teste funcional da ferramenta foi feito com uso de dados históricos no período entre 1 de março de 2014 e 3 de março de 2015. A inteface gráfica da ferramenta foi o foco dessa primeira análise.
+
+\item[Observações coletadas]
+Quando questionados sobre as cores adotadas na ferramenta, 5 pessoas consideraram boas e 1 pessoa considerou ótima. Quando questionados sobre a facilidade de compreensão da ferramenta, 3 pessoas consideraram como bom, 1 pessoa considerou razoável, 1 pessoa considerou como ruim e 1 se absteve. Quando solicitadas observações gerais para melhoria da ferramenta, destacaram-se: (i) feedback indicando o carregamento e o processo da ferramenta; (ii) atualização página principal automaticamente; (iii) disponibilidade de um canal de dúvidas; (iv) não adoção de estratégias baseadas em Médias Móveis; (v) utilização de javascript na interface; (vi) execução da ferramenta em duas máquinas; (vii) disponibilidade de informações sobre estratégias e uso da ferramenta.
+
+As sugestões apresentadas pelos usuários demandaram melhorias na interface gráfica, como esperado, e uma demanda na melhoria das estratégias adotadas. Para atender a demanda de melhorias na interface gráfica, foi necessário realizar pequenas capacitações em tecnologias front-end, tais como: javaScript e jQuery. Para atender a demanda de melhorias nas estratégias, foi necessário criar novas estratégias baseadas em outros indicadores financeiros e simular novamente a estratégia.
+
+\item[Ações Tomadas]
+
+Foram feitos ajustes na interface, dentre eles: (i) a criação um canal de comunicação por onde os usuários podem enviar dúvidas, sugestões entre outros; (ii) a criação de uma página com informações importantes da ferramenta; e (iii) a inserção de um mecanismo de requisição automática na página principal. Após as melhorias, a ferramenta foi apresentada novamente aos usuários e verificou-se que as melhorias foram aceitas e novos feedbacks foram coletados.Ao final do ciclo pesquisa-ação, foram registradas algumas demandas de manutenção evolutiva da ferramenta, tais como a inserção de estratégias baseadas em outros indicadores financeiros. Neste caso, optou-se pelo uso de padrões de projeto, como o Strategy, visando facilidades orientadas à manutenção, reutilização e extensibilidade. Detalhes sobre a abordagem de manutenção evolutiva utilizada encontram-se no capítulo 5, sobre a ferramenta. 
+
+\end{description}
+
+\subsection{Coleta de Impressões: Simulações de Estratégias}
+
+\begin{description}
+\item[Objetivos]
+Esta coleta de impressões com potenciais usuários teve como principal propósito verificar  o objetivo específico: \textit{“Abstrair a complexidade de cálculos financeiros comumente utilizados na Análise Técnica. Assim, essa complexidade não é sentida pelo usuário, deixando a mesma a cargo da ferramenta”}. Vale ressaltar que essa avaliação teve como foco as estratégias adotadas na ferramenta.
+
+As estratégias foram simuladas no período no período de 1 de janeiro de 2012 a 1 de março de 2015, a versão do JADE utilizada é a 4.3.3 de 10 de dezembro de 2014, a versão do Grails foi a 2.4.3 e a versão do java foi a 1.7.0\_79. A ferramenta foi simulada ainda em um notebook da marca Apple modelo MacBook Pro (Retina, 13-inch, Late 2013) com processador 2.6 GHz Intel Core i5, com 8 GB 1600 MHz DDR3 de Memória RAM e com o Sistema operacional OS X Yosemite versão 10.10.3.
+
+\item[Observações coletadas]
+O processo de coleta de impressões foi iniciado simulando o perfil Corajoso. Ao final, as estratégias se mostraram ineficientes. No periodo simulado, as estratégias apresentaram -18,08\% de ganho, ou seja, houve uma perda de capital considerável e tal fato motivou um ajuste nas estratégias. Ao simular o perfil Moderado, as estratégias adotadas apresentaram o 11,60\% de ganho. Durante a simulação percebeu-se uma oportunidade de melhoria nas estratégias adotadas. Ao Simular o perfil perfil Conservador, as estratégias adotadas para este perfil apresentaram 7,8\% de ganho. Apesar do ganho, outras melhorias nas estratégias foram motivadas.
+
+\begin{center}
+\begin{longtable}{| p{2cm} | p{10cm} |p{2cm} |}
+\caption{Estratégias Perfil Conservador e Resultados} \\
+\hline
+\textbf{Agente} & \textbf{Estratégia} & \textbf{Percentual de Ganho} \\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{Agente} & \textbf{Estratégia} & \textbf{Percentual de Ganho} \\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	A1 & Média Móvel Simples 13/21 & -29,06\% \\ \hline
+	A2 & Media Móvel Simples 21/34 & -31,74\% \\ \hline
+	A3 & Media Móvel Exponencial 21/34 & 34,96\% \\ \hline
+	A4 & Media Móvel Simples  13/21 & 4,93\% \\ \hline
+	A5 & Media Móvel Simples 21/34. & -60,41\% \\ \hline
+	A6 & Media Móvel Exponencial 21/34. & 8,26\% \\ \hline
+	A7 & Media Móvel Simples  13/21. & 59,91\% \\ \hline
+	{} & \textbf{TOTAL GERAL} & \textbf{7,8\%} 
+	
+\label{t09}
+\end{longtable}
+\end{center} 
+
+
+\begin{center}
+\begin{longtable}{| p{2cm} | p{10cm} |p{2cm} |}
+\caption{Estratégias Perfil Moderado e Resultados} \\
+\hline
+\textbf{Agente} & \textbf{Estratégia} & \textbf{Percentual de Ganho} \\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{Agente} & \textbf{stratégia} & \textbf{Percentual de Ganho} \\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	A1 & Media Móvel Exponencial 13/21 & 9,7\% \\ \hline
+	A2 & Media Móvel Simples 13/21 & -24,36\% \\ \hline
+	A3 & Media Móvel Exponencial 13/21 &41,89\% \\ \hline
+	{} & \textbf{TOTAL GERAL} & \textbf{11,60\%} 
+	
+
+\label{t10}
+\end{longtable}
+\end{center} 
+
+\begin{center}
+\begin{longtable}{| p{2cm} | p{10cm} |p{2cm} |}
+\caption{Estratégias Perfil Corajoso e Resultados} \\
+\hline
+\textbf{Agente} & \textbf{Estratégia} & \textbf{Percentual de Ganho} \\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{Agente} & \textbf{Estratégia} & \textbf{Percentual de Ganho} \\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	A1 & Bearish - Bullish & -34,71\% \\ \hline
+	A2 & Dark Cloud - Bullish Engulf & -6,45\% \\ \hline
+	{} & \textbf{TOTAL GERAL} & -\textbf{18,08\%} 
+	
+\label{t10}
+\end{longtable}
+\end{center} 
+
+\item[Ações tomadas]
+
+As estratégias financeiras do perfil Corajoso, associadas aos agentes especialistas foram substituídas por estratégias baseadas em Médias Moveis exponenciais com uso de \textit{Stop Loss}. Para esta versão da Ferramenta de Software, não serão utilizadas as estratégias baseadas em padrões de Candlestick. Verificou-se, nesse caso, que para desenvolver um código capaz de identificar variações de um padrão de Candlestick, bem como validar os sinais, se falsos ou não, seria mais adequado usar uma abordagem de inteligência artificial orientada a mecanimos de aprendizagem. Tal mecanismo não é escopo deste trabalho, entretanto, trata-se de uma sugestão de melhoria para a ferramenta. Essa melhoria poderá usufruir da abordagem evolutiva adotada no desenvolvimento dessa ferramenta, ampliando ainda mais a capacidade de atuação dos agentes.
+
+
+\begin{center}
+\begin{longtable}{| p{2cm} | p{10cm} |p{2cm} |}
+\caption{Estratégias Perfil Corajoso e Resultados} \\
+\hline
+\textbf{Agente} & \textbf{Estratégia} & \textbf{Percentual de Ganho} \\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{Agente} & \textbf{Estratégia} & \textbf{Percentual de Ganho} \\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	A1 & Media Móvel Exponencial 13/21 & 33,00\% \\ \hline
+	A2 & Média Móvel Exponencial 13/21 & 72,47\% \\ \hline
+	{} & \textbf{TOTAL GERAL} & \textbf{60,27\%} 
+	
+\label{t12}
+\end{longtable}
+\end{center} 
+
+A tabela 13 apresenta os novos resultados da simulação do perfil Corajoso no mesmo período da simulação anterior. O valor do \textit{Stop Loss} foi ajustado empiricamente, e percebeu-se que 5\% é o valor ideal. Este valor de \textit{Stop Loss} foi adotado para os três perfis existentes na Ferramenta. As tabelas 14 e 15 apresentam os resultados da simulação dos perfis Conservador e Moderado com suas respectivas estratégias ajustadas. 
+
+\begin{center}
+\begin{longtable}{| p{2cm} | p{10cm} |p{2cm} |}
+\caption{Estratégias Perfil Moderado e Resultados} \\
+\hline
+\textbf{Agente} & \textbf{Estratégia} & \textbf{Percentual de Ganho} \\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{Agente} & \textbf{Estratégia} & \textbf{Percentual de Ganho} \\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	A1 & Media Móvel Exponencial 13/21 & 13,80\% \\ \hline
+	A2 & Media Móvel Simples 13/21 & -3,85\% \\ \hline
+	A3 & Media Móvel Exponencial 13/21 & 82,45\% \\ \hline
+	{} & \textbf{TOTAL GERAL} & \textbf{34,77\%} 
+	
+\label{t12}
+\end{longtable}
+\end{center} 
+
+
+\begin{center}
+\begin{longtable}{| p{2cm} | p{10cm} |p{2cm} |}
+\caption{Estratégias Perfil Conservador e Resultados} \\
+\hline
+\textbf{Agente} & \textbf{Estratégia} & \textbf{Percentual de Ganho} \\ \hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Continuação da página anterior}} \\
+\hline
+\textbf{Agente} & \textbf{stratégia} & \textbf{Percentual de Ganho} \\ \hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continuaçao na próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+	A1 & Média Móvel Simples 13/21 & -4,28\% \\ \hline
+	A2 & Media Móvel Simples 21/34 & -8,75\% \\ \hline
+	A3 & Media Móvel Exponencial 21/34 & 64,81\% \\ \hline
+	A4 & Media Móvel Simples  13/21 & 50,33\% \\ \hline
+	A5 & Media Móvel Simples 21/34. & 8,17\% \\ \hline
+	A6 & Media Móvel Exponencial 21/34. & 25,91\% \\ \hline
+	A7 & Media Móvel Simples  13/21. & 116,76\% \\ \hline
+	{} & \textbf{TOTAL GERAL} & \textbf{38,58\%} 
+	
+\label{t11}
+\end{longtable}
+\end{center} 
+\end{description}
+
+\section{Resumo do capítulo}
+
+Este capítulo elucidou as análises dos resultados obtidos com os testes realizados na ferramenta, sejam eles: (i) baseados na satisfação dos usuários ao utilizar a ferramenta, coleta qualitativa de dados, ou (ii) baseados em simulações, coleta quantitativa de dados. Quanto a análise quantitativa, foi estabelecida uma meta de cobertura de teste unitário em 90\%. Vale ressaltar que essa meta se aplicou somente as classes contidas no pacote suport. 
+
+Quanto a análise qualitativa, utilizou-se uma abordagem iterativa-evolutiva baseada em pesquisa-ação combinada a cenários de uso, cujo objetivo foi verificar a conformidade da ferramenta com os objtivos deste Trabalho de Conclusão de Curso.
 
 
 \newpage
 \chapter[CONSIDERAÇÕES FINAIS]{Considerações Finais}
+
+Esse capítulo procura resgatar as principais contribuições oriundas desse Trabalho de Conclusão de Curso. Adicionalmente, são apresentados possíveis pontos de extensibilidade da ferramenta, os quais poderão acordar evoluções e trabalhos futuros.
+
+\section{Principais contribuições}
+
+A Ferramenta de Software desenvolvida neste TCC é capaz de auxiliar cidadãos brasileiros a realizarem investimentos em bolsa de valores. Sua primeira versão faz uso de estratégias comumente referenciadas por investidores, Medias Móveis.  Entretanto, sua arquitetura foi desenhada de modo a suportar a adição de novas estratégias sem a necessidade de fazer alterações nos códigos fontes dos agentes comportamentais. Isto contribui para a manutenção evolutiva da ferramenta.
+
+Ao usuário, não é requerido um prévio conhecimento relacionado ao contexto financeiro, a Ferramenta é capaz de abstrair a complexidade de cálculos financeiro, deixando-os a cargo dos agentes. A ferramenta, por ser Web, foi estruturada de acordo com o padrão arquitetural MVC, com a aplicação adicional de padrões de projeto. Em particular, o padrão Strategy destaca-se dentre os padrões de projeto adotados, uma vez que confere à ferramenta facilidades em termos de manutenção, refatoração, extensibilidade, e reusabilidade de código fonte.
+
+Ressalta-se que os objetivos geral e específicos desse trabalho foram alcançados, de acordo com a análise dos resultados obtidos. Portanto, construiu-se, em atendimento ao objetivo geral, uma ferramenta de estratégia financeira apoiada por Sistemas Multiagentes Comportamentais, cuja máquina de raciocínio foi descrita em detalhes no capítulo 5 desse documento. Procurou-se, em atendimento ao primeiro objetivo específico, trabalhar estratégias visando abstrair a complexidade dos cálculos financeiros comumente utilizados na análise técnica, deixando essa complexidade aos agentes e não aos usuários finais da ferramenta. Por fim, em atendimento ao segundo e último objetivo específico, explorou-se o Paradigma de Sistemas Multiagentes Comportamentais no contexto financeiro, usando provas de conceito pontuais e pesquisa-ação combinada a cenários de uso, conforme apresentado em detalhes no capítulo 6 desse documento.
+
+
+\section{Sugestões de Trabalhos Futuros}
+
+Lembrando que a arquitetura adotada no desenvolviment oda ferramenta colabora com a manutenção evolutiva da mesma, poderão ser adicionados agentes capazes de atuar em outros contextos comumente encontrados na BM\&FBovespa, tais como: (i) Mercado de Opções; (i) Mercado de Mercadorias e Contratos Futuros; (iii) Renda Fixa, dentre outros. Adicionalmente, poderão ser incorporados agentes capazes de atuar em outras bolsas de valores em âmbito mundial, expandindo a capacidade cognitiva dos agentes com novas estratégias, novos indicadores financeiros e novas propostas de implementação (ex. implementação orientada ao Paradigma de Sistemas Multiagentes Intencionais, apoiado no Modelo BDI (\textit{Belief-Desire-Intention})).
+
+Outro ponto de extensibilidade da ferramenta desenvolvida é a criação de uma interface mobile com o usuário, através do desenvolvimento de aplicativos para Smartphones e Tablets. Estes, podem ser desenvolvidos para iOS, Android ou Windows Phone. Lembrando que a interface gráfica da ferramenta desenvolvida, em sua versão atual, pode ser visualizada, via browser, em diferentes dispositivos móveis. Isso é possível, pois a mesma foi construída com base no framework Grails. Esse framework já confere, às aplicações desenvolvidas com base em sua arquitetura padrão, responsividade em diferentes dispositivos móveis. Entretanto, seria interessante desenvolver a ferramenta como uma aplicação nativa, específica para dispositivos móveis.
 
