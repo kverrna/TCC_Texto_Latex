@@ -143,7 +143,7 @@ A primeira é o grau de autonomia de Objetos e Agentes, um objeto tem controle s
 Esse capítulo elucidou o Contexto Financeiro, apresentando como o Mercado Financeiro Brasileiro é composto por quatro tipos de mercado \cite[p. 15]{cmv2014}: (i) Mercado Monetário, que é um mercado exclusivo para instituições financeiras; (ii) Mercado de Crédito, mercado onde atuam empresas financeiras especializadas em empréstimos como bancos públicos e privados; (iii) Mercado de Câmbio, onde atuam empresas que normalmente têm despesas e/ou receitas em moeda estrangeira; e (iv) Mercado de Capitais, que é o mercado abordado neste estudo de TCC. Em Engenharia de Software, foi apresentada uma definição de agentes de Software, reforçando suas características quando os mesmos são reativos ou deliberativos. Adicionalmente, ainda sobre Sistemas Multiagentes, comentou-se sobre três arquiteturas comumente encontradas em SMA, tais como: a (i) arquitetura de quadro negro; a (ii) arquitetura de troca de mensagens; e a (iii) arquitetura federativa.
 \newpage
 \FloatBarrier
-\chapter[SUPORTE TECNOLÓGICO]{Suporte Tecnoógico}
+\chapter[SUPORTE TECNOLÓGICO]{Suporte Tecnológico}
 
 Este capítulo apresenta o suporte tecnológico utilizado para o desenvolvimento da ferramenta. O capítulo está organizado em seções. Na primeira seção, são apresentadas ferramentas comumente utilizadas em análises técnicas da Bolsa de Valores. Na segunda seção, são apresentados os padrões de projetos adotados no desenvolvimento da ferramenta, bem como o padrão arquitetural adotado com propósito de contribuir com a manutenabilidade e extensibilidade da ferramenta. Adicionalmente, ainda nessa seção, é apresentada uma descrição mais detalhada do framework JADE. Por fim, é apresentada a metodologia Ágil que foi adaptada para conduzir o desenvolvimento da ferramenta acordada por este Trabalho de Conclusão de Curso.
 
@@ -1098,7 +1098,7 @@ A Classe CommunicationBehaviour implementa o comportamento em comum entre os age
 
 \section{Resumo do Capítulo}
 
-Elucidou-se neste capítulo o detalhamento da arquitetura desenhada para a ferramenta. A qual foi organizada de acordo com o padrão arquitetural Model-View-Controller (MVC). Adicionalmente, foi apresentada a arquitetura da máquina de raciocínio dos agentes implementados, esta composta por quatro tipos de agentes: (i) agente gestor, responsável por administrar uma carteira de ações; (ii) agente especialista, responsável identificar sinais de compra em venda de ações através de estratégia financeira; (iii) agente caçador,  responsável por baixar cotações e persistir dados estatísticos de ações; e (iv) agente criador, responsável por auxiliar a comunicação entre os usuários e seus respectivos agentes gestores.
+Elucidou-se neste capítulo o detalhamento da arquitetura desenhada para a ferramenta. Essa arquitetura orientou-se de acordo com o padrão arquitetural Model-View-Controller (MVC). Adicionalmente, foi apresentada a arquitetura da máquina de raciocínio dos agentes implementados, esta composta por quatro tipos de agentes: (i) agente gestor, responsável por administrar uma carteira de ações; (ii) agente especialista, responsável identificar sinais de compra e venda de ações através de estratégia financeira; (iii) agente caçador,  responsável por baixar cotações e persistir dados estatísticos de ações; e (iv) agente criador, responsável por auxiliar a comunicação entre os usuários e seus respectivos agentes gestores.
 Adicionalmente, foi apresentada uma estrutura baseada em interfaces sugerida para facilitar a manutenção bem como a refatoração da ferramenta.  
 
 
@@ -1108,11 +1108,11 @@ Adicionalmente, foi apresentada uma estrutura baseada em interfaces sugerida par
 Nesse capítulo, serão apresentados os principais resultados obtidos usando uma abordagem híbrida quantitativa e qualitativa, conduzida com pesquisa-ação combinada a cenários de uso. A parte quantitativa está apoiada em simulações realizadas na ferramenta. Já a parte qualitativa está apoiada em feedbacks dos usuários que participaram dos testes realizados na ferrramenta. A cada iteração da pesquisa-ação, foram coletadas as respectivas impressões quanto aos testes realizados.
 
 \section{Análise Quantitativa}
-\subsection{Teste unitários e coberturas de código}
+\subsection{Teste Unitários e Coberturas de Código}
 
 Foram adotadas as ferramentas JUnit e Eclemma para a realização dos testes nos códigos referentes ao suporte, tais como: (i) os códigos que implementam a camada de persisitência da ferramenta; (ii) os códigos que implementam algoritmos estatísticos utilizados pelos agentes caçadores e gestores; (iii) os códigos que implementam as estratégias financeiras utilizadas pelos agentes especialistas; e (iv) os códigos que implementam as classes de suporte a comportamentos utilizadas pelos agentes gestores e especialista. O propósito do uso dos teste unitários foi validar os algoritmos de suporte, este essenciais para o funcionamento da ferramenta. Assim, foi estabelecida a meta de 90\% de cobertura de testes.
 
-Quanto aos códigos que implementam os agentes comportamentais, estes não possuem, até o presente momento, uma ferramenta de validação comportamental adequada. Diante disto, foram migrados todas as rotinas utilizadas por comportamentos dos agentes, para classes que podem ser testadas através da ferramenta JUnit. A figura 32 apresenta a cobertura obtida da ferramenta em si. Vale ressaltar, que o JUnit não é a ferramenta mais adequada para o teste de classes que possuem comportamentos utilizados por agentes. Assim, a meta de cobertura de testes unitários estabelecida para este Trabalho de Conclusão de Curso se aplica somente para as classes contidas no pacote rcs.suport.
+Quanto aos códigos que implementam os agentes comportamentais, estes não possuem, até o presente momento, uma ferramenta de validação comportamental adequada. Diante disto, foram migradas todas as rotinas utilizadas por comportamentos dos agentes, para classes que podem ser testadas através da ferramenta JUnit. A figura 32 apresenta a cobertura obtida da ferramenta em si. Vale ressaltar, que o JUnit não é a ferramenta mais adequada para o teste de classes que possuem comportamentos utilizados por agentes. Assim, a meta de cobertura de testes unitários estabelecida para este Trabalho de Conclusão de Curso se aplica somente para as classes contidas no pacote rcs.suport.
 
 \begin{figure}[h]
 \centering
@@ -1124,11 +1124,11 @@ Quanto aos códigos que implementam os agentes comportamentais, estes não possu
 \FloatBarrier
 
 
-\subsection{Métricas de Qualidade de código}
+\subsection{Métricas de Qualidade de Código}
 
-Segundo Filho (\citeyear{filho2013}, p.1), medir e monitorar a qualidade do software é fundamental, independentemente da metodologia de desenvolmento adotada. Ele afirma ainda, que muitos fatores que compõem um bom software podem ser percebidos no código fonte. E mesmo que se possua uma ótima bateria de testes, esta não é capaz de produzir informações acerca de itens de qualidade, tais como : (i) manutenabilidde; (ii) modularidade; (iii) flexibilidade e (iv) simplicidade. Assim, não é recomendado negligenciar as métricas de código em relação a outras abordagens de monitoramento da qualidade. Diante disso, as duas características fundamentais que nortearam o desenvolvimento da ferramenta resultado deste Trabalho de Conclusão de Curso foram, a manutenabilidade e a reusabilidade. Estas consideradas importantes pelo autor por contruibuir na facilidade de evolução da ferramenta. 
+Segundo Filho (\citeyear{filho2013}, p.1), medir e monitorar a qualidade do software é fundamental, independentemente da metodologia de desenvolmento adotada. Ele afirma ainda que muitos fatores que compõem um bom software podem ser percebidos no código fonte. E mesmo que se possua uma ótima suite de testes, esta não é capaz de produzir informações acerca de itens de qualidade, tais como : (i) manutenabilidade; (ii) modularidade; (iii) flexibilidade e (iv) simplicidade. Assim, não é recomendado negligenciar as métricas de código em relação a outras abordagens de monitoramento da qualidade. Diante disso, as duas características fundamentais que nortearam o desenvolvimento da ferramenta resultado deste Trabalho de Conclusão de Curso foram, a manutenabilidade e a reusabilidade. Estas consideradas importantes pelo autor por contribuirem em termos de facilidade de evolução da ferramenta. 
 
-Assim, para verificar o grau de qualidade da ferramenta, no ponto de vista da qualidade de código, foram adotadas as seguintes métricas: (i) Complexidade Ciclomática - CC; (ii)  Coesão e Acoplamento  - SC; e (iii) Herança - DIT. Onde os valores de cada métrica foi obtido com o auxílio da ferramenta Analizo, esses valores são apresentados na tabela 10 e são classificados de acordo os intervalos apresentados na figura 32.
+Assim, para verificar o grau de qualidade da ferramenta, no ponto de vista da qualidade de código, foram adotadas as seguintes métricas: (i) Complexidade Ciclomática - CC; (ii)  Coesão e Acoplamento  - SC; e (iii) Herança - DIT. Os valores de cada métrica foram obtidos com o auxílio da ferramenta Analizo. Esses valores são apresentados na tabela 10 e são classificados de acordo com os intervalos apresentados na figura 33.
 
 \begin{figure}[h]
 \centering
@@ -1161,7 +1161,7 @@ Assim, para verificar o grau de qualidade da ferramenta, no ponto de vista da qu
 \end{longtable}
 \end{center} 
 
-Por fim, diante dos dados apresentados na tabela 10. Pode-se concluir que a ferramenta desenvolvida neste Trabalho de Conclusão de Curso possui uma arquitetura que contruibui com a manutenabilidade e a reusabilidade. 
+Por fim, diante dos dados apresentados na tabela 10, pode-se concluir que a ferramenta desenvolvida neste Trabalho de Conclusão de Curso possui uma arquitetura que contribui com a manutenibilidade e a reusabilidade. 
 
 \section{Análise Qualitativa}
 
@@ -1171,27 +1171,61 @@ Segundo Rocha, pesquisa-ação pode ser considerada "independente" e "objetiva".
 Um tipo de pesquisa social com base empírica, concebida e realizada em estreita associação com uma ação ou com a resolução de um problema coletivo no qual os pesquisadores e os participantes, representativos da situação e/ou do problema, estão envolvidos de forma cooperativa e participativa \apud[p. 3]{thiollent1986} {rocha2012}.
 \end{citacao}
 
-A pesquisa-ação é um processo cíclico e contínuo onde planeja-se, implementa-se, descreve-se e avalia-se uma mudança para a melhoria de sua prática. Desta forma, há um aprendizado maior por parte do pesquisador durante o processo. Neste trabalho, o processo de pesquisa-ação foi utilizado para verificar o objetivo específico, sob o ponto de vista da interface com usuário, no caso: "Abstrair a complexidade de cálculos financeiros comumente utilizados na Análise Técnica. Assim, essa complexidade não é sentida pelo usuário, deixando a mesma a cargo da ferramenta.". O cenário de uso e resultados obtidos são apresentados nos tópicos seguintes.
+\newpage
+A pesquisa-ação é um processo cíclico e contínuo, onde se planeja, implementa, descreve e avalia uma mudança para a melhoria de sua prática. Desta forma, há um aprendizado maior por parte do pesquisador durante o processo. Neste trabalho, o processo de pesquisa-ação foi utilizado para verificar o objetivo específico, sob o ponto de vista da interface com usuário, no caso: "Abstrair a complexidade de cálculos financeiros comumente utilizados na Análise Técnica. Assim, essa complexidade não é sentida pelo usuário, deixando a mesma a cargo da ferramenta.". O cenário de uso bem como os resultados obtidos são apresentados nos tópicos seguintes. Em resumo, serão apresentadas as principais etapas para condução da coleta de impressões com os potenciais usuários da ferramenta. Posteriormente, serão descritos, na ordem: os objetivos dessa coleta, o público alvo avaliado, as observações coletadas e as ações tomadas.
 
 \subsection{Coleta de Impressões: Usuários}
 
+
+
+A coleta de dados foi organizada de acordo com as seguintes etapas: 
+\begin{itemize}
+\item Planejamento:\\
+Nesta etapa foram levantadas questões a serem respondidas pelos potenciais usuários de maneira a avaliar a interface gráfica da ferramenta;
+
+\item Implementação:\\
+Nesta etapa foi elaborado um questionário (figura 34 e 35) a ser respondido pelos usuários, e foi disponibilizado ainda um cenário tecnológico onde a ferramenta apresentou dados em um período histórico de cotações da BM\&FBovespa;
+
+\begin{figure}[h]
+\centering
+\label{f34}
+\includegraphics[width=0.7\textwidth]{figuras/questionario_1}
+\caption{Questionário aplicado.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\label{f34}
+\includegraphics[width=0.7\textwidth]{figuras/questionario_2}
+\caption{Questionário aplicado.}
+\end{figure}
+\FloatBarrier
+
+\item Descrição:\\
+Nesta etapa, concentra-se a descrição do cenário de uso da ferramenta. Quanto à descrição do cenário de uso, tem-se que o mesmo é apresentado a seguir:
+
+\begin{adjustwidth}{1,5cm}{0cm}
+ \textit{A Ferramenta foi apresentada aos potenciais usuários em modo de simulação no período de 1 de março de 2013 a 1 de março de 2014, a versão do JADE utilizado é a 4.3.3 de 10 de dezembro de 2014, a versão do Grails foi a 2.4.3 e a versão do java foi a 1.7.0\_79. A ferramenta foi simulada ainda em um notebook da marca Apple modelo MacBook Pro (Retina, 13-inch, Late 2013) com processador 2.6 GHz Intel Core i5, com 8 GB 1600 MHz DDR3 de Memória RAM e com o Sistema operacional OS X Yosemite versão 10.10.3.} 
+\end{adjustwidth}
+
+\item Avaliação e Ação:\\
+Nesta etapa foram coletados os \textit{feedbacks} dos potenciais usuários da ferramentas em primeiro momento; no segundo momento, foram tomadas ações de ajustes da interface da ferramenta, sendo apresentada novamente aos usuários. Dentre os \textit{feedbacks} recebidos, destacou-se a sugestão de um usuário que se identificou com o perfil Corajoso, onde ele sugeriu usar outro indicador no lugar do indicador Média Móvel. As informações coletadas são expostas de maneira sucinta neste tópico e na íntegra no Apêndice E.
+\end{itemize}
 \begin{description}
-\item[Coleta de impressões com usuários]
-Esta coleta de dados foi organizada de acordo com as seguintes etapas: (i) Planejamento, nesta etapa foram levantadas questões a serem respondidas pelos potenciais usuários de maneira a avaliar a interface gráfica da ferramenta; (ii) Implementação, nesta etapa foi elaborado um questionário a ser respondido pelos usuários, e foi disponibilizado ainda um cenário tecnológico onde a ferramenta apresentou dados em um período histórico de cotações da BM\&FBovespa ; (iii) Descrição, nesta etapa concentra-se a seguinte descrição do cenário de uso da ferramenta. A Ferramenta foi apresentada aos potenciais usuários em modo de simulação no período de 1 de março de 2013 a 1 de março de 2014, a versão do JADE utilizado é a 4.3.3 de 10 de dezembro de 2014, a versão do Grails foi a 2.4.3 e a versão do java foi a 1.7.0\_79. A ferramenta foi simulada ainda em um notebook da marca Apple modelo MacBook Pro (Retina, 13-inch, Late 2013) com processador 2.6 GHz Intel Core i5, com 8 GB 1600 MHz DDR3 de Memória RAM e com o Sistema operacional OS X Yosemite versão 10.10.3; (iv) Avaliação e Ação, nesta etapa foram colhidos os \textit{feedbacks} dos potenciais usuários da ferramentas em primeiro momento; no segundo momento foram tomadas ações de ajuste da interface da ferramenta,sendo apresentado novamente aos usuários. Dentre os \textit{feedbacks} recebidos, destacou-se a sugestão de um usuário que se identificou com o perfil Corajoso, onde ele sugeriu usar outro indicador no lugar do indicador Média Móvel. As informações coletadas são expostas de maneira sucinta neste tópico e na integra no Apêndice E.
 
-\item[Objetivos]
-Esta coleta de dados com potenciais usuários teve como principal propósito verificar o objetivo especifico: “Abstrair a complexidade de cálculos financeiros comumente utilizados na Análise Técnica. Assim, essa complexidade não é sentida pelo usuário, deixando a mesma a cargo da ferramenta”. Vale ressaltar que essa avaliação teve como foco a interface gráfica da ferramenta com os usuários, onde cada usuário recebeu um formulário com questões objetivas e um campo livre para sugestões. O comportamento dos agentes bem como os resultados das estratégias abordadas foram avaliados através de simulações.
+\item[Objetivos:]
+Esta coleta de dados com potenciais usuários teve como principal propósito verificar o objetivo específico: “Abstrair a complexidade de cálculos financeiros comumente utilizados na Análise Técnica. Assim, essa complexidade não é sentida pelo usuário, deixando a mesma a cargo da ferramenta”. Vale ressaltar que essa avaliação teve como foco a interface gráfica da ferramenta com os usuários, onde cada usuário recebeu um formulário com questões objetivas e um campo livre para sugestões. O comportamento dos agentes bem como os resultados das estratégias abordadas foram avaliados através de simulações.
 
-\item[Público alvo avaliado]
+\item[Público alvo avaliado:]
 
 A avaliação ocorreu em maio de 2014 e participaram da avaliação seis pessoas, onde: 1 se classifica no perfil Corajoso; 1 se classifica no perfil Moderado e 4 se classificam no perfil Conservador. O teste funcional da ferramenta foi feito com uso de dados históricos no período entre 1 de março de 2014 e 3 de março de 2015. A inteface gráfica da ferramenta foi o foco dessa primeira análise.
 
-\item[Observações coletadas]
-Quando questionados sobre as cores adotadas na ferramenta, 5 pessoas consideraram boas e 1 pessoa considerou ótima. Quando questionados sobre a facilidade de compreensão da ferramenta, 3 pessoas consideraram como bom, 1 pessoa considerou razoável, 1 pessoa considerou como ruim e 1 se absteve. Quando solicitadas observações gerais para melhoria da ferramenta, destacaram-se: (i) feedback indicando o carregamento e o processo da ferramenta; (ii) atualização página principal automaticamente; (iii) disponibilidade de um canal de dúvidas; (iv) não adoção de estratégias baseadas em Médias Móveis; (v) utilização de javascript na interface; (vi) execução da ferramenta em duas máquinas; (vii) disponibilidade de informações sobre estratégias e uso da ferramenta.
+\item[Observações coletadas:]
+Quando questionados sobre as cores adotadas na ferramenta, 5 pessoas consideraram boas e 1 pessoa considerou ótima. Quando questionados sobre a facilidade de compreensão da ferramenta, 3 pessoas consideraram como bom, 1 pessoa considerou razoável, 1 pessoa considerou como ruim e 1 se absteve. Quando solicitadas observações gerais para melhoria da ferramenta, destacaram-se: (i) feedback indicando o carregamento e o processo da ferramenta; (ii) atualização da página principal automaticamente; (iii) disponibilidade de um canal de dúvidas; (iv) não adoção de estratégias baseadas em Médias Móveis; (v) utilização de javascript na interface; (vi) execução da ferramenta em duas máquinas, e (vii) disponibilidade de informações sobre estratégias e uso da ferramenta.
 
 As sugestões apresentadas pelos usuários demandaram melhorias na interface gráfica, como esperado, e uma demanda na melhoria das estratégias adotadas. Para atender a demanda de melhorias na interface gráfica, foi necessário realizar pequenas capacitações em tecnologias front-end, tais como: javaScript e jQuery. Para atender a demanda de melhorias nas estratégias, foi necessário criar novas estratégias baseadas em outros indicadores financeiros e simular novamente a estratégia.
 
-\item[Ações Tomadas]
+\item[Ações Tomadas:]
 
 Foram feitos ajustes na interface, dentre eles: (i) a criação um canal de comunicação por onde os usuários podem enviar dúvidas, sugestões entre outros; (ii) a criação de uma página com informações importantes da ferramenta; e (iii) a inserção de um mecanismo de requisição automática na página principal. Após as melhorias, a ferramenta foi apresentada novamente aos usuários e verificou-se que as melhorias foram aceitas e novos feedbacks foram coletados.Ao final do ciclo pesquisa-ação, foram registradas algumas demandas de manutenção evolutiva da ferramenta, tais como a inserção de estratégias baseadas em outros indicadores financeiros. Neste caso, optou-se pelo uso de padrões de projeto, como o Strategy, visando facilidades orientadas à manutenção, reutilização e extensibilidade. Detalhes sobre a abordagem de manutenção evolutiva utilizada encontram-se no capítulo 5, sobre a ferramenta. 
 
@@ -1199,14 +1233,25 @@ Foram feitos ajustes na interface, dentre eles: (i) a criação um canal de comu
 
 \subsection{Coleta de Impressões: Simulações de Estratégias}
 
+Esta coleta de dados foi organizada de acordo com as seguintes etapas:
+\begin{itemize}
+\item Planejamento:\\
+Nesta etapa, foi definido um intervalo de tempo para simular as estratégias financeiras;
+\item Execução:\\
+Nesta etapa, foram feitas simulações utilizando os três perfis de usuários;
+\item Avaliação:\\
+Nesta etapa, foram feitas interpretações dos dados coletados em primeiro momento; Em segundo momento, foram feitos ajustes nas estratégias que apresentaram resultados não satisfatórios.
+\end{itemize}
+
 \begin{description}
-\item[Objetivos]
+\item[Objetivos:]
 Esta coleta de impressões com potenciais usuários teve como principal propósito verificar  o objetivo específico: \textit{“Abstrair a complexidade de cálculos financeiros comumente utilizados na Análise Técnica. Assim, essa complexidade não é sentida pelo usuário, deixando a mesma a cargo da ferramenta”}. Vale ressaltar que essa avaliação teve como foco as estratégias adotadas na ferramenta.
 
 As estratégias foram simuladas no período no período de 1 de janeiro de 2012 a 1 de março de 2015, a versão do JADE utilizada é a 4.3.3 de 10 de dezembro de 2014, a versão do Grails foi a 2.4.3 e a versão do java foi a 1.7.0\_79. A ferramenta foi simulada ainda em um notebook da marca Apple modelo MacBook Pro (Retina, 13-inch, Late 2013) com processador 2.6 GHz Intel Core i5, com 8 GB 1600 MHz DDR3 de Memória RAM e com o Sistema operacional OS X Yosemite versão 10.10.3.
 
-\item[Observações coletadas]
-O processo de coleta de impressões foi iniciado simulando o perfil Corajoso. Ao final, as estratégias se mostraram ineficientes. No periodo simulado, as estratégias apresentaram -18,08\% de ganho, ou seja, houve uma perda de capital considerável e tal fato motivou um ajuste nas estratégias. Ao simular o perfil Moderado, as estratégias adotadas apresentaram o 11,60\% de ganho. Durante a simulação percebeu-se uma oportunidade de melhoria nas estratégias adotadas. Ao Simular o perfil perfil Conservador, as estratégias adotadas para este perfil apresentaram 7,8\% de ganho. Apesar do ganho, outras melhorias nas estratégias foram motivadas.
+\item[Observações coletadas:]
+
+O processo de coleta de impressões foi iniciado simulando o perfil Corajoso. Ao final, as estratégias se mostraram ineficientes. No periodo simulado, as estratégias apresentaram -18,08\% de ganho, ou seja, houve uma perda de capital considerável e tal fato motivou um ajuste nas estratégias. Ao simular o perfil Moderado, as estratégias adotadas apresentaram 11,60\% de ganho. Durante a simulação percebeu-se uma oportunidade de melhoria nas estratégias adotadas. Ao simular o perfil perfil Conservador, as estratégias adotadas para este perfil apresentaram 7,8\% de ganho. Apesar do ganho, outras melhorias nas estratégias foram motivadas. As tabelas 11, 12 e 13 apresentam os resultados para os perfis Conservador, Moderado e Corajoso.
 
 \begin{center}
 \begin{longtable}{| p{2cm} | p{10cm} |p{2cm} |}
@@ -1290,7 +1335,7 @@ O processo de coleta de impressões foi iniciado simulando o perfil Corajoso. Ao
 
 \item[Ações tomadas]
 
-As estratégias financeiras do perfil Corajoso, associadas aos agentes especialistas foram substituídas por estratégias baseadas em Médias Moveis exponenciais com uso de \textit{Stop Loss}. Para esta versão da Ferramenta de Software, não serão utilizadas as estratégias baseadas em padrões de Candlestick. Verificou-se, nesse caso, que para desenvolver um código capaz de identificar variações de um padrão de Candlestick, bem como validar os sinais, se falsos ou não, seria mais adequado usar uma abordagem de inteligência artificial orientada a mecanimos de aprendizagem. Tal mecanismo não é escopo deste trabalho, entretanto, trata-se de uma sugestão de melhoria para a ferramenta. Essa melhoria poderá usufruir da abordagem evolutiva adotada no desenvolvimento dessa ferramenta, ampliando ainda mais a capacidade de atuação dos agentes.
+As estratégias financeiras do perfil Corajoso, associadas aos agentes especialistas foram substituídas por estratégias baseadas em Médias Moveis Exponenciais com uso de \textit{Stop Loss}. Para esta versão da Ferramenta de Software, não serão utilizadas as estratégias baseadas em padrões de Candlestick. Verificou-se, nesse caso, que para desenvolver um código capaz de identificar variações de um padrão de Candlestick, bem como validar os sinais, se falsos ou não, seria mais adequado usar uma abordagem de inteligência artificial orientada a mecanimos de aprendizagem. Tal mecanismo não é escopo deste trabalho, entretanto, trata-se de uma sugestão de melhoria para a ferramenta. Essa melhoria poderá usufruir da abordagem evolutiva adotada no desenvolvimento dessa ferramenta, ampliando ainda mais a capacidade de atuação dos agentes.
 
 
 \begin{center}
@@ -1317,7 +1362,7 @@ As estratégias financeiras do perfil Corajoso, associadas aos agentes especiali
 \end{longtable}
 \end{center} 
 
-A tabela 13 apresenta os novos resultados da simulação do perfil Corajoso no mesmo período da simulação anterior. O valor do \textit{Stop Loss} foi ajustado empiricamente, e percebeu-se que 5\% é o valor ideal. Este valor de \textit{Stop Loss} foi adotado para os três perfis existentes na Ferramenta. As tabelas 14 e 15 apresentam os resultados da simulação dos perfis Conservador e Moderado com suas respectivas estratégias ajustadas. 
+A tabela 14 apresenta os novos resultados da simulação do perfil Corajoso no mesmo período da simulação anterior. O valor do \textit{Stop Loss} foi ajustado empiricamente, e percebeu-se que 5\% é o valor ideal. Este valor de \textit{Stop Loss} foi adotado para os três perfis existentes na Ferramenta. As tabelas 15 e 16 apresentam os resultados da simulação dos perfis Conservador e Moderado com suas respectivas estratégias ajustadas. 
 
 \begin{center}
 \begin{longtable}{| p{2cm} | p{10cm} |p{2cm} |}
@@ -1377,9 +1422,9 @@ A tabela 13 apresenta os novos resultados da simulação do perfil Corajoso no m
 
 \section{Resumo do capítulo}
 
-Este capítulo elucidou as análises dos resultados obtidos com os testes realizados na ferramenta, sejam eles: (i) baseados na satisfação dos usuários ao utilizar a ferramenta, coleta qualitativa de dados, ou (ii) baseados em simulações, coleta quantitativa de dados. Quanto a análise quantitativa, foi estabelecida uma meta de cobertura de teste unitário em 90\%. Vale ressaltar que essa meta se aplicou somente as classes contidas no pacote suport. 
+Este capítulo elucidou as análises dos resultados obtidos com os testes realizados na ferramenta, sejam eles: (i) baseados na satisfação dos usuários ao utilizar a ferramenta, coleta qualitativa de dados, ou (ii) baseados em simulações, coleta quantitativa de dados. Quanto a análise quantitativa, foi estabelecida uma meta de cobertura de teste unitário em 90\%. Vale ressaltar que essa meta se aplicou somente às classes contidas no pacote \textit{suport}. 
 
-Quanto a análise qualitativa, utilizou-se uma abordagem iterativa-evolutiva baseada em pesquisa-ação combinada a cenários de uso, cujo objetivo foi verificar a conformidade da ferramenta com os objtivos deste Trabalho de Conclusão de Curso.
+Quanto à análise qualitativa, utilizou-se uma abordagem iterativa-evolutiva baseada em pesquisa-ação combinada a cenários de uso, cujo objetivo foi verificar a conformidade da ferramenta com os objtivos deste Trabalho de Conclusão de Curso.
 
 
 \newpage
@@ -1387,7 +1432,7 @@ Quanto a análise qualitativa, utilizou-se uma abordagem iterativa-evolutiva bas
 
 Esse capítulo procura resgatar as principais contribuições oriundas desse Trabalho de Conclusão de Curso. Adicionalmente, são apresentados possíveis pontos de extensibilidade da ferramenta, os quais poderão acordar evoluções e trabalhos futuros.
 
-\section{Principais contribuições}
+\section{Principais Contribuições}
 
 A Ferramenta de Software desenvolvida neste TCC é capaz de auxiliar cidadãos brasileiros a realizarem investimentos em bolsa de valores. Sua primeira versão faz uso de estratégias comumente referenciadas por investidores, Medias Móveis.  Entretanto, sua arquitetura foi desenhada de modo a suportar a adição de novas estratégias sem a necessidade de fazer alterações nos códigos fontes dos agentes comportamentais. Isto contribui para a manutenção evolutiva da ferramenta.
 
@@ -1398,7 +1443,7 @@ Ressalta-se que os objetivos geral e específicos desse trabalho foram alcançad
 
 \section{Sugestões de Trabalhos Futuros}
 
-Lembrando que a arquitetura adotada no desenvolviment oda ferramenta colabora com a manutenção evolutiva da mesma, poderão ser adicionados agentes capazes de atuar em outros contextos comumente encontrados na BM\&FBovespa, tais como: (i) Mercado de Opções; (i) Mercado de Mercadorias e Contratos Futuros; (iii) Renda Fixa, dentre outros. Adicionalmente, poderão ser incorporados agentes capazes de atuar em outras bolsas de valores em âmbito mundial, expandindo a capacidade cognitiva dos agentes com novas estratégias, novos indicadores financeiros e novas propostas de implementação (ex. implementação orientada ao Paradigma de Sistemas Multiagentes Intencionais, apoiado no Modelo BDI (\textit{Belief-Desire-Intention})).
+Lembrando que a arquitetura adotada no desenvolvimento da ferramenta colabora com a manutenção evolutiva da mesma, poderão ser adicionados agentes capazes de atuar em outros contextos comumente encontrados na BM\&FBovespa, tais como: (i) Mercado de Opções; (i) Mercado de Mercadorias e Contratos Futuros; (iii) Renda Fixa, dentre outros. Adicionalmente, poderão ser incorporados agentes capazes de atuar em outras bolsas de valores em âmbito mundial, expandindo a capacidade cognitiva dos agentes com novas estratégias, novos indicadores financeiros e novas propostas de implementação (ex. implementação orientada ao Paradigma de Sistemas Multiagentes Intencionais, apoiado no Modelo BDI (\textit{Belief-Desire-Intention})).
 
-Outro ponto de extensibilidade da ferramenta desenvolvida é a criação de uma interface mobile com o usuário, através do desenvolvimento de aplicativos para Smartphones e Tablets. Estes, podem ser desenvolvidos para iOS, Android ou Windows Phone. Lembrando que a interface gráfica da ferramenta desenvolvida, em sua versão atual, pode ser visualizada, via browser, em diferentes dispositivos móveis. Isso é possível, pois a mesma foi construída com base no framework Grails. Esse framework já confere, às aplicações desenvolvidas com base em sua arquitetura padrão, responsividade em diferentes dispositivos móveis. Entretanto, seria interessante desenvolver a ferramenta como uma aplicação nativa, específica para dispositivos móveis.
+Outro ponto de extensibilidade da ferramenta desenvolvida é a criação de uma interface \textit{mobile} com o usuário, através do desenvolvimento de aplicativos para Smartphones e Tablets. Estes, podem ser desenvolvidos para iOS, Android ou Windows Phone. Lembrando que a interface gráfica da ferramenta desenvolvida, em sua versão atual, pode ser visualizada, via browser, em diferentes dispositivos móveis. Isso é possível, pois a mesma foi construída com base no framework Grails. Esse framework já confere, às aplicações desenvolvidas com base em sua arquitetura padrão, responsividade em diferentes dispositivos móveis. Entretanto, seria interessante desenvolver a ferramenta como uma aplicação nativa, específica para dispositivos móveis.
 
