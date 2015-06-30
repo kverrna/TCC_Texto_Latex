@@ -17,7 +17,7 @@ Segundo a CVM, Comissão de Valores Mobiliários, o Mercado Financeiro Brasileir
 \centering
 \label{f01}
 \includegraphics[width=0.5\textwidth]{figuras/f01}
-\caption{Composição Mercado Financeiro Brasileiro  \newline fonte: CVM,2013}
+\caption{Composição Mercado Financeiro Brasileiro  \newline Fonte: CVM,2013}
 
 \end{figure}
 
@@ -116,7 +116,7 @@ Um modelo de agente deliberativo bastante investigado na Inteligência Artificia
 
 Girardi (\citeyear{girardi2004}, p.6) caracteriza um sistema multiagentes (SMA) como \textit{“um grupo de agentes que atuam em conjunto no sentido de resolver problemas que estão além das suas habilidades individuais. Os agentes realizam interações entre eles de modo cooperativo para atingir uma meta.”} Girardi (\citeyear{girardi2004}, p.7) define ainda, \textit{“A arquitetura  de um SMA mostra a maneira como o sistema está implementado em termos de propriedades e estrutura e como os agentes que o compõe podem interagir a fim de garantir a funcionalidade do sistema.”}
 
- Esta arquitetura pode ser classificada dentre três grupos, conforme sua complexidade: (i) Arquitetura simples: composta apenas por um agente. (ii) Arquitetura moderada, composta por agentes que executam as mesmas tarefas, mas possuem diferentes usuários, sendo que estes agentes podem ainda ser distribuídos em diversos computadores e cooperar entre si. (iii) Arquitetura complexa, composta por agentes de diversos tipos, estes também podem ser distribuídos em diversos computadores e cooperar entre si. As arquiteturas podem ser classificadas considerando seu mecanismo de cooperação e coordenação \apud[p. 7]{knapik1998}{girardi2004}.
+ Esta arquitetura pode ser classificada dentre três grupos, conforme sua complexidade: (i) Arquitetura simples, composta apenas por um agente. (ii) Arquitetura moderada, composta por agentes que executam as mesmas tarefas, mas possuem diferentes usuários, sendo que estes agentes podem ainda ser distribuídos em diversos computadores e cooperar entre si. (iii) Arquitetura complexa, composta por agentes de diversos tipos, estes também podem ser distribuídos em diversos computadores e cooperar entre si. As arquiteturas podem ser classificadas considerando seu mecanismo de cooperação e coordenação \apud[p. 7]{knapik1998}{girardi2004}.
 
 Através de um mecanismo de cooperação, os agentes de um SMA expõem suas necessidades para outros agentes. Segundo Girardi, este mecanismo de cooperação é abordado de maneira destacada em três padrões arquiteturais para o desenvolvimento de um SMA: a (i) arquitetura quadro-negro; a (ii) arquitetura de troca de mensagens; e a (iii) arquitetura federativa.\cite[p. 7]{girardi2004}. 
 
@@ -240,6 +240,7 @@ Como o padrão Strategy delega a implementação de algoritmos às classes concr
 \includegraphics[width=0.9\textwidth]{figuras/f07}
 \caption{Padrão Strategy}
 \end{figure}
+\FloatBarrier
 \subsubsubsection{Singleton}
 
 Trata-se de um padrão de criação, cujo objetivo é garantir que uma classe possua somente uma instância e tenha ainda um ponto global de acesso à essa instância. Gamma (\citeyear{gamma2000}, p. 130) ilustra um cenário de aplicação deste padrão. Este cenário contém um sistema onde existem várias impressoras e deveria haver somente um \textit{spooler} (i.e. arquivo temporário que concentra os demais arquivos a serem impressos). Da mesma forma, deve haver somente um sistema de arquivos e um gerenciador de janelas. Neste cenário, nota-se a necessidade em garantir que a classe que detem o controle do \textit{spooler} tenha apenas uma instância. E tenha ainda, um ponto público de acesso a essa instância. Gamma (\citeyear{gamma2000}, p. 130) afirma que, a melhor solução seria tornar a própria classe responsável por manter o controle da sua única instância. A classe pode garantir que nenhuma outra instância seja criada, bem como pode fornecer um meio para acessar sua única instância. Este é o padrão Singleton.
@@ -270,7 +271,7 @@ Trata-se de um padrão estrutura, cujo propósito é isolar a camada de modelo d
 
 O JADE \cite{telecon2014} é um framework implementado em Java que possibilita a programação de Sistemas Multiagentes complexos. O JADE oferece suporte para testes de atividade de debug, arquitetura bem estabelecida para criação, comunicação, identificação, gerenciamento e demais ações com vários agentes atuando como em uma sociedade real. No JADE, os agentes podem trocar mensagens entre si, caracterizando sua arquitetura de comunicação como troca de mensagem. Este framework foi desenvolvido de acordo com as especificações Foundation for IntelligentPhysicalAgents (FIPA) \cite{telecon2014}, que é uma comunidade IEEE que promove padrões tecnológicos para Sistemas Multiagentes. Por ter sido implementado integralmente em Java, o JADE pode ser executado em qualquer sistema operacional que possua uma Máquina Virtual Java.
 
-O JADE é um Software livre e distribuído pela Telecom Itália, empresa proprietária da TIM Brasil, e possui a Licença LGPL \cite{telecon2014}. Ele é supervisionado por um grupo de empresas de cinco membros: Telecom Itália, Motorola, Whitestein Technologies AG, ProfactorGmbH e France Telecom R\&D. Atualmente, a versão disponível é a 4.3.2, publicada em 28 de março de 2014.
+O JADE é um Software livre e distribuído pela Telecom Itália, empresa proprietária da TIM Brasil, e possui a Licença LGPL \cite{telecon2014}. Ele é supervisionado por um grupo de empresas de cinco membros: Telecom Itália, Motorola, Whitestein Technologies AG, ProfactorGmbH e France Telecom R\&D. Atualmente, a versão disponível é a 4.3.3, publicada em 11 de dezembro de 2014.
 
 \begin{figure}[h]
 \centering
@@ -290,7 +291,7 @@ Simplificadamente, na Arquitetura do JADE, uma dada plataforma é composta por u
 
 O termo Scrum  é originário do Rugby, esporte criado na Inglaterra. No Scrum, são feitas entregas contínuas de pequenas partes funcionais do Software. O Scrum consiste em times associados a papéis, eventos, artefatos e regras. Cada componente tem uma função específica no desenvolvimento do Software \cite{schwaber2013}.
 
-O time Scrum é formado por:(i)um Scrum Master, que é a figura do líder do time. Ele é o responsável por fazer o time compreender as regras do Scrum; (ii) um grupo de desenvolvimento (time), que são os programadores, designers, entre outros; e (iii) um Product Owner, que é uma pessoa com bom conhecimento das necessidades do produto. No Scrum, os times são auto-organizáveis no que tange à escolha da melhor forma para realizar um trabalho. O modelo de time no Scrum foi pensado de forma que valorize a flexibilidade, criatividade e produtividade.  O time entrega produtos de forma iterativa e incremental, assim aumentando oportunidades de \textit{feedback} contínuo. Estas entregas são versões parciais funcionais do Software trabalhado pelo time \cite[p. 5-7]{schwaber2013}.
+O time Scrum é formado por: (i) um Scrum Master, que é a figura do líder do time. Ele é o responsável por fazer o time compreender as regras do Scrum; (ii) um grupo de desenvolvimento (time), que são os programadores, designers, entre outros; e (iii) um Product Owner, que é uma pessoa com bom conhecimento das necessidades do produto. No Scrum, os times são auto-organizáveis no que tange à escolha da melhor forma para realizar um trabalho. O modelo de time no Scrum foi pensado de forma que valorize a flexibilidade, criatividade e produtividade.  O time entrega produtos de forma iterativa e incremental, assim aumentando oportunidades de \textit{feedback} contínuo. Estas entregas são versões parciais funcionais do Software trabalhado pelo time \cite[p. 5-7]{schwaber2013}.
 
 Cada evento no Scrum é uma oportunidade de verificar e corrigir algo no produto. Eles são projetados para que seja possível obter transparência e uma inspeção criteriosa do produto. Cada evento termina sempre que seu objetivo é alcançado. No Scrum, o evento principal é a Sprint. Ela é o ciclo de desenvolvimento do produto, que dura um mês ou menos, sendo composta por:(i) uma reunião de planejamento; (ii) reuniões diárias curtas; (iii) uma revisão da Sprint, (iv) uma retrospectiva; e o  (v) trabalho de desenvolvimento do produto.
 
@@ -390,9 +391,8 @@ Nesta etapa do TCC, foi elaborado um cenário para avaliar o esforço necessári
 \label{f12}
 \includegraphics[width=0.9\textwidth]{figuras/f09}
 \caption{Processo investigativo }
-
 \end{figure}
-
+\FloatBarrier
 \begin{description}
 \item [Elaborar Cenário para Prova de Conceito:]
 Para nortear as provas de conceito feitas para este estudo, foi elaborado um cenário onde é requerida uma maneira automatizada de se chegar à uma solução. Este cenário é descrito a seguir.
@@ -506,7 +506,7 @@ A ferramenta resultante deste TCC teve seu desenvolvimento orientando-se de acor
 
 \begin{center}
 \begin{longtable}{| p{2cm} | p{10cm} |p{3cm} |}
-\caption{ProductBacklog inicial} \\
+\caption{Product Backlog inicial} \\
 \hline
 \textbf{Número} & \textbf{Descrição} & \textbf{Tipo}\\\hline
 \endfirsthead
@@ -1189,14 +1189,14 @@ Nesta etapa foi elaborado um questionário (figura 34 e 35) a ser respondido pel
 \begin{figure}[h]
 \centering
 \label{f34}
-\includegraphics[width=0.7\textwidth]{figuras/questionario_1}
+\includegraphics[width=0.9\textwidth]{figuras/questionario_1}
 \caption{Questionário aplicado.}
 \end{figure}
 
 \begin{figure}[h]
 \centering
 \label{f34}
-\includegraphics[width=0.7\textwidth]{figuras/questionario_2}
+\includegraphics[width=0.9\textwidth]{figuras/questionario_2}
 \caption{Questionário aplicado.}
 \end{figure}
 \FloatBarrier
@@ -1238,7 +1238,7 @@ Esta coleta de dados foi organizada de acordo com as seguintes etapas:
 \item Planejamento:\\
 Nesta etapa, foi definido um intervalo de tempo para simular as estratégias financeiras;
 \item Execução:\\
-Nesta etapa, foram feitas simulações utilizando os três perfis de usuários;
+Nesta etapa, foram feitas simulações para cada perfil de usuário existente na ferramenta;
 \item Avaliação:\\
 Nesta etapa, foram feitas interpretações dos dados coletados em primeiro momento; Em segundo momento, foram feitos ajustes nas estratégias que apresentaram resultados não satisfatórios.
 \end{itemize}
