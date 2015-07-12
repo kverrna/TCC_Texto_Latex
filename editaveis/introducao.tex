@@ -1,6 +1,14 @@
 \chapter[INTRODUÇÃO]{Introdução}
 
-Este capítulo apresenta uma visão geral do contexto onde a ferramenta desenvolvida está situada, bem como uma breve explanação acerca do framework JADE, utilizado na investigação do Paradigma de Sistemas Multiagentes. Adicionalmente, são apresentados os objetivos que orientaram o desenvolvimento deste Trabalho de Conclusão de Curso.
+Este capítulo está organizado em seções, como apresentado na figura 1, e apresenta uma visão geral do contexto onde a ferramenta desenvolvida está situada, bem como uma breve explanação acerca do \textit{framework} JADE, utilizado na investigação do Paradigma de Sistemas Multiagentes. Adicionalmente, são apresentados os objetivos que orientaram o desenvolvimento deste Trabalho de Conclusão de Curso. É apresentado ainda neste capítulo, o escopo final deste trabalho.
+
+\begin{figure}[h!]
+\centering
+\label{f10}
+\includegraphics[width=1\textwidth]{figuras/cap1}
+\caption{Organização do Capítulo}
+\end{figure}
+\FloatBarrier
 
 \section{Motivação}
 
@@ -23,7 +31,7 @@ Diante do exposto, percebe-se que o brasileiro não tem uma presença expressiva
 
 Diante disto, é possível identificar um \textit{deficit} do cidadão brasileiro em relação aos conhecimentos necessários para investir. Investir na bolsa de valores requer alguns conhecimentos específicos que podem ser automatizados via Software. Um Software capaz de acompanhar e analisar determinados ativos de maneira autônoma, extraindo informações que auxiliem o cidadão a decidir como fazer seus próprios investimentos, de acordo com o seu perfil de investidor. Idealmente, seria como uma ferramenta guia, que mostraria ao cidadão outros tipos de investimentos além das aplicações em poupança. É exatamente essa necessidade que esse Trabalho de Conclusão de Curso procura atender.
 
-Para desenvolver o Software proposto, foi abordado o Paradigma de Sistemas Multiagentes, no intuito de explorar o paradigma, aplicando-o ao contexto financeiro. Para isto foi escolhido o framework JADE  (Java Agent Development Framework ).
+Para desenvolver o Software proposto, foi abordado o Paradigma de Sistemas Multiagentes, no intuito de explorar o paradigma, aplicando-o ao contexto financeiro. Para isto foi escolhido o \textit{framework} JADE  \textit{(Java Agent Development Framework )}.
 
 \begin{citacao}
 O JADE é um framework completamente implementado na linguagem Java. Ele simplifica a implementação de sistemas multiagentes através de uma ponte que compila os agentes com as especificações FIPA e oferece suporte de ferramentas gráficas de acompanhamento e possibilidade de realizar atividades de debugging e deploy.  A plataforma de agentes é distribuída entre outros computadores (que não necessariamente possua o mesmo Sistema Operacional) e a configuração pode ser feita através de uma ferramenta remota. Um agente pode ser movido de um computador para outro em tempo de execução sempre que necessário. O JADE é completamente implementado na linguagem Java e requer pelo menos a versão 1.4 do JAVA, JRE ou  JDK, instalado. \cite{telecon2014}
@@ -48,8 +56,15 @@ Construir uma Ferramenta de estratégia financeira apoiada por Sistemas Multiage
 \begin{enumerate}
 \item Abstrair a complexidade de cálculos financeiros comumente utilizados na Análise Técnica. Assim, essa complexidade não é sentida pelo usuário, deixando a mesma a cargo da ferramenta.
 \item Explorar o Paradigma de Sistemas Multiagentes Comportamentais no contexto financeiro, implementando, por exemplo, comportamentos cíclicos e baseados em tempo.
+\item Procurar facilitar a reutilização de Software, em especial visando melhorar a manutenibilidade da ferramenta bem como sua extensibilidade em trabalhos futuros.
+\item Procurar reduzir o acoplamento e aumentar a coesão, apoiando-se em boas práticas da Orientação a Objetos.
 \end{enumerate}
 
+\section{Escopo Final do Trabalho}
+
+Ao conduzir o Trabalho de Conclusão de Curso, percebeu-se que o escopo final de trabalho compreende: (i) todo um estudo quanto ao paradigma de Sistemas Multiagentes aplicável ao Mercado de Bolsa de Valores, o qual orientou-se pela modalidade de pesquisa exploratória. Nesse caso, desenvolveu-se uma prova de conceito para embasar as decisões preliminares desse trabalho, e (ii) desenvolvimento propriamente dito da Ferramenta de Estratégia Financeira apoiada por Sistemas Multiagentes Comportamentais bem como a análise qualitativa dessa ferramenta quanto à qualidade do código obtido e as impressões coletadas junto aos potenciais usuários. 
+
+Em resumo, o trabalho permitiu estudar uma abordagem emergente, desenvolver um produto de Software, e realizar ciclos evolutivos de teste e refinamento desse produto de Software com base nos resultados obtidos. Resultados esses oriundos da aplicação de pesquisa-ação \cite{rocha2012} (uma modalidade de pesquisa de natureza qualitativa). Esses aspectos serão principalmente retomados e acordados em detalhes nos capítulos Metodologia, Ferramenta Financeira e Resultados.
 
 \section{Organização do Trabalho}
 

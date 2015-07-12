@@ -1,0 +1,53 @@
+\chapter[Introdução]{INTRODUÇÃO}
+
+\section{MOTIVAÇÃO}
+
+
+Bolsa de valores, de maneira geral, é um mercado organizado onde uma empresa pública ou privada abre seu capital para arrecadar fundos para fazer investimentos visando crescimento e maior lucro. Ao abrir o capital, a empresa disponibiliza uma quantidade de ações, que podem ser entendidas como pedaços da empresa. Esses, por sua vez, são vendidos para investidores, pessoas físicas/jurídicas ou estrangeiros. Essa empresa assume um compromisso de manter transparência com dados financeiros de interesse dos investidores e pode ser punida por um órgão regulador caso seja identificada alguma irregularidade.
+
+Hoje no Brasil, existe apenas uma bolsa de valores, a Bolsa de Valores de São Paulo, que neste ano, só no mês de fevereiro, movimentou R\$ 131,54 bilhões com uma média de R\$ 6,57 bilhões por dia de pregão. Sendo que dessa movimentação, 50,42\% foi realizada por investidores estrangeiros, e apenas 13,73\% das movimentações vieram de investidores brasileiros pessoas físicas \cite{bovespa2014}.
+
+Diante do exposto, percebe-se que o brasileiro não tem uma presença expressiva na bolsa de valores do país. Tal fato é comprovado por um estudo realizado pelo Instituto Rosenfield, encomendado pela BM\&FBovespa referente à educação financeira do brasileiro, o qual revelou que apenas 1\% da população investe em ações. Foram ouvidas pelo menos 2.000 pessoas das 15 maiores regiões metropolitanas brasileiras, abrangendo 100 municípios, de todas as classes sociais\cite{isabella2013}. O Estudo  publicado pela revista RI em 2013também mostrou que:
+
+\begin{citacao}
+\begin{enumerate}
+\item 40,8\% não fazem investimentos. Aplicam em poupança 44,4\% dos entrevistados, e 37\% deixam o dinheiro na conta corrente. Nem 5\% dos entrevistados investem em ao menos um dos demais investimentos, como imóveis, CDB (Certificado de Depósito Bancário), fundos DI (fundos de Depósito Interbancário), ações ou Tesouro Direto.
+\item 52,6\% 	dos entrevistados preferem investimentos com baixo risco e baixa rentabilidade, confirmando o perfil conservador do brasileiro, e 65,6\% têm pouca propensão para investir em ações.
+\item Os dois principais motivos para não investir em ações são a falta de conhecimento (para 43,5\% dos entrevistados) e o fato de não disponibilizar de dinheiro ao final do mês (para 21,3\% dos entrevistados).
+\item Também há bastante desconhecimento sobre a diversificação dos investimentos. Como por exemplo, percebe-se que apenas 22\% dos entrevistados sabem que quando se investe em mais de um ativo, o risco de perder dinheiro diminui.\cite{isabella2013}
+
+\end{enumerate}
+\end{citacao}
+
+Diante disto, é possível identificar um deficit do cidadão brasileiro em relação aosconhecimentos necessários para investir. Investir na bolsa de valores requer alguns conhecimentos específicos que podem ser automatizados via Software. Um Software capaz de acompanhar e analisar determinados ativos de maneira autônoma, extraindo informações que auxiliem o cidadão a decidir como fazer seus próprios investimentos, de acordo com o seu perfil de investidor. Idealmente, seria como uma ferramenta guia, que mostraria ao cidadão outros tipos de investimentos além das aplicações em poupança. É exatamente essa necessidade que a proposta aqui apresentada procurará atender.
+
+Para desenvolver o Software proposto, foi abordado o Paradigma de Sistemas Multiagentes, no intuito de explorar o paradigma, aplicando-o ao contexto financeiro. Para isto foi escolhido o framework JADE  (Java Agent Development Framework ).
+
+\begin{citacao}
+O JADE é um framework completamente implementado na linguagem Java. Ele simplifica a implementação de sistemas multiagentes através de uma ponte que compila os agentes com as especificações FIPA e oferece suporte de ferramentas gráficas de acompanhamento e possibilidade de realizar atividades de debugging e deploy.  A plataforma de agentes é distribuída entre outros computadores (que não necessariamente possua o mesmo Sistema Operacional) e a configuração pode ser feita através de uma ferramenta remota. Um agente pode ser movido de um computador para outro em tempo de execução sempre que necessário. O JADE é completamente implementado na linguagem Java e requer pelo menos a versão 1.4 do JAVA, JRE ou  JDK, instalado. \cite{telecon2014}
+\end{citacao}
+
+Cada agente implementado nesta ferramenta possui um conjunto de comportamentos que define sua especialidade, comportamentos estes que podem ser abstraídos de investidores humanos existentes no contexto financeiro abordado neste estudo. Adicionalmente, cada agente tem a capacidade de ser autônomo o suficiente para utilizar este conjunto de comportamentos, até mesmo de forma colaborativa com outros agentes, visando alcançar determinados objetivos. No contexto abordado neste trabalho, um objetivo a ser alcançado pelos agentes seria a escolha, por exemplo, dos melhores investimentos alinhados ao perfil investidor do cidadão.
+
+O propósito do Software, objeto de estudo e desenvolvimento da proposta de TCC, aqui apresentada, é oferecer ao cidadão brasileiro uma ferramenta que o auxilie a realizar investimentos em bolsa de valores, de maneira simplificada e apoiada por estratégias financeiras. A ferramenta apresentará opções de investimentos de acordo com o perfil investidor do cidadão. Perfil que pode ser, por exemplo, de uma pessoa que deseja aumentar seu patrimônio ou de uma pessoa que deseja realizar investimentos de longo prazo para com objetivo de aposentar-se por conta própria.
+
+\section{OBJETIVOS}
+
+Essa seção compreende os principais objetivos da pesquisa proposta, organizados em: objetivo geral (Subseção 1.2.1) e objetivos específicos (Subseção 1.2.2).
+
+
+\subsection {Objetivo Geral}
+
+Construir uma Ferramenta de estratégia financeira apoiada por Sistemas Multiagentes Comportamentais.
+
+\subsection {Objetivos Específicos}
+
+\begin{enumerate}
+\item Abstrair a complexidade de cálculos financeiros comumente utilizados na Análise Técnica. Assim, essa complexidade não é sentida pelo usuário, deixando a mesma a cargo da ferramenta.
+\item Explorar o Paradigma de Sistemas Multiagentes Comportamentais no contexto financeiro, implementando, por exemplo, comportamentos cíclicos e baseados em tempo.
+\end{enumerate}
+
+
+\section{ORGANIZAÇÃO DO TRABALHO}
+
+Este TCC esta organizado em Capítulos. No \textbf{Capitulo 2}, concentra-se o referencial teórico, este organizado em Contexto Financeiro, com uma breve explanação sobre o mercado abordado, bem como em Engenharia de Software, com uma explanação do Paradigma de Sistemas Multiagentes.No \textbf{Capitulo 3}, concentra-se o suporte tecnológico deste TCC, este dividido em Contexto financeiro, com uma exposição de alguns tipos de ferramentas de Software comumente encontradas no mercado para apoiar atividades de analises técnicas, bem como em Engenharia de Software, com um apresentação dos recursos utilizados neste TCC. No \textbf{Capitulo 4}, concentra-se a descrição da ferramenta proposta. No \textbf{Capitulo 5}, concentra-se a metodologia de desenvolvimento da ferramenta proposta. Bem como, o estado atual de desenvolvimento da ferramenta. No \textbf{Capitulo 6}, apresenta as considerações finais desde estudo.
