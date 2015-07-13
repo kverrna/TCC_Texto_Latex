@@ -24,7 +24,7 @@ Segundo a CVM, Comissão de Valores Mobiliários, o Mercado Financeiro Brasileir
 \centering
 \label{f01}
 \includegraphics[width=0.5\textwidth]{figuras/f01}
-\caption{Composição Mercado Financeiro Brasileiro} {Fonte:\cite{cvm2014}}
+\caption{Composição Mercado Financeiro Brasileiro} {Fonte:\cite{cmv2014}}
 
 \end{figure}
 
@@ -32,7 +32,7 @@ O Mercado Monetário é um mercado onde os participantes são instituições fin
 
 O Mercado de Crédito é o mercado onde instituições financeiras captam dinheiro de agentes superavitários e realizam empréstimos a pessoas físicas ou jurídicas. Esta instituição tem um compromisso com o agente superavitário comprovado por títulos privados. Ao emprestar um valor à uma pessoa, esta instituição financeira é remunerada com a diferença de juros que cobra do devedor e paga ao seu credor (agente superavitário), denominado \textit{spread}, pelos serviços de intermediação. O Bacen é o principal órgão regulador deste mercado para evitar que ocorram casos de lucros abusivos \cite[p. 32]{cmv2014}.
 
-O Mercado de Câmbio é um mercado onde há transações entre moedas estrangeiras e a moeda nacional. Participam deste mercado instituições que possuem despesas ou receitas em moeda estrangeira. O Bacen é o órgão que regula este mercado visando mantê-lo em concordância com a Política Cambial\cite[p. 32]{cmv2014}.
+O Mercado de Câmbio é um mercado onde há transações entre moedas estrangeiras e a moeda nacional. Participam deste mercado instituições que possuem despesas ou receitas em moeda estrangeira. O Bacen é o órgão que regula este mercado visando mantê-lo em concordância com a Política Cambial \cite[p. 32]{cmv2014}.
 
 O Mercado de Capitais é o mercado onde empresas captam valores diretamente com os agentes superavitários, através de títulos como Debêntures, notas promissórias, ações, dentre outros. Em outras palavras, o risco da operação é assumido pelo agente superavitário e não mais pela instituição que faz a intermediação, como no Mercado de Crédito. Porém, essa captação é assessorada por uma empresa apropriada que presta estes serviços. Este mercado é regulado pela CVM (\citeyear{cmv2014},p 33).Os participantes deste mercado estão apresentados no tópico subsequente, uma vez que este será o mercado abordando neste TCC.
 
@@ -54,6 +54,9 @@ São adotadas, neste TCC, técnicas financeiras pertencentes à abordagem da An�
 
 
 \section{Engenharia de Software}
+
+Nesta seção é apresentada uma descrição do Paradigma de Sistemas Multiagentes explorado neste Trabalho de Conclusão de curso, bem como descrição conceitual acerca de Agentes Comportamentais, tipo explorado neste trabalho, e Agentes Intencionais. Adicionalmente, é feita uma explanação acerta das três arquiteturas comumente encontradas em Sistemas Multiagentes (arquitetura quadro-negro, arquitetura de troca de mensagens e arquitetura federativa).
+
 \subsection{Agentes}
 
 Russel e Norving (\citeyear{russel2003}, p. 31) definem: \textit{“An agent is anything that can be viewed as perceiving its environment through sensors and acting upon that environment through actuators”}. Em outras palavras, um agente é capaz de se comportar em um determinado ambiente de acordo com as informações oriundas deste ambiente, seja ele determinístico ou não.
@@ -63,7 +66,7 @@ Segundo Wooldridge (\citeyear{wooldrige2002}), um agente possui as seguintes car
 De acordo com Girardi (\citeyear{girardi2004}, p. 5), o mecanismo utilizado para a tomada de decisão da ação a ser executada a partir de uma percepção é o que distingue um agente, classificando-o em um agente: (i) deliberativo, quando a tomada de decisão da ação a ser executada é realizada via raciocínio lógico em concordância com um plano de ações para atingir alguma meta; (ii) reativo, quando o agente não possui um modelo do ambiente, agindo apenas em reposta a estímulos do ambiente no qual está inserido, sendo assim, um agente reativo não conhece o ambiente ao qual pertence; e (iii) híbrido, quando um agente possui características de um agente deliberativo e de um agente reativo \cite[p. 5]{girardi2004}. 
 
 \begin{description}
-\item[Agentes Comportamentais ]
+\item[Agentes Comportamentais:]
 
 Um agente comportamental é um agente reativo, que tem seus comportamentos abstraídos de comportamentos de uma entidade do mundo real, normalmente \cite[p. 33]{oliveira2008}. Um conjunto de agentes comportamentais, de maneira cooperativa, pode ser utilizado para solucionar um problema complexo. Um exemplo comumente encontrado na literatura, é o da colônia de formigas. Neste cenário, cada formiga é uma entidade simples, mas em conjunto é capaz de realizar trabalhos complexos existentes em uma colônia, por exemplo: construir um formigueiro semelhante ao da figura 4.
 
@@ -98,7 +101,7 @@ Alvares e Sichman (\citeyear{alvares1997}, p. 12) destacam do exemplo das formig
 \end{citacao}
 
 
-\item [Agentes Intencionais]
+\item [Agentes Intencionais:]
 
 Quando um aluno deixa a universidade com uma primeira graduação, ele se depara com uma decisão a tomar, sobre o que fazer com sua vida. O processo de decisão tipicamente inicia-se tentando entender as opções disponíveis em função do conhecimento (crenças) que o aluno possui do seu ambiente. Por exemplo, se o aluno tem um bom histórico escolar, então uma opção é se tornar um acadêmico. Outra opção é se tornar um profissional. Após a geração do grupo de alternativas (desejos), deve-se optar por uma e se comprometer com ela. Esta escolha vem a ser sua intenção. As intenções alimentam o raciocínio lógico futuro do agente. Por exemplo, se o aluno decidir que quer se tornar um acadêmico, então ele deve comprometer-se com esse objetivo e despender tempo e esforço para alcançá-lo. \apud[p. 4] {wooldridge1999}{girardi2004}.
 
@@ -153,7 +156,7 @@ Esse capítulo elucidou o Contexto Financeiro, apresentando como o Mercado Finan
 \FloatBarrier
 \chapter[SUPORTE TECNOLÓGICO]{Suporte Tecnológico}
 
-Este capítulo apresenta o suporte tecnológico utilizado para o desenvolvimento da ferramenta. O capítulo está organizado em seções, conforme ilustrado na figura 5. Na seção 3.1, são apresentadas ferramentas comumente utilizadas em análises técnicas da Bolsa de Valores. Na seção 3.2, são apresentados os padrões de projetos adotados no desenvolvimento da ferramenta, bem como o padrão arquitetural adotado com propósito de contribuir com a manutenabilidade e extensibilidade da ferramenta. Adicionalmente, ainda nessa seção, é apresentada uma descrição mais detalhada do \textit{framework} JADE. Por fim, é apresentada a metodologia Ágil que foi adaptada para conduzir o desenvolvimento da ferramenta acordada por este Trabalho de Conclusão de Curso.
+Este capítulo apresenta o suporte tecnológico utilizado para o desenvolvimento da ferramenta. O capítulo está organizado em seções, conforme ilustrado na figura 5. Na seção 3.1, são apresentadas ferramentas comumente utilizadas em análises técnicas da Bolsa de Valores, vale ressaltar que essas ferramentas compartilham uma característica em comum, que é a necessidade do usuário em possuir conhecimentos avançados acerta de estratégias financeiras. Na seção 3.2, são apresentados os padrões de projetos adotados no desenvolvimento da ferramenta, bem como o padrão arquitetural adotado com propósito de contribuir com a manutenabilidade e extensibilidade da ferramenta. Adicionalmente, ainda nessa seção, é apresentada uma descrição mais detalhada do \textit{framework} JADE. Por fim, é apresentada a metodologia Ágil que foi adaptada para conduzir o desenvolvimento da ferramenta acordada por este Trabalho de Conclusão de Curso.
 
 \begin{figure}[h!]
 \centering
@@ -447,7 +450,7 @@ Para nortear as provas de conceito feitas para este estudo, foi elaborado um cen
 \begin{figure}[h!]
 \centering
 \label{f13} 
-\includegraphics[width=0.8\textwidth]{figuras/f10}
+\includegraphics[width=0.6\textwidth]{figuras/f10}
 \caption{Candlestick }
 \end{figure}
 \FloatBarrier
@@ -526,7 +529,7 @@ Finalmente, diante das propriedades do Paradigma de Sistemas Multiagentes, expos
 
 \item Sociabilidade - um agente interage com outros agentes, Software ou humano, através de  algum tipo de linguagem de comunicação. Da mesma maneira, um investidor humano interage com outros atores presentes em uma bolsa de valores, seja para montar grupos, e de maneira conjunta resolver problemas que estão além das suas habilidades individuais, ou apenas para usar serviços disponibilizados por outros atores;
 
-\item Reatividade - um agente fica situado em um ambiente e é capaz de perceber esse ambiente através de seus sensores, é capaz de responder em tempo hábil às mudanças que ocorrem nele. Da mesma maneira, um investidor percebe o ambiente de bolsa de valores no qual está inserido, através de acompanhamentos frequentes de informações que alimentam suas estratégias, e responde às mudanças ocorridas na bolsa de valores de acordo com as informações de saída de suas estratégias;
+\item Reatividade - um agente é capaz de perceber o ambiente no qual está inserido através se seus sensores, é capaz de responder em tempo hábil às mudanças que ocorrem neste ambiente. Da mesma maneira, um investidor percebe o ambiente de bolsa de valores no qual está inserido, através de acompanhamentos frequentes de informações que alimentam suas estratégias, e responde às mudanças ocorridas na bolsa de valores de acordo com as informações de saída de suas estratégias;
 \item Assincronismo -  um agente, ao receber uma requisição, tem o poder de decidir se irá ou não atender à mesma. Adicionalmente, este agente pode enviar uma requisição a outro agente e continuar suas atividades. Caso não seja atendido, ele tem o poder de enviar a mesma requisição a outros agentes, por exemplo, contornando o problema. Da mesma maneira, um investidor humano pode procurar um ou vários atores presentes na bolsa e escolher aquele que melhor o atende.
 
 \end{enumerate}
@@ -824,7 +827,7 @@ Por fim, na subseção 4.6, foi apresentada a metodologia que orientou a anális
 \newpage
 \chapter[FERRAMENTA FINANCEIRA]{Ferramenta Financeira}
 
-Esse capítulo apresenta em detalhes a ferramenta desenvolvida para o contexto do Mercado Financeiro de Bolsa de Valores usando uma abordagem Multiagentes. O capítulo está organizado em seções, como ilustrado na figura 21. Na seção 5.1, serão detalhados os diferentes níveis arquiteturais que compõem a estrutura geral da ferramenta. Salienta-se que o primeiro nível arquitetural corresponde à arquitetura base, a qual orientou a comunicação dos agentes, o ciclo de vida dos mesmos, protocolos de interação, suas criações, registros de serviços prestados e outros detalhes inerentes à programação multiagentes. A arquitetura base utilizada é a da Plataforma JADE. Essa foi apresentada no capítulo de Suporte Tecnológico, seção 3.2.3. Em um segundo momento, será apresentada a arquitetura da ferramenta em si, a qual foi organizada de acordo com o padrão arquitetural \textit{Model-View-Controller} (MVC). Adicionalmente, será apresentada a arquitetura da máquina de raciocínio dos agentes, onde cada agente será descrito em detalhes bem como suas estratégias de ação no contexto financeiro. Esse último nível arquitetural foi quem mais demandou esforços nesse Trabalho de Conclusão de Curso, por representar a lógica de raciocínio dos agentes, e, portanto, o core da ferramenta. Por fim, é acordada uma abordagem evolutiva, visando facilitar a manutenção bem como a refatoração da ferramenta.
+Esse capítulo apresenta em detalhes a ferramenta desenvolvida para o contexto do Mercado Financeiro de Bolsa de Valores usando uma abordagem Multiagentes. O capítulo está organizado em seções, como ilustrado na figura 21. Na seção 5.1, serão detalhados os diferentes níveis arquiteturais que compõem a estrutura geral da ferramenta. Salienta-se que o primeiro nível arquitetural corresponde à arquitetura base, a qual orientou a comunicação dos agentes, o ciclo de vida dos mesmos, protocolos de interação, suas criações, registros de serviços prestados e outros detalhes inerentes à programação multiagentes. A arquitetura base utilizada é a da Plataforma JADE. Essa foi apresentada no capítulo de Suporte Tecnológico, seção 3.2.3. Em um segundo momento, será apresentada a arquitetura da ferramenta em si, a qual foi organizada de acordo com o padrão arquitetural \textit{Model-View-Controller} (MVC). Adicionalmente, será apresentada a arquitetura da máquina de raciocínio dos agentes, onde cada agente será descrito em detalhes bem como suas estratégias de ação no contexto financeiro. Esse último nível arquitetural foi quem mais demandou esforços nesse Trabalho de Conclusão de Curso, por representar a lógica de raciocínio dos agentes, e, portanto, o core da ferramenta. Por fim, é acordada uma abordagem evolutiva, visando facilitar a manutenção bem como a refatoração da ferramenta. Os códigos fontes Grails e Java da Ferramenta desenvolvida neste Trabalho de Conclusão de Curso estão disponíveis nos seguintes endereços: (i) \url{https://github.com/kverrna/TCC_Ferramenta_Grails}; e (ii) \url{https://github.com/RamonCruzSoftware/TCC_Ferramenta_Java}. 
 
 
 \begin{figure}[h!]
@@ -937,7 +940,7 @@ A ferramenta desenvolvida atua considerando três tipos de perfis de investidor,
 \end{center}
 \subsection{Principais agentes}
 
-Foram projetados inicialmente três tipos de agentes comportamentais: (i) agente gestor; (ii) agente especialista, e (iii) agente caçador. No entanto, durante o desenvolvimento da ferramenta verificou-se a necessidade em criar um quarto tipo de agente de Software, o agente criador. Este é responsável por auxiliar na comunicação entre usuários web com seus respectivos agentes de Software, mais internos à lógica da ferramenta. 
+Foram projetados inicialmente três tipos de agentes comportamentais: (i) agente gestor; (ii) agente especialista, e (iii) agente caçador. No entanto, durante o desenvolvimento da ferramenta verificou-se a necessidade em criar um quarto tipo de agente de Software, o agente criador. Este é responsável por auxiliar na comunicação entre usuários \textit{web} com seus respectivos agentes de Software, mais internos à lógica da ferramenta. 
 
 \begin{description}
 \item[Agente gestor (\textit{manager}):]
@@ -1280,7 +1283,7 @@ Esta coleta de dados com 12 potenciais usuários, com idade entre 18 e 26 anos, 
 
 \item[Público alvo avaliado:]
 
-A avaliação ocorreu em maio de 2014 e participaram da avaliação seis pessoas, onde: 1 se classifica no perfil Corajoso; 1 se classifica no perfil Moderado e 4 se classificam no perfil Conservador. O teste funcional da ferramenta foi feito com uso de dados históricos no período entre 1 de março de 2014 e 3 de março de 2015. A inteface gráfica da ferramenta foi o foco dessa primeira análise.
+A avaliação ocorreu em maio de 2014 e participaram da avaliação seis estudantes universitários com idade até 26 anos e com pouco conhecimento relacionado à estratégias financeiras, onde: 1 se classifica no perfil Corajoso; 1 se classifica no perfil Moderado e 4 se classificam no perfil Conservador. O teste funcional da ferramenta foi feito com uso de dados históricos no período entre 1 de março de 2014 e 3 de março de 2015. A inteface gráfica da ferramenta foi o foco dessa primeira análise.
 
 \item[Observações coletadas:]
 Quando questionados sobre as cores adotadas na ferramenta, 5 pessoas consideraram boas e 1 pessoa considerou ótima. Quando questionados sobre a facilidade de compreensão da ferramenta, 3 pessoas consideraram como bom, 1 pessoa considerou razoável, 1 pessoa considerou como ruim e 1 se absteve. Quando solicitadas observações gerais para melhoria da ferramenta, destacaram-se: (i) feedback indicando o carregamento e o processo da ferramenta; (ii) atualização da página principal automaticamente; (iii) disponibilidade de um canal de dúvidas; (iv) não adoção de estratégias baseadas em Médias Móveis; (v) utilização de javascript na interface; (vi) execução da ferramenta em duas máquinas, e (vii) disponibilidade de informações sobre estratégias e uso da ferramenta.
@@ -1504,11 +1507,19 @@ Esse capítulo procura resgatar as principais contribuições oriundas desse Tra
 
 \section{Principais Contribuições}
 
-A Ferramenta de Software desenvolvida neste TCC é capaz de auxiliar cidadãos brasileiros a realizarem investimentos em bolsa de valores. Sua primeira versão faz uso de estratégias comumente referenciadas por investidores, Medias Móveis.  Entretanto, sua arquitetura foi desenhada de modo a suportar a adição de novas estratégias sem a necessidade de fazer alterações nos códigos fontes dos agentes comportamentais. Isto contribui para a manutenção evolutiva da ferramenta.
+A Ferramenta de Software desenvolvida neste TCC é capaz de auxiliar cidadãos brasileiros a realizarem investimentos em bolsa de valores. Sua primeira versão faz uso de estratégias comumente referenciadas por investidores, Medias Móveis.  Entretanto, sua arquitetura foi desenhada de modo a suportar a adição de novas estratégias sem a necessidade de fazer alterações nos códigos fontes dos agentes comportamentais. Isto contribui para a manutenção evolutiva da ferramenta. Adicionalmente, a Ferramenta é capaz de validar o uso do paradigma de Sistemas Multiagentes no contexto de bolsa de valores.
 
-Ao usuário, não é requerido um prévio conhecimento relacionado ao contexto financeiro, a Ferramenta é capaz de abstrair a complexidade de cálculos financeiro, deixando-os a cargo dos agentes. A ferramenta, por ser Web, foi estruturada de acordo com o padrão arquitetural MVC, com a aplicação adicional de padrões de projeto. Em particular, o padrão Strategy destaca-se dentre os padrões de projeto adotados, uma vez que confere à ferramenta facilidades em termos de manutenção, refatoração, extensibilidade, e reusabilidade de código fonte.
+Ao usuário, não é requerido um prévio conhecimento relacionado ao contexto financeiro, a Ferramenta é capaz de abstrair a complexidade de cálculos financeiros, deixando-os a cargo dos agentes, ao usuário é requirido somente o mesmo informe a Ferramenta seu perfil (Corajoso, Moderado ou Conservador) e o valor de investimento. A Ferramenta, por ser \textit{Web}, foi estruturada de acordo com o padrão arquitetural MVC, com a aplicação adicional de padrões de projeto. Em particular, o padrão \textit{Strategy} destaca-se dentre os padrões de projeto adotados, uma vez que confere à ferramenta facilidades em termos de manutenção, refatoração, extensibilidade, e reusabilidade de código fonte.
 
-Ressalta-se que os objetivos geral e específicos desse trabalho foram alcançados, de acordo com a análise dos resultados obtidos. Portanto, construiu-se, em atendimento ao objetivo geral, uma ferramenta de estratégia financeira apoiada por Sistemas Multiagentes Comportamentais, cuja máquina de raciocínio foi descrita em detalhes no capítulo 5 desse documento. Procurou-se, em atendimento ao primeiro objetivo específico, trabalhar estratégias visando abstrair a complexidade dos cálculos financeiros comumente utilizados na análise técnica, deixando essa complexidade aos agentes e não aos usuários finais da ferramenta. Por fim, em atendimento ao segundo e último objetivo específico, explorou-se o Paradigma de Sistemas Multiagentes Comportamentais no contexto financeiro, usando provas de conceito pontuais e pesquisa-ação combinada a cenários de uso, conforme apresentado em detalhes no capítulo 6 desse documento.
+Ressalta-se que os objetivos geral e específicos desse trabalho foram alcançados, de acordo com a análise dos resultados obtidos. Portanto, construiu-se, em atendimento ao objetivo geral, uma ferramenta de estratégia financeira apoiada por Sistemas Multiagentes Comportamentais, cuja máquina de raciocínio foi descrita em detalhes no capítulo 5 desse documento.
+
+Procurou-se, em atendimento ao primeiro objetivo específico, trabalhar estratégias visando abstrair a complexidade dos cálculos financeiros comumente utilizados na análise técnica, deixando essa complexidade aos agentes e não aos usuários finais da ferramenta. Em atendimento ao segundo objetivo específico, explorou-se o Paradigma de Sistemas Multiagentes Comportamentais no contexto financeiro, usando provas de conceito pontuais e pesquisa-ação combinada a cenários de uso, conforme apresentado em detalhes no capítulo 6 desse documento. Em atendimento ao terceiro objetivo específico, desenvolveu-se uma arquitetura capaz de facilitar a reutilização de Software, bem como a manutenibilidade e extensibilidade em trabalho futuros. Por fim, em atendimento ao quarto e último objetivo específico, durante o desenvolvimento da Ferramenta adotaram-se boas práticas da Orientação a Objetos visando a redução do acoplamento e o aumento da coesão do código fonte.
+
+
+\section{Limitações}
+
+A ferramenta desenvolvida neste Trabalho de Conclusão de Curso aborda o contexto financeiro com estratégias oriundas da análise técnica, tais como: (i) estratégia baseada em médias móveis exponenciais e simples; e (ii) estratégias baseadas em padrões de formação de \textit{candlestick}, inicialmente \textit{Dark cloud} e \textit{Bullish Engulf}. Ambas estratégias são detalhadas no capítulo 5 deste trabalho. Somente ações de empresas presentes na Bolsa de Valores de São Paulo são abordadas nesta versão da ferramenta. Outros mercados mercados pertencentes ao contexto financeiro, tais como: (i) mercado de Renda Fixa; (ii) mercado de Opções; (iii) mercado de Contratos Futuros; (iv) mercado de Moedas (\textit{FOREX}), entre outros. Não são abordados nesta versão da ferramenta. Entretanto, a ferramenta desenvolvida possui arquitetura que facilita sua evolução em termos de mercados financeiros, bem como as estratégias financeiras.
+
 
 
 \section{Sugestões de Trabalhos Futuros}
