@@ -10,7 +10,8 @@ from candlesticks importdarkCloud
 
 print __doc__
 
-f=csv.reader(open('/home/ramon/ATIVOS/DTEX3SA.csv'),delimiter=',')
+f=csv.reader(open('/home/ramon/ATIVOS/DTEX3SA.csv'),
+	delimiter=',')
 conjunto=['']
 
 #Le o arquivocsv

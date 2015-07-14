@@ -4,8 +4,8 @@ publicclassCandleStick {
 privatedoubleopen, high, low, close, volume;
 private String date;
 
-publicCandleStick(double open, double high, double low, double close, double volume
-, String date)
+publicCandleStick(double open, double high, double low, 
+	double close, double volume, String date)
 {
 this.open = open;
 this.high = high;
@@ -15,8 +15,8 @@ this.volume = volume;
 this.date = date;
 }
 
-publicCandleStick(String open, String high, String low, String close, String volume
-, String date)
+publicCandleStick(String open, String high, String low, String close, 
+	String volume, String date)
 {
 this.date = date;
 this.open = Double.parseDouble(open);
